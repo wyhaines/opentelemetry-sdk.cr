@@ -1,0 +1,29 @@
+name: OpenTelemetry CI
+
+on:
+  schedule:
+    - cron:  '0 3 * * *'
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: crystallang/crystal
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: shards install
+    - name: Run tests
+      run: crystal spec -t -s
+    - name: Linting
+      run: crystal tool format --check
+    - name: Run Ameba
+      run: bin/ameba
+    - name: Build docs
+      run: crystal docs
