@@ -1,2 +1,0 @@
-require "opentelemetry-api"
-require "./**"
