@@ -1,5 +1,5 @@
 name: opentelemetry-sdk
-version: 0.1.0
+version: 0.4.0
 
 authors:
   - Kirk Haines <wyhaines@gmail.com>
@@ -11,6 +11,26 @@ license: "Apache 2.0"
 dependencies:
   opentelemetry-api:
     github: wyhaines/opentelemetry-api.cr
+    branch: kh.the_big_api_to_sdk_shuffle
+  db:
+    github: crystal-lang/crystal-db
+  splay_tree_map:
+    github: wyhaines/splay_tree_map.cr
+  nbchannel:
+    github: wyhaines/nbchannel.cr
+    branch: main
+  csuuid:
+    github: wyhaines/csuuid.cr
+    branch: main
+  time-ext:
+    github: wyhaines/time-ext.cr
+    branch: main
+  protobuf:
+    github: jeromegn/protobuf.cr
+  retriable:
+    github: Sija/retriable.cr
+  debug:
+    github: Sija/debug.cr
 
 development_dependencies:
   ameba:

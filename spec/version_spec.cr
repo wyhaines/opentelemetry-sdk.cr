@@ -1,7 +1,7 @@
 require "./spec_helper"
 require "yaml"
 
-describe OpenTelemetry::VERSION do
+describe OpenTelemetry::SDK::VERSION do
   it "has a defined VERSION" do
     OpenTelemetry::SDK::VERSION.empty?.should be_false
   end

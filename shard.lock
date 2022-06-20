@@ -12,13 +12,13 @@ shards:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.11.0
 
+  debug:
+    git: https://github.com/sija/debug.cr.git
+    version: 2.0.2
+
   nbchannel:
     git: https://github.com/wyhaines/nbchannel.cr.git
     version: 0.1.0+git.commit.ea6517a837270361695244d14c4b03d84660f113
-
-  opentelemetry-api:
-    git: https://github.com/wyhaines/opentelemetry-api.cr.git
-    version: 0.3.4
 
   parse_date:
     git: https://github.com/wyhaines/parsedate.cr.git
