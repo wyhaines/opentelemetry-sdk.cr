@@ -1,3 +1,5 @@
+require "opentelemetry-api/src/api/abstract_context"
+
 module OpenTelemetry
   struct Context < OpenTelemetry::API::AbstractContext
     struct Key < OpenTelemetry::API::AbstractContext::AbstractKey
