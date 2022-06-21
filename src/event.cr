@@ -1,3 +1,5 @@
+require "opentelemetry-api/src/api/abstract_event"
+
 module OpenTelemetry
   class Event < OpenTelemetry::API::AbstractEvent
     property name : String = ""
