@@ -44,6 +44,5 @@ module OpenTelemetry
 
     def to_json(json : JSON::Builder)
     end
-    
   end
 end
