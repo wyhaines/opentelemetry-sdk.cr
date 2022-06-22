@@ -1,4 +1,4 @@
-require "opentelemetry-api/src/api/abstract_span_context_config"
+require "opentelemetry-api/src/api/span_context/abstract_config"
 
 module OpenTelemetry
   struct SpanContext < OpenTelemetry::API::AbstractSpanContext
