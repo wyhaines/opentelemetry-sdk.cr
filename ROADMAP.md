@@ -2,10 +2,6 @@
 
 This document represents a general set of goals for the project. It will change over time, and should be taken as a document that presents a general vision and plan for what is to come, and not as a document with specific tasks or milestones expressed. All specific goals and tasks will be found [as issues](https://github.com/wyhaines/opentelemetry-api.cr/issues).
 
-- Separate SDK from the API.
-
-  Currently the SDK and the API are combined into this single repository, but that is the wrong thing to be doing. The SDK capabilities must move [to their own repository](https://github.com/wyhaines/opentelemetry-sdk.cr).
-
 - Improved Spec Compliance
 
   The current implementation is a work in progress, with areas where the spec is implemented incompletely or incorrectly. These omissions and transgressions must be addressed.
