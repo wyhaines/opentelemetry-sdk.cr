@@ -7,7 +7,7 @@ module OpenTelemetry
   # or the MetricsProvider. It supplies some common faculties for dealing with configuration.
   abstract class Provider
     getter config : Configuration
-    @id_generator_instance : IdGenerator::Base?
+    @id_generator_instance : API::AbstractIdGenerator::AbstractBase?
 
     def initialize
       @config = Configuration::Factory.build
@@ -82,7 +82,7 @@ module OpenTelemetry
     end
 
     private def merge_id_generator(config, secondary_config)
-      config.id_generator = secondary_config.id_generator if config.id_generator.nil? || config.id_generator.generator.is_a?(AbstractIdGenerator)
+      config.id_generator = secondary_config.id_generator if config.id_generator.nil?
     end
 
     def service_name

@@ -1,20 +1,19 @@
 require "opentelemetry-api/src/api/abstract_id_generator"
-require "./id_generator/*"
 
 module OpenTelemetry
-  struct AbstractIdGenerator < IdGenerator::Base
-    def trace_id
-      Slice(UInt8).new(16, 0)
-    end
+  # struct AbstractIdGenerator < IdGenerator::Base
+  #   def trace_id
+  #     Slice(UInt8).new(16, 0)
+  #   end
 
-    def span_id
-      Slice(UInt8).new(8, 0)
-    end
-  end
+  #   def span_id
+  #     Slice(UInt8).new(8, 0)
+  #   end
+  # end
 
-  struct IdGenerator < AbstractIdGenerator
-    getter generator : OpenTelemetry::IdGenerator::Base
-    class_property generator : OpenTelemetry::IdGenerator::Base = OpenTelemetry::IdGenerator::Unique.new
+  struct IdGenerator < API::AbstractIdGenerator
+    getter generator : OpenTelemetry::API::AbstractIdGenerator::AbstractBase
+    class_property generator : OpenTelemetry::API::AbstractIdGenerator::AbstractBase = OpenTelemetry::IdGenerator::Unique.new
 
     def initialize(variant : String | Symbol = "unique")
       case variant.to_s.downcase
@@ -45,3 +44,5 @@ module OpenTelemetry
     end
   end
 end
+
+require "./id_generator/*"

@@ -1,7 +1,7 @@
-require "./base"
+require "opentelemetry-api/src/api/id_generator/abstract_base"
 
 module OpenTelemetry
-  struct IdGenerator::Random < IdGenerator::Base
+  struct IdGenerator::Random < API::AbstractIdGenerator::AbstractBase
     # Return a random sequence of 16 bytes for the trace id.
     def trace_id
       Trace.prng.random_bytes(16)
