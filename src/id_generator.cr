@@ -1,3 +1,4 @@
+require "opentelemetry-api/src/api/abstract_id_generator"
 require "./id_generator/*"
 
 module OpenTelemetry
@@ -11,7 +12,7 @@ module OpenTelemetry
     end
   end
 
-  struct IdGenerator
+  struct IdGenerator < AbstractIdGenerator
     getter generator : OpenTelemetry::IdGenerator::Base
     class_property generator : OpenTelemetry::IdGenerator::Base = OpenTelemetry::IdGenerator::Unique.new
 

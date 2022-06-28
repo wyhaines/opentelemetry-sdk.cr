@@ -1,5 +1,4 @@
 require "./proto/resource.pb"
-require "./sendable"
 
 module OpenTelemetry
   class Resource < OpenTelemetry::API::AbstractResource

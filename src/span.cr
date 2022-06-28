@@ -3,7 +3,6 @@ require "./span/*"
 require "./status"
 require "./event"
 require "json"
-require "./sendable"
 
 module OpenTelemetry
   # A `Span` represents a single measured timespan, and all data associated
