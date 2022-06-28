@@ -1,6 +1,6 @@
-![OpenTelemetry CI](https://img.shields.io/github/workflow/status/wyhaines/opentelemetry-api.cr/OpenTelemetry%20CI?style=for-the-badge&logo=GitHub)
-[![GitHub release](https://img.shields.io/github/release/wyhaines/opentelemetry-api.cr.svg?style=for-the-badge)](https://github.com/wyhaines/opentelemetry-api.cr/releases)
-![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/wyhaines/opentelemetry-api.cr/latest?style=for-the-badge)
+![OpenTelemetry CI](https://img.shields.io/github/workflow/status/wyhaines/opentelemetry-sdk.cr/OpenTelemetry%20CI?style=for-the-badge&logo=GitHub)
+[![GitHub release](https://img.shields.io/github/release/wyhaines/opentelemetry-sdk.cr.svg?style=for-the-badge)](https://github.com/wyhaines/opentelemetry-sdk.cr/releases)
+![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/wyhaines/opentelemetry-sdk.cr/latest?style=for-the-badge)
 
 # OpenTelemetry-API
 
@@ -9,19 +9,19 @@
 This library provides the base functionality for implementing services that utilize
 OpenTelemetry to send or receive metrics, traces, and logs. This library is intended to be focused specifically on OpenTelemetry itself, with most higher level functionality implemented by other libraries which use this library.
 
-**NOTE:** This shard currently breaks the OpenTelemetry spec because it bundles both API and SDK functionality into a single repository/library. This [issue](https://github.com/wyhaines/opentelemetry-api.cr/issues/5) will be addressed very soon, and the SDK functionality will all be moved over to [https://github.com/wyhaines/opentelemetry-sdk.cr](https://github.com/wyhaines/opentelemetry-sdk.cr).
+**NOTE:** This shard currently breaks the OpenTelemetry spec because it bundles both API and SDK functionality into a single repository/library. This [issue](https://github.com/wyhaines/opentelemetry-sdk.cr/issues/5) will be addressed very soon, and the SDK functionality will all be moved over to [https://github.com/wyhaines/opentelemetry-sdk.cr](https://github.com/wyhaines/opentelemetry-sdk.cr).
 
 As a general rule, naming conventions have been based on the standard glossary of OpenTelementry terms, as found at [https://opentelemetry.io/docs/concepts/glossary/](https://opentelemetry.io/docs/concepts/glossary/)
 
 The general architecture of the implementation is guided by this document:
 
-[https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md)
+[https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md)
 
 The TL;DR is that a `TracerProvider` is used to create a `Tracer`. A `Span` is created inside of the context of a `Tracer`, and one `Span` may nest inside of another.
 
 ## Full Generated Documentation
 
-[https://wyhaines.github.io/opentelemetry-api.cr/](https://wyhaines.github.io/opentelemetry-api.cr/)
+[https://wyhaines.github.io/opentelemetry-sdk.cr/](https://wyhaines.github.io/opentelemetry-sdk.cr/)
 
 A lot of documentation needs to be added. PRs would be welcome!
 
@@ -37,8 +37,8 @@ https://discord.gg/WKe9WWJ3HE
 
    ```yaml
    dependencies:
-     opentelemetry-api:
-       github: wyhaines/opentelemetry-api.cr
+     opentelemetry-sdk:
+       github: wyhaines/opentelemetry-sdk.cr
    ```
 
 2. Run `shards install`
@@ -46,7 +46,7 @@ https://discord.gg/WKe9WWJ3HE
 ## Usage
 
 ```crystal
-require "opentelemetry-api"
+require "opentelemetry-sdk"
 ```
 
 ## Global Tracer Provider
@@ -191,5 +191,5 @@ TODO: Write development instructions here
 
 - [Kirk Haines](https://github.com/wyhaines) - creator and maintainer
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wyhaines/opentelemetry-api.cr?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/wyhaines/opentelemetry-api.cr?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wyhaines/opentelemetry-sdk.cr?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/wyhaines/opentelemetry-sdk.cr?style=for-the-badge)
