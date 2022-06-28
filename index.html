@@ -1056,19 +1056,17 @@
 <p><img src="https://img.shields.io/github/workflow/status/wyhaines/opentelemetry-sdk.cr/OpenTelemetry%20CI?style=for-the-badge&amp;logo=GitHub" alt="OpenTelemetry CI" />
 <a href="https://github.com/wyhaines/opentelemetry-sdk.cr/releases"><img src="https://img.shields.io/github/release/wyhaines/opentelemetry-sdk.cr.svg?style=for-the-badge" alt="GitHub release" /></a>
 <img src="https://img.shields.io/github/commits-since/wyhaines/opentelemetry-sdk.cr/latest?style=for-the-badge" alt="GitHub commits since latest release (by SemVer)" /></p>
-<h1><a id="open-telemetry-api" class="anchor" href="#open-telemetry-api">
+<h1><a id="open-telemetry-sdk" class="anchor" href="#open-telemetry-sdk">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a>OpenTelemetry-API</h1>
-<h1><a id="todo-documentation-must-be-substantially-expanded.-click-through-to-the-full-generated-documentation-for-somewhat-more-complete-documentation." class="anchor" href="#todo-documentation-must-be-substantially-expanded.-click-through-to-the-full-generated-documentation-for-somewhat-more-complete-documentation.">
+</a>OpenTelemetry-SDK</h1>
+<h3><a id="click-through-to-the-full-generated-documentation-for-somewhat-more-complete-documentation." class="anchor" href="#click-through-to-the-full-generated-documentation-for-somewhat-more-complete-documentation.">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a>TODO: Documentation must be substantially expanded. Click through to the <a href="#full-generated-documentation">Full Generated Documentation</a> for somewhat more complete documentation.</h1>
-<p>This library provides the base functionality for implementing services that utilize
-OpenTelemetry to send or receive metrics, traces, and logs. This library is intended to be focused specifically on OpenTelemetry itself, with most higher level functionality implemented by other libraries which use this library.</p>
-<p><strong>NOTE:</strong> This shard currently breaks the OpenTelemetry spec because it bundles both API and SDK functionality into a single repository/library. This <a href="https://github.com/wyhaines/opentelemetry-sdk.cr/issues/5">issue</a> will be addressed very soon, and the SDK functionality will all be moved over to <a href="https://github.com/wyhaines/opentelemetry-sdk.cr">https://github.com/wyhaines/opentelemetry-sdk.cr</a>.</p>
+</a>Click through to the <a href="#full-generated-documentation">Full Generated Documentation</a> for somewhat more complete documentation.</h3>
+<p>This library implements an OpenTelemetry SDK for Crystal, using the API interfaces defined in the <a href="https://github.com/wyhaines/opentelemetry-api.cr">API</a> shard.</p>
 <p>As a general rule, naming conventions have been based on the standard glossary of OpenTelementry terms, as found at <a href="https://opentelemetry.io/docs/concepts/glossary/">https://opentelemetry.io/docs/concepts/glossary/</a></p>
 <p>The general architecture of the implementation is guided by this document:</p>
 <p><a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md">https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/sdk.md</a></p>
@@ -1207,14 +1205,15 @@ OTEL_TRACES_SAMPLER_ARG=&quot;0.10&quot;</code></pre>
     <use href="#octicon-link"/>
   </svg>
 </a>Development</h2>
-<p><span class="flag orange">TODO</span>  Write development instructions here</p>
+<p>If you want to help with development, <a href="https://github.com/wyhaines/opentelemetry-sdk.cr/fork">fork</a> this repo. Do your work in a branch inside your fork, and when it is ready (and has specs), submit a PR. See <a href="#contributing">Contributing</a> below.</p>
+<p>If you have a question or find an issue, you can <a href="https://github.com/wyhaines/opentelemetry-sdk.cr/discussions/new">start a discussion</a> or <a href="https://github.com/wyhaines/opentelemetry-sdk.cr/issues/new/choose">create an issue</a>.</p>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Contributing</h2>
 <ol>
-<li>Fork it (<a href="https://github.com/your-github-user/otel/fork">https://github.com/your-github-user/otel/fork</a>)</li>
+<li>Fork it (https://github.com/wyhaines/opentelemetry-sdk.cr/fork)</li>
 <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
 <li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
 <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
