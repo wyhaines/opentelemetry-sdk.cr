@@ -81,11 +81,6 @@
       
         <ul>
   
-  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/AbstractIdGenerator" data-name="opentelemetry::abstractidgenerator">
-      <a href="../OpenTelemetry/AbstractIdGenerator.html">AbstractIdGenerator</a>
-      
-    </li>
-  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../OpenTelemetry/Context.html">Context</a>
       
@@ -175,11 +170,6 @@
       <a href="../OpenTelemetry/IdGenerator.html">IdGenerator</a>
       
         <ul>
-  
-  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/IdGenerator/Base" data-name="opentelemetry::idgenerator::base">
-      <a href="../OpenTelemetry/IdGenerator/Base.html">Base</a>
-      
-    </li>
   
   <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/IdGenerator/Random" data-name="opentelemetry::idgenerator::random">
       <a href="../OpenTelemetry/IdGenerator/Random.html">Random</a>
@@ -1070,22 +1060,10 @@
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenTelemetry/IdGenerator.html">OpenTelemetry::IdGenerator</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenTelemetry/IdGenerator.html">OpenTelemetry::IdGenerator</a></li><li class="superclass">OpenTelemetry::API::AbstractIdGenerator</li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
-
-  <h2>
-    <a id="overview" class="anchor" href="#overview">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Overview
-  </h2>
-
-  <p>This is the abstract base implementation for an ID Generator. Other ID Generators
-should inherit from this class to implement the interface prescribed here.</p>
 
 
 
@@ -1111,11 +1089,6 @@ should inherit from this class to implement the interface prescribed here.</p>
   
     
       id_generator.cr
-    
-    <br/>
-  
-    
-      id_generator/base.cr
     
     <br/>
   
@@ -1154,12 +1127,12 @@ should inherit from this class to implement the interface prescribed here.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase-class-method" class="signature"><strong>.generator</strong> : OpenTelemetry::IdGenerator::Base</a>
+        <a href="#generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase-class-method" class="signature"><strong>.generator</strong> : OpenTelemetry::API::AbstractIdGenerator::AbstractBase</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#generator%3D%28generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase%29-class-method" class="signature"><strong>.generator=</strong>(generator : OpenTelemetry::IdGenerator::Base)</a>
+        <a href="#generator%3D%28generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase%29-class-method" class="signature"><strong>.generator=</strong>(generator : OpenTelemetry::API::AbstractIdGenerator::AbstractBase)</a>
         
       </li>
     
@@ -1188,7 +1161,7 @@ should inherit from this class to implement the interface prescribed here.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase-instance-method" class="signature"><strong>#generator</strong> : OpenTelemetry::IdGenerator::Base</a>
+        <a href="#generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase-instance-method" class="signature"><strong>#generator</strong> : OpenTelemetry::API::AbstractIdGenerator::AbstractBase</a>
         
       </li>
     
@@ -1209,6 +1182,16 @@ should inherit from this class to implement the interface prescribed here.</p>
 
 
 <div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
   
     
 
@@ -1278,12 +1261,12 @@ should inherit from this class to implement the interface prescribed here.</p>
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="generator:OpenTelemetry::IdGenerator::Base-class-method">
+    <div class="entry-detail" id="generator:OpenTelemetry::API::AbstractIdGenerator::AbstractBase-class-method">
       <div class="signature">
         
-        def self.<strong>generator</strong> : <a href="../OpenTelemetry/IdGenerator/Base.html">OpenTelemetry::IdGenerator::Base</a>
+        def self.<strong>generator</strong> : OpenTelemetry::API::AbstractIdGenerator::AbstractBase
 
-        <a class="method-permalink" href="#generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase-class-method">#</a>
+        <a class="method-permalink" href="#generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase-class-method">#</a>
       </div>
       
       <br/>
@@ -1292,12 +1275,12 @@ should inherit from this class to implement the interface prescribed here.</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="generator=(generator:OpenTelemetry::IdGenerator::Base)-class-method">
+    <div class="entry-detail" id="generator=(generator:OpenTelemetry::API::AbstractIdGenerator::AbstractBase)-class-method">
       <div class="signature">
         
-        def self.<strong>generator=</strong>(generator : <a href="../OpenTelemetry/IdGenerator/Base.html">OpenTelemetry::IdGenerator::Base</a>)
+        def self.<strong>generator=</strong>(generator : OpenTelemetry::API::AbstractIdGenerator::AbstractBase)
 
-        <a class="method-permalink" href="#generator%3D%28generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase%29-class-method">#</a>
+        <a class="method-permalink" href="#generator%3D%28generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1346,12 +1329,12 @@ should inherit from this class to implement the interface prescribed here.</p>
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="generator:OpenTelemetry::IdGenerator::Base-instance-method">
+    <div class="entry-detail" id="generator:OpenTelemetry::API::AbstractIdGenerator::AbstractBase-instance-method">
       <div class="signature">
         
-        def <strong>generator</strong> : <a href="../OpenTelemetry/IdGenerator/Base.html">OpenTelemetry::IdGenerator::Base</a>
+        def <strong>generator</strong> : OpenTelemetry::API::AbstractIdGenerator::AbstractBase
 
-        <a class="method-permalink" href="#generator%3AOpenTelemetry%3A%3AIdGenerator%3A%3ABase-instance-method">#</a>
+        <a class="method-permalink" href="#generator%3AOpenTelemetry%3A%3AAPI%3A%3AAbstractIdGenerator%3A%3AAbstractBase-instance-method">#</a>
       </div>
       
       <br/>
