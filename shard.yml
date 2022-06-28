@@ -11,7 +11,6 @@ license: "Apache 2.0"
 dependencies:
   opentelemetry-api:
     github: wyhaines/opentelemetry-api.cr
-    branch: kh.the_big_api_to_sdk_shuffle
   db:
     github: crystal-lang/crystal-db
   splay_tree_map:
