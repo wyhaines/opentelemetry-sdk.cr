@@ -2,14 +2,11 @@
 [![GitHub release](https://img.shields.io/github/release/wyhaines/opentelemetry-sdk.cr.svg?style=for-the-badge)](https://github.com/wyhaines/opentelemetry-sdk.cr/releases)
 ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/wyhaines/opentelemetry-sdk.cr/latest?style=for-the-badge)
 
-# OpenTelemetry-API
+# OpenTelemetry-SDK
 
-# TODO: Documentation must be substantially expanded. Click through to the [Full Generated Documentation](#full-generated-documentation) for somewhat more complete documentation.
+### Click through to the [Full Generated Documentation](#full-generated-documentation) for somewhat more complete documentation.
 
-This library provides the base functionality for implementing services that utilize
-OpenTelemetry to send or receive metrics, traces, and logs. This library is intended to be focused specifically on OpenTelemetry itself, with most higher level functionality implemented by other libraries which use this library.
-
-**NOTE:** This shard currently breaks the OpenTelemetry spec because it bundles both API and SDK functionality into a single repository/library. This [issue](https://github.com/wyhaines/opentelemetry-sdk.cr/issues/5) will be addressed very soon, and the SDK functionality will all be moved over to [https://github.com/wyhaines/opentelemetry-sdk.cr](https://github.com/wyhaines/opentelemetry-sdk.cr).
+This library implements an OpenTelemetry SDK for Crystal, using the API interfaces defined in the [API] shard.
 
 As a general rule, naming conventions have been based on the standard glossary of OpenTelementry terms, as found at [https://opentelemetry.io/docs/concepts/glossary/](https://opentelemetry.io/docs/concepts/glossary/)
 
@@ -177,11 +174,13 @@ end
 
 ## Development
 
-TODO: Write development instructions here
+If you want to help with development, [fork](https://github.com/wyhaines/opentelemetry-sdk.cr/fork) this repo. Do your work in a branch inside your fork, and when it is ready (and has specs), submit a PR. See [Contributing] below.
+
+If you have a question or find an issue, you can [start a discussion](https://github.com/wyhaines/opentelemetry-sdk.cr/discussions/new) or [create an issue](https://github.com/wyhaines/opentelemetry-sdk.cr/issues/new/choose).
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/otel/fork>)
+1. Fork it (https://github.com/wyhaines/opentelemetry-sdk.cr/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -193,3 +192,6 @@ TODO: Write development instructions here
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wyhaines/opentelemetry-sdk.cr?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/wyhaines/opentelemetry-sdk.cr?style=for-the-badge)
+
+[Contributing]: #contributing
+[API]: https://github.com/wyhaines/opentelemetry-api.cr
