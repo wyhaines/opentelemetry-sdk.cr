@@ -5,5 +5,5 @@ module OpenTelemetry
     {% end %}
   end
 
-  alias VERSION = SDK::VERSION
+  VERSION = SDK::VERSION
 end
