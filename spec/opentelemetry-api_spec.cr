@@ -66,4 +66,69 @@ describe OpenTelemetry do
     trace.service_version.should eq "2.2.2"
     trace.exporter.should be_a OpenTelemetry::Exporter
   end
+
+  it "can trace using the macro version of in_span with blocks" do
+    checkout_config do
+      OpenTelemetry.configure do |config|
+        config.exporter = OpenTelemetry::Exporter.new(variant: :null)
+      end
+      trace = nil
+      OpenTelemetry.in_span("request") do |span|
+        trace = Fiber.current.current_trace
+        span.set_attribute("verb", "GET")
+        span.set_attribute("url", "http://example.com/foo")
+        sleep(rand/1000)
+        span.add_event("dispatching to handler")
+        OpenTelemetry.in_span("handler") do |child_span|
+          sleep(rand/1000)
+          child_span.add_event("dispatching to database")
+          OpenTelemetry.in_span("db") do |db_span|
+            db_span.add_event("querying database")
+            sleep(rand/1000)
+          end
+          OpenTelemetry.in_span("external api") do |api_span|
+            api_span.add_event("querying api")
+            sleep(rand/1000)
+          end
+          sleep(rand/1000)
+        end
+      end
+
+      iterate_tracer_spans(trace.not_nil!).map(&.name).should eq ["request", "handler", "external api", "db"]
+    end
+  end
+
+  it "can trace using the macro version of in_span without blocks" do
+    checkout_config do
+      OpenTelemetry.configure do |config|
+        config.exporter = OpenTelemetry::Exporter.new(variant: :null)
+      end
+      trace = nil
+      begin
+        span = OpenTelemetry.in_span("request")
+        trace = Fiber.current.current_trace
+        span.set_attribute("verb", "GET")
+        span.set_attribute("url", "http://example.com/foo")
+        sleep(rand/1000)
+        span.add_event("dispatching to handler")
+        OpenTelemetry.in_span("handler") do |child_span|
+          sleep(rand/1000)
+          child_span.add_event("dispatching to database")
+          OpenTelemetry.in_span("db") do |db_span|
+            db_span.add_event("querying database")
+            sleep(rand/1000)
+          end
+          OpenTelemetry.in_span("external api") do |api_span|
+            api_span.add_event("querying api")
+            sleep(rand/1000)
+          end
+          sleep(rand/1000)
+        end
+      ensure
+        OpenTelemetry.close_span
+      end
+
+      iterate_tracer_spans(trace.not_nil!).map(&.name).should eq ["request", "handler", "external api", "db"]
+    end
+  end
 end

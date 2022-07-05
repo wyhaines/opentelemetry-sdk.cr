@@ -231,22 +231,44 @@ module OpenTelemetry
 
   macro in_span(span_name, &block)
   {%
-    span_arg = block.args.first.id
-    if span_arg == "_".id
-      span_arg = "__tmp_span_arg__".id
+    if block
+      span_arg = block.args.first.id
+      if span_arg == "_".id
+        span_arg = "__tmp_span_arg__".id
+      end
+    else
+      span_arg = nil
     end
   %}
+  {% if span_arg %}
   OpenTelemetry.trace.in_span({{ span_name }}) do |{{ span_arg }}|
-  {{ span_arg }}["code.filepath"] = __FILE__
-  {{ span_arg }}["code.lineno"] = __LINE__
-  {{ span_arg }}["code.function"] = \{{ "#{@def ? @def.name : "@toplevel".id}" }}
-  {{ span_arg }}["code.namespace"] = \{{ "#{@type.name}" }}
-  {{ span_arg }}["thread.id"] = Fiber.current.object_id
-  {{ span_arg }}["thread.name"] = Fiber.current.name.to_s
-    {{ block.body }}
-  end
-end
+    {{ span_arg }}["code.filepath"] = __FILE__
+    {{ span_arg }}["code.lineno"] = __LINE__
+    {{ span_arg }}["code.function"] = \{{ "#{@def ? @def.name : "@toplevel".id}" }}
+    {{ span_arg }}["code.namespace"] = \{{ "#{@type.name}" }}
+    {{ span_arg }}["thread.id"] = Fiber.current.object_id
+    {{ span_arg }}["thread.name"] = Fiber.current.name.to_s
+      {{ block.body }}
+    end
+  {% else %}
+  (begin
+    %span = OpenTelemetry.trace.in_span({{ span_name }})
+    %span["code.filepath"] = __FILE__
+    %span["code.lineno"] = __LINE__
+    %span["code.function"] = \{{ "#{@def ? @def.name : "@toplevel".id}" }}
+    %span["code.namespace"] = \{{ "#{@type.name}" }}
+    %span["thread.id"] = Fiber.current.object_id
+    %span["thread.name"] = Fiber.current.name.to_s
 
+    %span
+  end)
+  {% end %}
+  end
+
+  macro close_span
+    Fiber.current.current_trace.try(&.close_span)
+  end
+  
   def self.instrumentation_scope
     Proto::Common::V1::InstrumentationScope.new(
       name: NAME,
