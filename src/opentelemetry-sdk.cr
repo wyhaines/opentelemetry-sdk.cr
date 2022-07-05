@@ -268,7 +268,7 @@ module OpenTelemetry
   macro close_span
     Fiber.current.current_trace.try(&.close_span)
   end
-  
+
   def self.instrumentation_scope
     Proto::Common::V1::InstrumentationScope.new(
       name: NAME,
