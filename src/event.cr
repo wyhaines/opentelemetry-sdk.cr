@@ -3,8 +3,8 @@ require "opentelemetry-api/src/api/abstract_event"
 module OpenTelemetry
   class Event < OpenTelemetry::API::AbstractEvent
     property name : String = ""
-    property timestamp : Time::Span = Time.monotonic
-    property wall_timestamp : Time = Time.utc
+    property timestamp : Time::Span = OpenTelemetry.clock.monotonic
+    property wall_timestamp : Time = OpenTelemetry.clock.utc
     getter attributes : Hash(String, AnyAttribute) = {} of String => AnyAttribute
     property parent_span : Span? = nil
 

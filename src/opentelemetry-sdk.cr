@@ -1,6 +1,7 @@
 require "opentelemetry-api/interfaces"
 require "./ext"
 require "csuuid"
+require "./clock"
 require "./resource"
 require "./trace_flags"
 require "./name"
@@ -76,6 +77,9 @@ module OpenTelemetry
 
   # `provider` class property provides direct access to the global default Tracerprovider instance.
   class_property provider : TraceProvider = TraceProvider.new.configure!(@@config)
+
+  # `clock` class property allows alternative implementations for testing or simulations
+  class_property clock : Clock = TimeClock.new
 
   # Use this method to configure the global trace provider. The provided block will receive a `OpenTelemetry::Provider::Configuration::Factory`
   # instance, which will be used to generate a `OpenTelemetry::Provider::Configuration` struct instance.
@@ -281,5 +285,16 @@ module OpenTelemetry
   end
 
   def self.handle_error(error)
+  end
+
+  def self.with_clock(clock : Clock)
+    original_clock = self.clock
+
+    begin
+      self.clock = clock
+      yield
+    ensure
+      self.clock = original_clock
+    end
   end
 end

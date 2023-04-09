@@ -260,8 +260,8 @@ module OpenTelemetry
 
     @[AlwaysInline]
     private def close_span_impl(span)
-      span.finish = Time.monotonic
-      span.wall_finish = Time.utc
+      span.finish = OpenTelemetry.clock.monotonic
+      span.wall_finish = OpenTelemetry.clock.utc
       if @span_stack.last == span
         candidate_span = @span_stack.pop
         @output_stack.unshift(candidate_span) if candidate_span.can_export?

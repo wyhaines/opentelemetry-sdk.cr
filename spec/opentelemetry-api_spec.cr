@@ -131,4 +131,16 @@ describe OpenTelemetry do
       iterate_tracer_spans(trace.not_nil!).map(&.name).should eq ["request", "handler", "external api", "db"]
     end
   end
+
+  it "sets clock and reverts after block" do
+    original_clock = OpenTelemetry.clock
+
+    clock = FixedClock.new(now: Time.utc, monotonic: Time::Span.new(nanoseconds: 5))
+
+    OpenTelemetry.with_clock(clock) do
+      OpenTelemetry.clock.should eq(clock)
+    end
+
+    OpenTelemetry.clock.should eq(original_clock)
+  end
 end
