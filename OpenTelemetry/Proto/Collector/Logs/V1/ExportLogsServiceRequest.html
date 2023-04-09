@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Collector::Logs::V1::ExportLogsServiceRequest - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Collector::Logs::V1::ExportLogsServiceRequest - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:resource_logs</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:resource_logs</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Logs</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">ResourceLogs</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(resource_logs : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)? = <span class="n">nil</span>)</a>
+        <a href="#new%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(resource_logs : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs) | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,12 +1199,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F-instance-method" class="signature"><strong>#resource_logs</strong> : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)?</a>
+        <a href="#resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil-instance-method" class="signature"><strong>#resource_logs</strong> : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#resource_logs%3D%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F%29-instance-method" class="signature"><strong>#resource_logs=</strong>(resource_logs : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)?)</a>
+        <a href="#resource_logs%3D%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil%29-instance-method" class="signature"><strong>#resource_logs=</strong>(resource_logs : Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs) | Nil)</a>
         
       </li>
     
@@ -1282,12 +1292,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)?=nil)-class-method">
+    <div class="entry-detail" id="new(resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(resource_logs : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>)? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(resource_logs : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>) | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1348,12 +1358,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)?-instance-method">
+    <div class="entry-detail" id="resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>resource_logs</strong> : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>)?
+        def <strong>resource_logs</strong> : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>) | Nil
 
-        <a class="method-permalink" href="#resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1362,12 +1372,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="resource_logs=(resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)?)-instance-method">
+    <div class="entry-detail" id="resource_logs=(resource_logs:Array(OpenTelemetry::Proto::Logs::V1::ResourceLogs)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>resource_logs=</strong>(resource_logs : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>)?)
+        def <strong>resource_logs=</strong>(resource_logs : Array(<a href="../../../../../OpenTelemetry/Proto/Logs/V1/ResourceLogs.html">OpenTelemetry::Proto::Logs::V1::ResourceLogs</a>) | Nil)
 
-        <a class="method-permalink" href="#resource_logs%3D%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#resource_logs%3D%28resource_logs%3AArray%28OpenTelemetry%3A%3AProto%3A%3ALogs%3A%3AV1%3A%3AResourceLogs%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

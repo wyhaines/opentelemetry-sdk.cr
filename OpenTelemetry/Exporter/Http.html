@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Exporter::Http - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Exporter::Http - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1108,7 +1118,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28endpoint%3AString%3F%7CURI%3Dnil%2C_headers%3AHTTP%3A%3AHeaders%3F%3Dnil%2C_clients%3ADB%3A%3APool%28HTTP%3A%3AClient%29%3F%3Dnil%2C%2A_junk%2C%2A%2A_kwjunk%29-class-method" class="signature"><strong>.new</strong>(endpoint : String? | URI = <span class="n">nil</span>, _headers : HTTP::Headers? = <span class="n">nil</span>, _clients : DB::Pool(HTTP::Client)? = <span class="n">nil</span>, *_junk, **_kwjunk)</a>
+        <a href="#new%28endpoint%3AString%7CNil%7CURI%3Dnil%2C_headers%3AHTTP%3A%3AHeaders%7CNil%3Dnil%2C_clients%3ADB%3A%3APool%28HTTP%3A%3AClient%29%7CNil%3Dnil%2C%2A_junk%2C%2A%2A_kwjunk%29-class-method" class="signature"><strong>.new</strong>(endpoint : String | Nil | URI = <span class="n">nil</span>, _headers : HTTP::Headers | Nil = <span class="n">nil</span>, _clients : DB::Pool(HTTP::Client) | Nil = <span class="n">nil</span>, *_junk, **_kwjunk)</a>
         
       </li>
     
@@ -1400,12 +1410,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(endpoint:String?|URI=nil,_headers:HTTP::Headers?=nil,_clients:DB::Pool(HTTP::Client)?=nil,*_junk,**_kwjunk)-class-method">
+    <div class="entry-detail" id="new(endpoint:String|Nil|URI=nil,_headers:HTTP::Headers|Nil=nil,_clients:DB::Pool(HTTP::Client)|Nil=nil,*_junk,**_kwjunk)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(endpoint : <a href="../../String.html">String</a>? | URI = <span class="n">nil</span>, _headers : HTTP::Headers? = <span class="n">nil</span>, _clients : DB::Pool(HTTP::Client)? = <span class="n">nil</span>, *_junk, **_kwjunk)
+        def self.<strong>new</strong>(endpoint : <a href="../../String.html">String</a> | Nil | URI = <span class="n">nil</span>, _headers : HTTP::Headers | Nil = <span class="n">nil</span>, _clients : DB::Pool(HTTP::Client) | Nil = <span class="n">nil</span>, *_junk, **_kwjunk)
 
-        <a class="method-permalink" href="#new%28endpoint%3AString%3F%7CURI%3Dnil%2C_headers%3AHTTP%3A%3AHeaders%3F%3Dnil%2C_clients%3ADB%3A%3APool%28HTTP%3A%3AClient%29%3F%3Dnil%2C%2A_junk%2C%2A%2A_kwjunk%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28endpoint%3AString%7CNil%7CURI%3Dnil%2C_headers%3AHTTP%3A%3AHeaders%7CNil%3Dnil%2C_clients%3ADB%3A%3APool%28HTTP%3A%3AClient%29%7CNil%3Dnil%2C%2A_junk%2C%2A%2A_kwjunk%29-class-method">#</a>
       </div>
       
       <br/>

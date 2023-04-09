@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Trace::V1::TraceConfig - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Trace::V1::TraceConfig - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:constant_sampler</span>, pb_type: <span class="t">ConstantSampler</span>, crystal_type: <span class="t">ConstantSampler</span>, cast_type: <span class="t">ConstantSampler</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:trace_id_ratio_based</span>, pb_type: <span class="t">TraceIdRatioBased</span>, crystal_type: <span class="t">TraceIdRatioBased</span>, cast_type: <span class="t">TraceIdRatioBased</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:rate_limiting_sampler</span>, pb_type: <span class="t">RateLimitingSampler</span>, crystal_type: <span class="t">RateLimitingSampler</span>, cast_type: <span class="t">RateLimitingSampler</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> =&gt; {name: <span class="n">:max_number_of_attributes</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> =&gt; {name: <span class="n">:max_number_of_timed_events</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> =&gt; {name: <span class="n">:max_number_of_attributes_per_timed_event</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> =&gt; {name: <span class="n">:max_number_of_links</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> =&gt; {name: <span class="n">:max_number_of_attributes_per_link</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:constant_sampler</span>, pb_type: <span class="t">ConstantSampler</span>, crystal_type: <span class="t">ConstantSampler</span>, cast_type: <span class="t">ConstantSampler</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:trace_id_ratio_based</span>, pb_type: <span class="t">TraceIdRatioBased</span>, crystal_type: <span class="t">TraceIdRatioBased</span>, cast_type: <span class="t">TraceIdRatioBased</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:rate_limiting_sampler</span>, pb_type: <span class="t">RateLimitingSampler</span>, crystal_type: <span class="t">RateLimitingSampler</span>, cast_type: <span class="t">RateLimitingSampler</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> <span class="o">=&gt;</span> {name: <span class="n">:max_number_of_attributes</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> <span class="o">=&gt;</span> {name: <span class="n">:max_number_of_timed_events</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> <span class="o">=&gt;</span> {name: <span class="n">:max_number_of_attributes_per_timed_event</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> <span class="o">=&gt;</span> {name: <span class="n">:max_number_of_links</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> <span class="o">=&gt;</span> {name: <span class="n">:max_number_of_attributes_per_link</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28constant_sampler%3AConstantSampler%3F%3Dnil%2Ctrace_id_ratio_based%3ATraceIdRatioBased%3F%3Dnil%2Crate_limiting_sampler%3ARateLimitingSampler%3F%3Dnil%2Cmax_number_of_attributes%3AInt64%3F%3Dnil%2Cmax_number_of_timed_events%3AInt64%3F%3Dnil%2Cmax_number_of_attributes_per_timed_event%3AInt64%3F%3Dnil%2Cmax_number_of_links%3AInt64%3F%3Dnil%2Cmax_number_of_attributes_per_link%3AInt64%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(constant_sampler : ConstantSampler? = <span class="n">nil</span>, trace_id_ratio_based : TraceIdRatioBased? = <span class="n">nil</span>, rate_limiting_sampler : RateLimitingSampler? = <span class="n">nil</span>, max_number_of_attributes : Int64? = <span class="n">nil</span>, max_number_of_timed_events : Int64? = <span class="n">nil</span>, max_number_of_attributes_per_timed_event : Int64? = <span class="n">nil</span>, max_number_of_links : Int64? = <span class="n">nil</span>, max_number_of_attributes_per_link : Int64? = <span class="n">nil</span>)</a>
+        <a href="#new%28constant_sampler%3AConstantSampler%7CNil%3Dnil%2Ctrace_id_ratio_based%3ATraceIdRatioBased%7CNil%3Dnil%2Crate_limiting_sampler%3ARateLimitingSampler%7CNil%3Dnil%2Cmax_number_of_attributes%3AInt64%7CNil%3Dnil%2Cmax_number_of_timed_events%3AInt64%7CNil%3Dnil%2Cmax_number_of_attributes_per_timed_event%3AInt64%7CNil%3Dnil%2Cmax_number_of_links%3AInt64%7CNil%3Dnil%2Cmax_number_of_attributes_per_link%3AInt64%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(constant_sampler : ConstantSampler | Nil = <span class="n">nil</span>, trace_id_ratio_based : TraceIdRatioBased | Nil = <span class="n">nil</span>, rate_limiting_sampler : RateLimitingSampler | Nil = <span class="n">nil</span>, max_number_of_attributes : Int64 | Nil = <span class="n">nil</span>, max_number_of_timed_events : Int64 | Nil = <span class="n">nil</span>, max_number_of_attributes_per_timed_event : Int64 | Nil = <span class="n">nil</span>, max_number_of_links : Int64 | Nil = <span class="n">nil</span>, max_number_of_attributes_per_link : Int64 | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,72 +1199,72 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#constant_sampler%3AConstantSampler%3F-instance-method" class="signature"><strong>#constant_sampler</strong> : ConstantSampler?</a>
+        <a href="#constant_sampler%3AConstantSampler%7CNil-instance-method" class="signature"><strong>#constant_sampler</strong> : ConstantSampler | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#constant_sampler%3D%28constant_sampler%3AConstantSampler%3F%29-instance-method" class="signature"><strong>#constant_sampler=</strong>(constant_sampler : ConstantSampler?)</a>
+        <a href="#constant_sampler%3D%28constant_sampler%3AConstantSampler%7CNil%29-instance-method" class="signature"><strong>#constant_sampler=</strong>(constant_sampler : ConstantSampler | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes%3AInt64%3F-instance-method" class="signature"><strong>#max_number_of_attributes</strong> : Int64?</a>
+        <a href="#max_number_of_attributes%3AInt64%7CNil-instance-method" class="signature"><strong>#max_number_of_attributes</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes%3D%28max_number_of_attributes%3AInt64%3F%29-instance-method" class="signature"><strong>#max_number_of_attributes=</strong>(max_number_of_attributes : Int64?)</a>
+        <a href="#max_number_of_attributes%3D%28max_number_of_attributes%3AInt64%7CNil%29-instance-method" class="signature"><strong>#max_number_of_attributes=</strong>(max_number_of_attributes : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes_per_link%3AInt64%3F-instance-method" class="signature"><strong>#max_number_of_attributes_per_link</strong> : Int64?</a>
+        <a href="#max_number_of_attributes_per_link%3AInt64%7CNil-instance-method" class="signature"><strong>#max_number_of_attributes_per_link</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes_per_link%3D%28max_number_of_attributes_per_link%3AInt64%3F%29-instance-method" class="signature"><strong>#max_number_of_attributes_per_link=</strong>(max_number_of_attributes_per_link : Int64?)</a>
+        <a href="#max_number_of_attributes_per_link%3D%28max_number_of_attributes_per_link%3AInt64%7CNil%29-instance-method" class="signature"><strong>#max_number_of_attributes_per_link=</strong>(max_number_of_attributes_per_link : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes_per_timed_event%3AInt64%3F-instance-method" class="signature"><strong>#max_number_of_attributes_per_timed_event</strong> : Int64?</a>
+        <a href="#max_number_of_attributes_per_timed_event%3AInt64%7CNil-instance-method" class="signature"><strong>#max_number_of_attributes_per_timed_event</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_attributes_per_timed_event%3D%28max_number_of_attributes_per_timed_event%3AInt64%3F%29-instance-method" class="signature"><strong>#max_number_of_attributes_per_timed_event=</strong>(max_number_of_attributes_per_timed_event : Int64?)</a>
+        <a href="#max_number_of_attributes_per_timed_event%3D%28max_number_of_attributes_per_timed_event%3AInt64%7CNil%29-instance-method" class="signature"><strong>#max_number_of_attributes_per_timed_event=</strong>(max_number_of_attributes_per_timed_event : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_links%3AInt64%3F-instance-method" class="signature"><strong>#max_number_of_links</strong> : Int64?</a>
+        <a href="#max_number_of_links%3AInt64%7CNil-instance-method" class="signature"><strong>#max_number_of_links</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_links%3D%28max_number_of_links%3AInt64%3F%29-instance-method" class="signature"><strong>#max_number_of_links=</strong>(max_number_of_links : Int64?)</a>
+        <a href="#max_number_of_links%3D%28max_number_of_links%3AInt64%7CNil%29-instance-method" class="signature"><strong>#max_number_of_links=</strong>(max_number_of_links : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_timed_events%3AInt64%3F-instance-method" class="signature"><strong>#max_number_of_timed_events</strong> : Int64?</a>
+        <a href="#max_number_of_timed_events%3AInt64%7CNil-instance-method" class="signature"><strong>#max_number_of_timed_events</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_number_of_timed_events%3D%28max_number_of_timed_events%3AInt64%3F%29-instance-method" class="signature"><strong>#max_number_of_timed_events=</strong>(max_number_of_timed_events : Int64?)</a>
+        <a href="#max_number_of_timed_events%3D%28max_number_of_timed_events%3AInt64%7CNil%29-instance-method" class="signature"><strong>#max_number_of_timed_events=</strong>(max_number_of_timed_events : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rate_limiting_sampler%3ARateLimitingSampler%3F-instance-method" class="signature"><strong>#rate_limiting_sampler</strong> : RateLimitingSampler?</a>
+        <a href="#rate_limiting_sampler%3ARateLimitingSampler%7CNil-instance-method" class="signature"><strong>#rate_limiting_sampler</strong> : RateLimitingSampler | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rate_limiting_sampler%3D%28rate_limiting_sampler%3ARateLimitingSampler%3F%29-instance-method" class="signature"><strong>#rate_limiting_sampler=</strong>(rate_limiting_sampler : RateLimitingSampler?)</a>
+        <a href="#rate_limiting_sampler%3D%28rate_limiting_sampler%3ARateLimitingSampler%7CNil%29-instance-method" class="signature"><strong>#rate_limiting_sampler=</strong>(rate_limiting_sampler : RateLimitingSampler | Nil)</a>
         
       </li>
     
@@ -1269,12 +1279,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_id_ratio_based%3ATraceIdRatioBased%3F-instance-method" class="signature"><strong>#trace_id_ratio_based</strong> : TraceIdRatioBased?</a>
+        <a href="#trace_id_ratio_based%3ATraceIdRatioBased%7CNil-instance-method" class="signature"><strong>#trace_id_ratio_based</strong> : TraceIdRatioBased | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_id_ratio_based%3D%28trace_id_ratio_based%3ATraceIdRatioBased%3F%29-instance-method" class="signature"><strong>#trace_id_ratio_based=</strong>(trace_id_ratio_based : TraceIdRatioBased?)</a>
+        <a href="#trace_id_ratio_based%3D%28trace_id_ratio_based%3ATraceIdRatioBased%7CNil%29-instance-method" class="signature"><strong>#trace_id_ratio_based=</strong>(trace_id_ratio_based : TraceIdRatioBased | Nil)</a>
         
       </li>
     
@@ -1352,12 +1362,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(constant_sampler:ConstantSampler?=nil,trace_id_ratio_based:TraceIdRatioBased?=nil,rate_limiting_sampler:RateLimitingSampler?=nil,max_number_of_attributes:Int64?=nil,max_number_of_timed_events:Int64?=nil,max_number_of_attributes_per_timed_event:Int64?=nil,max_number_of_links:Int64?=nil,max_number_of_attributes_per_link:Int64?=nil)-class-method">
+    <div class="entry-detail" id="new(constant_sampler:ConstantSampler|Nil=nil,trace_id_ratio_based:TraceIdRatioBased|Nil=nil,rate_limiting_sampler:RateLimitingSampler|Nil=nil,max_number_of_attributes:Int64|Nil=nil,max_number_of_timed_events:Int64|Nil=nil,max_number_of_attributes_per_timed_event:Int64|Nil=nil,max_number_of_links:Int64|Nil=nil,max_number_of_attributes_per_link:Int64|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(constant_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a>? = <span class="n">nil</span>, trace_id_ratio_based : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a>? = <span class="n">nil</span>, rate_limiting_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a>? = <span class="n">nil</span>, max_number_of_attributes : Int64? = <span class="n">nil</span>, max_number_of_timed_events : Int64? = <span class="n">nil</span>, max_number_of_attributes_per_timed_event : Int64? = <span class="n">nil</span>, max_number_of_links : Int64? = <span class="n">nil</span>, max_number_of_attributes_per_link : Int64? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(constant_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a> | Nil = <span class="n">nil</span>, trace_id_ratio_based : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a> | Nil = <span class="n">nil</span>, rate_limiting_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a> | Nil = <span class="n">nil</span>, max_number_of_attributes : Int64 | Nil = <span class="n">nil</span>, max_number_of_timed_events : Int64 | Nil = <span class="n">nil</span>, max_number_of_attributes_per_timed_event : Int64 | Nil = <span class="n">nil</span>, max_number_of_links : Int64 | Nil = <span class="n">nil</span>, max_number_of_attributes_per_link : Int64 | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28constant_sampler%3AConstantSampler%3F%3Dnil%2Ctrace_id_ratio_based%3ATraceIdRatioBased%3F%3Dnil%2Crate_limiting_sampler%3ARateLimitingSampler%3F%3Dnil%2Cmax_number_of_attributes%3AInt64%3F%3Dnil%2Cmax_number_of_timed_events%3AInt64%3F%3Dnil%2Cmax_number_of_attributes_per_timed_event%3AInt64%3F%3Dnil%2Cmax_number_of_links%3AInt64%3F%3Dnil%2Cmax_number_of_attributes_per_link%3AInt64%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28constant_sampler%3AConstantSampler%7CNil%3Dnil%2Ctrace_id_ratio_based%3ATraceIdRatioBased%7CNil%3Dnil%2Crate_limiting_sampler%3ARateLimitingSampler%7CNil%3Dnil%2Cmax_number_of_attributes%3AInt64%7CNil%3Dnil%2Cmax_number_of_timed_events%3AInt64%7CNil%3Dnil%2Cmax_number_of_attributes_per_timed_event%3AInt64%7CNil%3Dnil%2Cmax_number_of_links%3AInt64%7CNil%3Dnil%2Cmax_number_of_attributes_per_link%3AInt64%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1418,12 +1428,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="constant_sampler:ConstantSampler?-instance-method">
+    <div class="entry-detail" id="constant_sampler:ConstantSampler|Nil-instance-method">
       <div class="signature">
         
-        def <strong>constant_sampler</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a>?
+        def <strong>constant_sampler</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a> | Nil
 
-        <a class="method-permalink" href="#constant_sampler%3AConstantSampler%3F-instance-method">#</a>
+        <a class="method-permalink" href="#constant_sampler%3AConstantSampler%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1432,12 +1442,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="constant_sampler=(constant_sampler:ConstantSampler?)-instance-method">
+    <div class="entry-detail" id="constant_sampler=(constant_sampler:ConstantSampler|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>constant_sampler=</strong>(constant_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a>?)
+        def <strong>constant_sampler=</strong>(constant_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/ConstantSampler.html">ConstantSampler</a> | Nil)
 
-        <a class="method-permalink" href="#constant_sampler%3D%28constant_sampler%3AConstantSampler%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#constant_sampler%3D%28constant_sampler%3AConstantSampler%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1446,12 +1456,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes:Int64?-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes</strong> : Int64?
+        def <strong>max_number_of_attributes</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#max_number_of_attributes%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1460,12 +1470,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes=(max_number_of_attributes:Int64?)-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes=(max_number_of_attributes:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes=</strong>(max_number_of_attributes : Int64?)
+        def <strong>max_number_of_attributes=</strong>(max_number_of_attributes : Int64 | Nil)
 
-        <a class="method-permalink" href="#max_number_of_attributes%3D%28max_number_of_attributes%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes%3D%28max_number_of_attributes%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1474,12 +1484,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes_per_link:Int64?-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes_per_link:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes_per_link</strong> : Int64?
+        def <strong>max_number_of_attributes_per_link</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#max_number_of_attributes_per_link%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes_per_link%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1488,12 +1498,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes_per_link=(max_number_of_attributes_per_link:Int64?)-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes_per_link=(max_number_of_attributes_per_link:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes_per_link=</strong>(max_number_of_attributes_per_link : Int64?)
+        def <strong>max_number_of_attributes_per_link=</strong>(max_number_of_attributes_per_link : Int64 | Nil)
 
-        <a class="method-permalink" href="#max_number_of_attributes_per_link%3D%28max_number_of_attributes_per_link%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes_per_link%3D%28max_number_of_attributes_per_link%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1502,12 +1512,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes_per_timed_event:Int64?-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes_per_timed_event:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes_per_timed_event</strong> : Int64?
+        def <strong>max_number_of_attributes_per_timed_event</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#max_number_of_attributes_per_timed_event%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes_per_timed_event%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1516,12 +1526,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_attributes_per_timed_event=(max_number_of_attributes_per_timed_event:Int64?)-instance-method">
+    <div class="entry-detail" id="max_number_of_attributes_per_timed_event=(max_number_of_attributes_per_timed_event:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_attributes_per_timed_event=</strong>(max_number_of_attributes_per_timed_event : Int64?)
+        def <strong>max_number_of_attributes_per_timed_event=</strong>(max_number_of_attributes_per_timed_event : Int64 | Nil)
 
-        <a class="method-permalink" href="#max_number_of_attributes_per_timed_event%3D%28max_number_of_attributes_per_timed_event%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_attributes_per_timed_event%3D%28max_number_of_attributes_per_timed_event%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1530,12 +1540,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_links:Int64?-instance-method">
+    <div class="entry-detail" id="max_number_of_links:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_links</strong> : Int64?
+        def <strong>max_number_of_links</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#max_number_of_links%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_links%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1544,12 +1554,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_links=(max_number_of_links:Int64?)-instance-method">
+    <div class="entry-detail" id="max_number_of_links=(max_number_of_links:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_links=</strong>(max_number_of_links : Int64?)
+        def <strong>max_number_of_links=</strong>(max_number_of_links : Int64 | Nil)
 
-        <a class="method-permalink" href="#max_number_of_links%3D%28max_number_of_links%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_links%3D%28max_number_of_links%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1558,12 +1568,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_timed_events:Int64?-instance-method">
+    <div class="entry-detail" id="max_number_of_timed_events:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_timed_events</strong> : Int64?
+        def <strong>max_number_of_timed_events</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#max_number_of_timed_events%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_timed_events%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1572,12 +1582,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max_number_of_timed_events=(max_number_of_timed_events:Int64?)-instance-method">
+    <div class="entry-detail" id="max_number_of_timed_events=(max_number_of_timed_events:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max_number_of_timed_events=</strong>(max_number_of_timed_events : Int64?)
+        def <strong>max_number_of_timed_events=</strong>(max_number_of_timed_events : Int64 | Nil)
 
-        <a class="method-permalink" href="#max_number_of_timed_events%3D%28max_number_of_timed_events%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_number_of_timed_events%3D%28max_number_of_timed_events%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1586,12 +1596,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="rate_limiting_sampler:RateLimitingSampler?-instance-method">
+    <div class="entry-detail" id="rate_limiting_sampler:RateLimitingSampler|Nil-instance-method">
       <div class="signature">
         
-        def <strong>rate_limiting_sampler</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a>?
+        def <strong>rate_limiting_sampler</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a> | Nil
 
-        <a class="method-permalink" href="#rate_limiting_sampler%3ARateLimitingSampler%3F-instance-method">#</a>
+        <a class="method-permalink" href="#rate_limiting_sampler%3ARateLimitingSampler%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1600,12 +1610,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="rate_limiting_sampler=(rate_limiting_sampler:RateLimitingSampler?)-instance-method">
+    <div class="entry-detail" id="rate_limiting_sampler=(rate_limiting_sampler:RateLimitingSampler|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>rate_limiting_sampler=</strong>(rate_limiting_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a>?)
+        def <strong>rate_limiting_sampler=</strong>(rate_limiting_sampler : <a href="../../../../OpenTelemetry/Proto/Trace/V1/RateLimitingSampler.html">RateLimitingSampler</a> | Nil)
 
-        <a class="method-permalink" href="#rate_limiting_sampler%3D%28rate_limiting_sampler%3ARateLimitingSampler%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#rate_limiting_sampler%3D%28rate_limiting_sampler%3ARateLimitingSampler%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1642,12 +1652,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_id_ratio_based:TraceIdRatioBased?-instance-method">
+    <div class="entry-detail" id="trace_id_ratio_based:TraceIdRatioBased|Nil-instance-method">
       <div class="signature">
         
-        def <strong>trace_id_ratio_based</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a>?
+        def <strong>trace_id_ratio_based</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a> | Nil
 
-        <a class="method-permalink" href="#trace_id_ratio_based%3ATraceIdRatioBased%3F-instance-method">#</a>
+        <a class="method-permalink" href="#trace_id_ratio_based%3ATraceIdRatioBased%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1656,12 +1666,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_id_ratio_based=(trace_id_ratio_based:TraceIdRatioBased?)-instance-method">
+    <div class="entry-detail" id="trace_id_ratio_based=(trace_id_ratio_based:TraceIdRatioBased|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>trace_id_ratio_based=</strong>(trace_id_ratio_based : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a>?)
+        def <strong>trace_id_ratio_based=</strong>(trace_id_ratio_based : <a href="../../../../OpenTelemetry/Proto/Trace/V1/TraceIdRatioBased.html">TraceIdRatioBased</a> | Nil)
 
-        <a class="method-permalink" href="#trace_id_ratio_based%3D%28trace_id_ratio_based%3ATraceIdRatioBased%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#trace_id_ratio_based%3D%28trace_id_ratio_based%3ATraceIdRatioBased%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>opentelemetry-sdk 0.5.1</title>
+  <title>opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="OpenTelemetry/Trace.html">Trace</a>
       
@@ -1116,7 +1126,7 @@
 <pre><code class="language-crystal"><span class="t">OpenTelemetry</span>.configure <span class="k">do</span> <span class="o">|</span>config<span class="o">|</span>
   config.service_name <span class="o">=</span> <span class="s">&quot;my_app_or_library&quot;</span>
   config.service_version <span class="o">=</span> <span class="s">&quot;1.1.1&quot;</span>
-  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.<span class="k">new</span>(variant: <span class="n">:stdout</span>)
+  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.new(variant: <span class="n">:stdout</span>)
 <span class="k">end</span></code></pre>
 <p>One may also provision a <code>TracerProvider</code> object directly:</p>
 <pre><code class="language-crystal">tracer_provider <span class="o">=</span> <span class="t">OpenTelemetry</span>.tracer_provider(<span class="s">&quot;my_app_or_library&quot;</span>, <span class="s">&quot;1.1.1&quot;</span>)
@@ -1125,12 +1135,12 @@ tracer_provider <span class="o">=</span> <span class="t">OpenTelemetry</span>.tr
   tracer.service_version <span class="o">=</span> <span class="s">&quot;1.1.1&quot;</span>
 <span class="k">end</span></code></pre>
 <p>This allows multiple providers with different configuration to be created:</p>
-<pre><code class="language-crystal">provider_a <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">TracerProvider</span>.<span class="k">new</span>(<span class="s">&quot;my_app_or_library&quot;</span>, <span class="s">&quot;1.1.1&quot;</span>)
-provider_a.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.<span class="k">new</span>(variant: <span class="n">:stdout</span>)</code></pre>
-<pre><code class="language-crystal">provider_b <span class="o">=</span> <span class="t">OpenTelementry</span><span class="t">::</span><span class="t">TracerProvider</span>.<span class="k">new</span> <span class="k">do</span> <span class="o">|</span>config<span class="o">|</span>
+<pre><code class="language-crystal">provider_a <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">TracerProvider</span>.new(<span class="s">&quot;my_app_or_library&quot;</span>, <span class="s">&quot;1.1.1&quot;</span>)
+provider_a.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.new(variant: <span class="n">:stdout</span>)</code></pre>
+<pre><code class="language-crystal">provider_b <span class="o">=</span> <span class="t">OpenTelementry</span><span class="t">::</span><span class="t">TracerProvider</span>.new <span class="k">do</span> <span class="o">|</span>config<span class="o">|</span>
   config.service_name <span class="o">=</span> <span class="s">&quot;my_app_or_library&quot;</span>
   config.service_version <span class="o">=</span> <span class="s">&quot;1.1.1&quot;</span>
-  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.<span class="k">new</span>(variant: <span class="n">:stdout</span>)
+  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.new(variant: <span class="n">:stdout</span>)
 <span class="k">end</span></code></pre>
 <p>All <code>TracerProvider</code> configuration done in this way will respect OpenTelemetry SDK conventions for environment variable based configuration. Configuration delivered via environment variables supercedes configuration delivered in code. For example:</p>
 <p><em>environment variables</em></p>
@@ -1143,10 +1153,10 @@ OTEL_TRACES_SAMPLER_ARG=&quot;0.10&quot;</code></pre>
 <pre><code class="language-crystal"><span class="t">OpenTelemetry</span>.configure <span class="k">do</span> <span class="o">|</span>config<span class="o">|</span>
   config.service_name <span class="o">=</span> <span class="s">&quot;Fibonacci Server&quot;</span>
   config.service_version <span class="o">=</span> <span class="t">Fibonacci</span><span class="t">::</span><span class="t">VERSION</span>
-  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.<span class="k">new</span>(variant: <span class="n">:http</span>) <span class="k">do</span> <span class="o">|</span>exporter<span class="o">|</span>
+  config.exporter <span class="o">=</span> <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span>.new(variant: <span class="n">:http</span>) <span class="k">do</span> <span class="o">|</span>exporter<span class="o">|</span>
     exporter <span class="o">=</span> exporter.<span class="k">as</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Exporter</span><span class="t">::</span><span class="t">Http</span>)
     exporter.endpoint <span class="o">=</span> <span class="s">&quot;https://otlp.nr-data.net:4318/v1/traces&quot;</span>
-    headers <span class="o">=</span> <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.<span class="k">new</span>
+    headers <span class="o">=</span> <span class="t">HTTP</span><span class="t">::</span><span class="t">Headers</span>.new
     headers[<span class="s">&quot;api-key&quot;</span>] <span class="o">=</span> <span class="t">ENV</span>[<span class="s">&quot;NEW_RELIC_LICENSE_KEY&quot;</span>]?.to_s
     exporter.headers <span class="o">=</span> headers
   <span class="k">end</span>

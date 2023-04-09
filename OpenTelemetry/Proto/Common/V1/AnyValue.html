@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Common::V1::AnyValue - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Common::V1::AnyValue - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:string_value</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:bool_value</span>, pb_type: <span class="n">:bool</span>, crystal_type: <span class="t">Bool</span>, cast_type: <span class="t">Bool</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:int_value</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> =&gt; {name: <span class="n">:double_value</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> =&gt; {name: <span class="n">:array_value</span>, pb_type: <span class="t">ArrayValue</span>, crystal_type: <span class="t">ArrayValue</span>, cast_type: <span class="t">ArrayValue</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> =&gt; {name: <span class="n">:kvlist_value</span>, pb_type: <span class="t">KeyValueList</span>, crystal_type: <span class="t">KeyValueList</span>, cast_type: <span class="t">KeyValueList</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> =&gt; {name: <span class="n">:bytes_value</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:string_value</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:bool_value</span>, pb_type: <span class="n">:bool</span>, crystal_type: <span class="t">Bool</span>, cast_type: <span class="t">Bool</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:int_value</span>, pb_type: <span class="n">:int64</span>, crystal_type: <span class="t">Int64</span>, cast_type: <span class="t">Int64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> <span class="o">=&gt;</span> {name: <span class="n">:double_value</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> <span class="o">=&gt;</span> {name: <span class="n">:array_value</span>, pb_type: <span class="t">ArrayValue</span>, crystal_type: <span class="t">ArrayValue</span>, cast_type: <span class="t">ArrayValue</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> <span class="o">=&gt;</span> {name: <span class="n">:kvlist_value</span>, pb_type: <span class="t">KeyValueList</span>, crystal_type: <span class="t">KeyValueList</span>, cast_type: <span class="t">KeyValueList</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> <span class="o">=&gt;</span> {name: <span class="n">:bytes_value</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28string_value%3AString%3F%3Dnil%2Cbool_value%3ABool%3F%3Dnil%2Cint_value%3AInt64%3F%3Dnil%2Cdouble_value%3AFloat64%3F%3Dnil%2Carray_value%3AArrayValue%3F%3Dnil%2Ckvlist_value%3AKeyValueList%3F%3Dnil%2Cbytes_value%3ASlice%28UInt8%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(string_value : String? = <span class="n">nil</span>, bool_value : Bool? = <span class="n">nil</span>, int_value : Int64? = <span class="n">nil</span>, double_value : Float64? = <span class="n">nil</span>, array_value : ArrayValue? = <span class="n">nil</span>, kvlist_value : KeyValueList? = <span class="n">nil</span>, bytes_value : Slice(UInt8)? = <span class="n">nil</span>)</a>
+        <a href="#new%28string_value%3AString%7CNil%3Dnil%2Cbool_value%3ABool%7CNil%3Dnil%2Cint_value%3AInt64%7CNil%3Dnil%2Cdouble_value%3AFloat64%7CNil%3Dnil%2Carray_value%3AArrayValue%7CNil%3Dnil%2Ckvlist_value%3AKeyValueList%7CNil%3Dnil%2Cbytes_value%3ASlice%28UInt8%29%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(string_value : String | Nil = <span class="n">nil</span>, bool_value : Bool | Nil = <span class="n">nil</span>, int_value : Int64 | Nil = <span class="n">nil</span>, double_value : Float64 | Nil = <span class="n">nil</span>, array_value : ArrayValue | Nil = <span class="n">nil</span>, kvlist_value : KeyValueList | Nil = <span class="n">nil</span>, bytes_value : Slice(UInt8) | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,72 +1199,72 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#array_value%3AArrayValue%3F-instance-method" class="signature"><strong>#array_value</strong> : ArrayValue?</a>
+        <a href="#array_value%3AArrayValue%7CNil-instance-method" class="signature"><strong>#array_value</strong> : ArrayValue | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#array_value%3D%28array_value%3AArrayValue%3F%29-instance-method" class="signature"><strong>#array_value=</strong>(array_value : ArrayValue?)</a>
+        <a href="#array_value%3D%28array_value%3AArrayValue%7CNil%29-instance-method" class="signature"><strong>#array_value=</strong>(array_value : ArrayValue | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bool_value%3ABool%3F-instance-method" class="signature"><strong>#bool_value</strong> : Bool?</a>
+        <a href="#bool_value%3ABool%7CNil-instance-method" class="signature"><strong>#bool_value</strong> : Bool | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bool_value%3D%28bool_value%3ABool%3F%29-instance-method" class="signature"><strong>#bool_value=</strong>(bool_value : Bool?)</a>
+        <a href="#bool_value%3D%28bool_value%3ABool%7CNil%29-instance-method" class="signature"><strong>#bool_value=</strong>(bool_value : Bool | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bytes_value%3ASlice%28UInt8%29%3F-instance-method" class="signature"><strong>#bytes_value</strong> : Slice(UInt8)?</a>
+        <a href="#bytes_value%3ASlice%28UInt8%29%7CNil-instance-method" class="signature"><strong>#bytes_value</strong> : Slice(UInt8) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bytes_value%3D%28bytes_value%3ASlice%28UInt8%29%3F%29-instance-method" class="signature"><strong>#bytes_value=</strong>(bytes_value : Slice(UInt8)?)</a>
+        <a href="#bytes_value%3D%28bytes_value%3ASlice%28UInt8%29%7CNil%29-instance-method" class="signature"><strong>#bytes_value=</strong>(bytes_value : Slice(UInt8) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#double_value%3AFloat64%3F-instance-method" class="signature"><strong>#double_value</strong> : Float64?</a>
+        <a href="#double_value%3AFloat64%7CNil-instance-method" class="signature"><strong>#double_value</strong> : Float64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#double_value%3D%28double_value%3AFloat64%3F%29-instance-method" class="signature"><strong>#double_value=</strong>(double_value : Float64?)</a>
+        <a href="#double_value%3D%28double_value%3AFloat64%7CNil%29-instance-method" class="signature"><strong>#double_value=</strong>(double_value : Float64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#int_value%3AInt64%3F-instance-method" class="signature"><strong>#int_value</strong> : Int64?</a>
+        <a href="#int_value%3AInt64%7CNil-instance-method" class="signature"><strong>#int_value</strong> : Int64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#int_value%3D%28int_value%3AInt64%3F%29-instance-method" class="signature"><strong>#int_value=</strong>(int_value : Int64?)</a>
+        <a href="#int_value%3D%28int_value%3AInt64%7CNil%29-instance-method" class="signature"><strong>#int_value=</strong>(int_value : Int64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#kvlist_value%3AKeyValueList%3F-instance-method" class="signature"><strong>#kvlist_value</strong> : KeyValueList?</a>
+        <a href="#kvlist_value%3AKeyValueList%7CNil-instance-method" class="signature"><strong>#kvlist_value</strong> : KeyValueList | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#kvlist_value%3D%28kvlist_value%3AKeyValueList%3F%29-instance-method" class="signature"><strong>#kvlist_value=</strong>(kvlist_value : KeyValueList?)</a>
+        <a href="#kvlist_value%3D%28kvlist_value%3AKeyValueList%7CNil%29-instance-method" class="signature"><strong>#kvlist_value=</strong>(kvlist_value : KeyValueList | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#string_value%3AString%3F-instance-method" class="signature"><strong>#string_value</strong> : String?</a>
+        <a href="#string_value%3AString%7CNil-instance-method" class="signature"><strong>#string_value</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#string_value%3D%28string_value%3AString%3F%29-instance-method" class="signature"><strong>#string_value=</strong>(string_value : String?)</a>
+        <a href="#string_value%3D%28string_value%3AString%7CNil%29-instance-method" class="signature"><strong>#string_value=</strong>(string_value : String | Nil)</a>
         
       </li>
     
@@ -1342,12 +1352,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(string_value:String?=nil,bool_value:Bool?=nil,int_value:Int64?=nil,double_value:Float64?=nil,array_value:ArrayValue?=nil,kvlist_value:KeyValueList?=nil,bytes_value:Slice(UInt8)?=nil)-class-method">
+    <div class="entry-detail" id="new(string_value:String|Nil=nil,bool_value:Bool|Nil=nil,int_value:Int64|Nil=nil,double_value:Float64|Nil=nil,array_value:ArrayValue|Nil=nil,kvlist_value:KeyValueList|Nil=nil,bytes_value:Slice(UInt8)|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(string_value : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, bool_value : Bool? = <span class="n">nil</span>, int_value : Int64? = <span class="n">nil</span>, double_value : Float64? = <span class="n">nil</span>, array_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a>? = <span class="n">nil</span>, kvlist_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a>? = <span class="n">nil</span>, bytes_value : Slice(UInt8)? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(string_value : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, bool_value : Bool | Nil = <span class="n">nil</span>, int_value : Int64 | Nil = <span class="n">nil</span>, double_value : Float64 | Nil = <span class="n">nil</span>, array_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a> | Nil = <span class="n">nil</span>, kvlist_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a> | Nil = <span class="n">nil</span>, bytes_value : Slice(UInt8) | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28string_value%3AString%3F%3Dnil%2Cbool_value%3ABool%3F%3Dnil%2Cint_value%3AInt64%3F%3Dnil%2Cdouble_value%3AFloat64%3F%3Dnil%2Carray_value%3AArrayValue%3F%3Dnil%2Ckvlist_value%3AKeyValueList%3F%3Dnil%2Cbytes_value%3ASlice%28UInt8%29%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28string_value%3AString%7CNil%3Dnil%2Cbool_value%3ABool%7CNil%3Dnil%2Cint_value%3AInt64%7CNil%3Dnil%2Cdouble_value%3AFloat64%7CNil%3Dnil%2Carray_value%3AArrayValue%7CNil%3Dnil%2Ckvlist_value%3AKeyValueList%7CNil%3Dnil%2Cbytes_value%3ASlice%28UInt8%29%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1408,12 +1418,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="array_value:ArrayValue?-instance-method">
+    <div class="entry-detail" id="array_value:ArrayValue|Nil-instance-method">
       <div class="signature">
         
-        def <strong>array_value</strong> : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a>?
+        def <strong>array_value</strong> : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a> | Nil
 
-        <a class="method-permalink" href="#array_value%3AArrayValue%3F-instance-method">#</a>
+        <a class="method-permalink" href="#array_value%3AArrayValue%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1422,12 +1432,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="array_value=(array_value:ArrayValue?)-instance-method">
+    <div class="entry-detail" id="array_value=(array_value:ArrayValue|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>array_value=</strong>(array_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a>?)
+        def <strong>array_value=</strong>(array_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/ArrayValue.html">ArrayValue</a> | Nil)
 
-        <a class="method-permalink" href="#array_value%3D%28array_value%3AArrayValue%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#array_value%3D%28array_value%3AArrayValue%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1436,12 +1446,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="bool_value:Bool?-instance-method">
+    <div class="entry-detail" id="bool_value:Bool|Nil-instance-method">
       <div class="signature">
         
-        def <strong>bool_value</strong> : Bool?
+        def <strong>bool_value</strong> : Bool | Nil
 
-        <a class="method-permalink" href="#bool_value%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#bool_value%3ABool%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1450,12 +1460,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="bool_value=(bool_value:Bool?)-instance-method">
+    <div class="entry-detail" id="bool_value=(bool_value:Bool|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>bool_value=</strong>(bool_value : Bool?)
+        def <strong>bool_value=</strong>(bool_value : Bool | Nil)
 
-        <a class="method-permalink" href="#bool_value%3D%28bool_value%3ABool%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#bool_value%3D%28bool_value%3ABool%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1464,12 +1474,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="bytes_value:Slice(UInt8)?-instance-method">
+    <div class="entry-detail" id="bytes_value:Slice(UInt8)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>bytes_value</strong> : Slice(UInt8)?
+        def <strong>bytes_value</strong> : Slice(UInt8) | Nil
 
-        <a class="method-permalink" href="#bytes_value%3ASlice%28UInt8%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#bytes_value%3ASlice%28UInt8%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1478,12 +1488,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="bytes_value=(bytes_value:Slice(UInt8)?)-instance-method">
+    <div class="entry-detail" id="bytes_value=(bytes_value:Slice(UInt8)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>bytes_value=</strong>(bytes_value : Slice(UInt8)?)
+        def <strong>bytes_value=</strong>(bytes_value : Slice(UInt8) | Nil)
 
-        <a class="method-permalink" href="#bytes_value%3D%28bytes_value%3ASlice%28UInt8%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#bytes_value%3D%28bytes_value%3ASlice%28UInt8%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1492,12 +1502,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="double_value:Float64?-instance-method">
+    <div class="entry-detail" id="double_value:Float64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>double_value</strong> : Float64?
+        def <strong>double_value</strong> : Float64 | Nil
 
-        <a class="method-permalink" href="#double_value%3AFloat64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#double_value%3AFloat64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1506,12 +1516,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="double_value=(double_value:Float64?)-instance-method">
+    <div class="entry-detail" id="double_value=(double_value:Float64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>double_value=</strong>(double_value : Float64?)
+        def <strong>double_value=</strong>(double_value : Float64 | Nil)
 
-        <a class="method-permalink" href="#double_value%3D%28double_value%3AFloat64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#double_value%3D%28double_value%3AFloat64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1520,12 +1530,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="int_value:Int64?-instance-method">
+    <div class="entry-detail" id="int_value:Int64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>int_value</strong> : Int64?
+        def <strong>int_value</strong> : Int64 | Nil
 
-        <a class="method-permalink" href="#int_value%3AInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#int_value%3AInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1534,12 +1544,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="int_value=(int_value:Int64?)-instance-method">
+    <div class="entry-detail" id="int_value=(int_value:Int64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>int_value=</strong>(int_value : Int64?)
+        def <strong>int_value=</strong>(int_value : Int64 | Nil)
 
-        <a class="method-permalink" href="#int_value%3D%28int_value%3AInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#int_value%3D%28int_value%3AInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1548,12 +1558,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="kvlist_value:KeyValueList?-instance-method">
+    <div class="entry-detail" id="kvlist_value:KeyValueList|Nil-instance-method">
       <div class="signature">
         
-        def <strong>kvlist_value</strong> : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a>?
+        def <strong>kvlist_value</strong> : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a> | Nil
 
-        <a class="method-permalink" href="#kvlist_value%3AKeyValueList%3F-instance-method">#</a>
+        <a class="method-permalink" href="#kvlist_value%3AKeyValueList%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1562,12 +1572,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="kvlist_value=(kvlist_value:KeyValueList?)-instance-method">
+    <div class="entry-detail" id="kvlist_value=(kvlist_value:KeyValueList|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>kvlist_value=</strong>(kvlist_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a>?)
+        def <strong>kvlist_value=</strong>(kvlist_value : <a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValueList.html">KeyValueList</a> | Nil)
 
-        <a class="method-permalink" href="#kvlist_value%3D%28kvlist_value%3AKeyValueList%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#kvlist_value%3D%28kvlist_value%3AKeyValueList%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1576,12 +1586,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="string_value:String?-instance-method">
+    <div class="entry-detail" id="string_value:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>string_value</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>string_value</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#string_value%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#string_value%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1590,12 +1600,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="string_value=(string_value:String?)-instance-method">
+    <div class="entry-detail" id="string_value=(string_value:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>string_value=</strong>(string_value : <a href="../../../../String.html">String</a>?)
+        def <strong>string_value=</strong>(string_value : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#string_value%3D%28string_value%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#string_value%3D%28string_value%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

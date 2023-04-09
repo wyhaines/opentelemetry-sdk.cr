@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>Debug - opentelemetry-sdk 0.5.1</title>
+  <title>Debug - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="OpenTelemetry/Trace.html">Trace</a>
       
@@ -1149,7 +1159,7 @@ environment variable.</p>
       
     
       <dt class="entry-const" id="MDEBUG_COLORS">
-        <strong>MDEBUG_COLORS</strong> = <code>{<span class="n">:severity</span> =&gt; <span class="s">&quot;82&quot;</span>, <span class="n">:separator</span> =&gt; <span class="s">&quot;230&quot;</span>, <span class="n">:file</span> =&gt; <span class="s">&quot;8&quot;</span>, <span class="n">:lineno</span> =&gt; <span class="s">&quot;8&quot;</span>, <span class="n">:message</span> =&gt; <span class="s">&quot;15&quot;</span>}</code>
+        <strong>MDEBUG_COLORS</strong> = <code>{<span class="n">:severity</span> <span class="o">=&gt;</span> <span class="s">&quot;82&quot;</span>, <span class="n">:separator</span> <span class="o">=&gt;</span> <span class="s">&quot;230&quot;</span>, <span class="n">:file</span> <span class="o">=&gt;</span> <span class="s">&quot;8&quot;</span>, <span class="n">:lineno</span> <span class="o">=&gt;</span> <span class="s">&quot;8&quot;</span>, <span class="n">:message</span> <span class="o">=&gt;</span> <span class="s">&quot;15&quot;</span>}</code>
       </dt>
       
       <dd class="entry-const-doc">
@@ -1177,7 +1187,7 @@ codes, see this link:
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#enabled%3D%28enabled%3ABool%3F%29-class-method" class="signature"><strong>.enabled=</strong>(enabled : Bool?)</a>
+        <a href="#enabled%3D%28enabled%3ABool%7CNil%29-class-method" class="signature"><strong>.enabled=</strong>(enabled : Bool | Nil)</a>
         
       </li>
     
@@ -1227,12 +1237,12 @@ codes, see this link:
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="enabled=(enabled:Bool?)-class-method">
+    <div class="entry-detail" id="enabled=(enabled:Bool|Nil)-class-method">
       <div class="signature">
         
-        def self.<strong>enabled=</strong>(enabled : Bool?)
+        def self.<strong>enabled=</strong>(enabled : Bool | Nil)
 
-        <a class="method-permalink" href="#enabled%3D%28enabled%3ABool%3F%29-class-method">#</a>
+        <a class="method-permalink" href="#enabled%3D%28enabled%3ABool%7CNil%29-class-method">#</a>
       </div>
       
       <br/>

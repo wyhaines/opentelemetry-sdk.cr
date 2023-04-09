@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Metrics::V1::ExponentialHistogramDataPoint - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Metrics::V1::ExponentialHistogramDataPoint - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:attributes</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:start_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> =&gt; {name: <span class="n">:count</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> =&gt; {name: <span class="n">:sum</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> =&gt; {name: <span class="n">:scale</span>, pb_type: <span class="n">:sint32</span>, crystal_type: <span class="t">Int32</span>, cast_type: <span class="t">Int32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> =&gt; {name: <span class="n">:zero_count</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> =&gt; {name: <span class="n">:positive</span>, pb_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, crystal_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, cast_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> =&gt; {name: <span class="n">:negative</span>, pb_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, crystal_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, cast_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> =&gt; {name: <span class="n">:flags</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> =&gt; {name: <span class="n">:exemplars</span>, pb_type: <span class="t">Exemplar</span>, crystal_type: <span class="t">Exemplar</span>, cast_type: <span class="t">Array</span>(<span class="t">Exemplar</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">12</span> =&gt; {name: <span class="n">:min</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">13</span> =&gt; {name: <span class="n">:max</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:attributes</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:start_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> <span class="o">=&gt;</span> {name: <span class="n">:count</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> <span class="o">=&gt;</span> {name: <span class="n">:sum</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> <span class="o">=&gt;</span> {name: <span class="n">:scale</span>, pb_type: <span class="n">:sint32</span>, crystal_type: <span class="t">Int32</span>, cast_type: <span class="t">Int32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> <span class="o">=&gt;</span> {name: <span class="n">:zero_count</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> <span class="o">=&gt;</span> {name: <span class="n">:positive</span>, pb_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, crystal_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, cast_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> <span class="o">=&gt;</span> {name: <span class="n">:negative</span>, pb_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, crystal_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>, cast_type: <span class="t">ExponentialHistogramDataPoint</span><span class="t">::</span><span class="t">Buckets</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> <span class="o">=&gt;</span> {name: <span class="n">:flags</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> <span class="o">=&gt;</span> {name: <span class="n">:exemplars</span>, pb_type: <span class="t">Exemplar</span>, crystal_type: <span class="t">Exemplar</span>, cast_type: <span class="t">Array</span>(<span class="t">Exemplar</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">12</span> <span class="o">=&gt;</span> {name: <span class="n">:min</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">13</span> <span class="o">=&gt;</span> {name: <span class="n">:max</span>, pb_type: <span class="n">:double</span>, crystal_type: <span class="t">Float64</span>, cast_type: <span class="t">Float64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%3Dnil%2Cstart_time_unix_nano%3AUInt64%3F%3Dnil%2Ctime_unix_nano%3AUInt64%3F%3Dnil%2Ccount%3AUInt64%3F%3Dnil%2Csum%3AFloat64%3F%3Dnil%2Cscale%3AInt32%3F%3Dnil%2Czero_count%3AUInt64%3F%3Dnil%2Cpositive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%3Dnil%2Cnegative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%3Dnil%2Cflags%3AUInt32%3F%3Dnil%2Cexemplars%3AArray%28Exemplar%29%3F%3Dnil%2Cmin%3AFloat64%3F%3Dnil%2Cmax%3AFloat64%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue)? = <span class="n">nil</span>, start_time_unix_nano : UInt64? = <span class="n">nil</span>, time_unix_nano : UInt64? = <span class="n">nil</span>, count : UInt64? = <span class="n">nil</span>, sum : Float64? = <span class="n">nil</span>, scale : Int32? = <span class="n">nil</span>, zero_count : UInt64? = <span class="n">nil</span>, positive : ExponentialHistogramDataPoint::Buckets? = <span class="n">nil</span>, negative : ExponentialHistogramDataPoint::Buckets? = <span class="n">nil</span>, flags : UInt32? = <span class="n">nil</span>, exemplars : Array(Exemplar)? = <span class="n">nil</span>, min : Float64? = <span class="n">nil</span>, max : Float64? = <span class="n">nil</span>)</a>
+        <a href="#new%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%3Dnil%2Cstart_time_unix_nano%3AUInt64%7CNil%3Dnil%2Ctime_unix_nano%3AUInt64%7CNil%3Dnil%2Ccount%3AUInt64%7CNil%3Dnil%2Csum%3AFloat64%7CNil%3Dnil%2Cscale%3AInt32%7CNil%3Dnil%2Czero_count%3AUInt64%7CNil%3Dnil%2Cpositive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%3Dnil%2Cnegative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%3Dnil%2Cflags%3AUInt32%7CNil%3Dnil%2Cexemplars%3AArray%28Exemplar%29%7CNil%3Dnil%2Cmin%3AFloat64%7CNil%3Dnil%2Cmax%3AFloat64%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil = <span class="n">nil</span>, start_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, count : UInt64 | Nil = <span class="n">nil</span>, sum : Float64 | Nil = <span class="n">nil</span>, scale : Int32 | Nil = <span class="n">nil</span>, zero_count : UInt64 | Nil = <span class="n">nil</span>, positive : ExponentialHistogramDataPoint::Buckets | Nil = <span class="n">nil</span>, negative : ExponentialHistogramDataPoint::Buckets | Nil = <span class="n">nil</span>, flags : UInt32 | Nil = <span class="n">nil</span>, exemplars : Array(Exemplar) | Nil = <span class="n">nil</span>, min : Float64 | Nil = <span class="n">nil</span>, max : Float64 | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,122 +1199,122 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F-instance-method" class="signature"><strong>#attributes</strong> : Array(OpenTelemetry::Proto::Common::V1::KeyValue)?</a>
+        <a href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil-instance-method" class="signature"><strong>#attributes</strong> : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%29-instance-method" class="signature"><strong>#attributes=</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue)?)</a>
+        <a href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%29-instance-method" class="signature"><strong>#attributes=</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#count%3AUInt64%3F-instance-method" class="signature"><strong>#count</strong> : UInt64?</a>
+        <a href="#count%3AUInt64%7CNil-instance-method" class="signature"><strong>#count</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#count%3D%28count%3AUInt64%3F%29-instance-method" class="signature"><strong>#count=</strong>(count : UInt64?)</a>
+        <a href="#count%3D%28count%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#count=</strong>(count : UInt64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exemplars%3AArray%28Exemplar%29%3F-instance-method" class="signature"><strong>#exemplars</strong> : Array(Exemplar)?</a>
+        <a href="#exemplars%3AArray%28Exemplar%29%7CNil-instance-method" class="signature"><strong>#exemplars</strong> : Array(Exemplar) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exemplars%3D%28exemplars%3AArray%28Exemplar%29%3F%29-instance-method" class="signature"><strong>#exemplars=</strong>(exemplars : Array(Exemplar)?)</a>
+        <a href="#exemplars%3D%28exemplars%3AArray%28Exemplar%29%7CNil%29-instance-method" class="signature"><strong>#exemplars=</strong>(exemplars : Array(Exemplar) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#flags%3AUInt32%3F-instance-method" class="signature"><strong>#flags</strong> : UInt32?</a>
+        <a href="#flags%3AUInt32%7CNil-instance-method" class="signature"><strong>#flags</strong> : UInt32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#flags%3D%28flags%3AUInt32%3F%29-instance-method" class="signature"><strong>#flags=</strong>(flags : UInt32?)</a>
+        <a href="#flags%3D%28flags%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#flags=</strong>(flags : UInt32 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max%3AFloat64%3F-instance-method" class="signature"><strong>#max</strong> : Float64?</a>
+        <a href="#max%3AFloat64%7CNil-instance-method" class="signature"><strong>#max</strong> : Float64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max%3D%28max%3AFloat64%3F%29-instance-method" class="signature"><strong>#max=</strong>(max : Float64?)</a>
+        <a href="#max%3D%28max%3AFloat64%7CNil%29-instance-method" class="signature"><strong>#max=</strong>(max : Float64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#min%3AFloat64%3F-instance-method" class="signature"><strong>#min</strong> : Float64?</a>
+        <a href="#min%3AFloat64%7CNil-instance-method" class="signature"><strong>#min</strong> : Float64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#min%3D%28min%3AFloat64%3F%29-instance-method" class="signature"><strong>#min=</strong>(min : Float64?)</a>
+        <a href="#min%3D%28min%3AFloat64%7CNil%29-instance-method" class="signature"><strong>#min=</strong>(min : Float64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#negative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F-instance-method" class="signature"><strong>#negative</strong> : ExponentialHistogramDataPoint::Buckets?</a>
+        <a href="#negative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil-instance-method" class="signature"><strong>#negative</strong> : ExponentialHistogramDataPoint::Buckets | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#negative%3D%28negative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%29-instance-method" class="signature"><strong>#negative=</strong>(negative : ExponentialHistogramDataPoint::Buckets?)</a>
+        <a href="#negative%3D%28negative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%29-instance-method" class="signature"><strong>#negative=</strong>(negative : ExponentialHistogramDataPoint::Buckets | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#positive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F-instance-method" class="signature"><strong>#positive</strong> : ExponentialHistogramDataPoint::Buckets?</a>
+        <a href="#positive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil-instance-method" class="signature"><strong>#positive</strong> : ExponentialHistogramDataPoint::Buckets | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#positive%3D%28positive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%29-instance-method" class="signature"><strong>#positive=</strong>(positive : ExponentialHistogramDataPoint::Buckets?)</a>
+        <a href="#positive%3D%28positive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%29-instance-method" class="signature"><strong>#positive=</strong>(positive : ExponentialHistogramDataPoint::Buckets | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%3AInt32%3F-instance-method" class="signature"><strong>#scale</strong> : Int32?</a>
+        <a href="#scale%3AInt32%7CNil-instance-method" class="signature"><strong>#scale</strong> : Int32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%3D%28scale%3AInt32%3F%29-instance-method" class="signature"><strong>#scale=</strong>(scale : Int32?)</a>
+        <a href="#scale%3D%28scale%3AInt32%7CNil%29-instance-method" class="signature"><strong>#scale=</strong>(scale : Int32 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#start_time_unix_nano%3AUInt64%3F-instance-method" class="signature"><strong>#start_time_unix_nano</strong> : UInt64?</a>
+        <a href="#start_time_unix_nano%3AUInt64%7CNil-instance-method" class="signature"><strong>#start_time_unix_nano</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%3F%29-instance-method" class="signature"><strong>#start_time_unix_nano=</strong>(start_time_unix_nano : UInt64?)</a>
+        <a href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#start_time_unix_nano=</strong>(start_time_unix_nano : UInt64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sum%3AFloat64%3F-instance-method" class="signature"><strong>#sum</strong> : Float64?</a>
+        <a href="#sum%3AFloat64%7CNil-instance-method" class="signature"><strong>#sum</strong> : Float64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sum%3D%28sum%3AFloat64%3F%29-instance-method" class="signature"><strong>#sum=</strong>(sum : Float64?)</a>
+        <a href="#sum%3D%28sum%3AFloat64%7CNil%29-instance-method" class="signature"><strong>#sum=</strong>(sum : Float64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#time_unix_nano%3AUInt64%3F-instance-method" class="signature"><strong>#time_unix_nano</strong> : UInt64?</a>
+        <a href="#time_unix_nano%3AUInt64%7CNil-instance-method" class="signature"><strong>#time_unix_nano</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#time_unix_nano%3D%28time_unix_nano%3AUInt64%3F%29-instance-method" class="signature"><strong>#time_unix_nano=</strong>(time_unix_nano : UInt64?)</a>
+        <a href="#time_unix_nano%3D%28time_unix_nano%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#time_unix_nano=</strong>(time_unix_nano : UInt64 | Nil)</a>
         
       </li>
     
@@ -1319,12 +1329,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#zero_count%3AUInt64%3F-instance-method" class="signature"><strong>#zero_count</strong> : UInt64?</a>
+        <a href="#zero_count%3AUInt64%7CNil-instance-method" class="signature"><strong>#zero_count</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#zero_count%3D%28zero_count%3AUInt64%3F%29-instance-method" class="signature"><strong>#zero_count=</strong>(zero_count : UInt64?)</a>
+        <a href="#zero_count%3D%28zero_count%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#zero_count=</strong>(zero_count : UInt64 | Nil)</a>
         
       </li>
     
@@ -1402,12 +1412,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?=nil,start_time_unix_nano:UInt64?=nil,time_unix_nano:UInt64?=nil,count:UInt64?=nil,sum:Float64?=nil,scale:Int32?=nil,zero_count:UInt64?=nil,positive:ExponentialHistogramDataPoint::Buckets?=nil,negative:ExponentialHistogramDataPoint::Buckets?=nil,flags:UInt32?=nil,exemplars:Array(Exemplar)?=nil,min:Float64?=nil,max:Float64?=nil)-class-method">
+    <div class="entry-detail" id="new(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil=nil,start_time_unix_nano:UInt64|Nil=nil,time_unix_nano:UInt64|Nil=nil,count:UInt64|Nil=nil,sum:Float64|Nil=nil,scale:Int32|Nil=nil,zero_count:UInt64|Nil=nil,positive:ExponentialHistogramDataPoint::Buckets|Nil=nil,negative:ExponentialHistogramDataPoint::Buckets|Nil=nil,flags:UInt32|Nil=nil,exemplars:Array(Exemplar)|Nil=nil,min:Float64|Nil=nil,max:Float64|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)? = <span class="n">nil</span>, start_time_unix_nano : UInt64? = <span class="n">nil</span>, time_unix_nano : UInt64? = <span class="n">nil</span>, count : UInt64? = <span class="n">nil</span>, sum : Float64? = <span class="n">nil</span>, scale : Int32? = <span class="n">nil</span>, zero_count : UInt64? = <span class="n">nil</span>, positive : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>? = <span class="n">nil</span>, negative : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>? = <span class="n">nil</span>, flags : UInt32? = <span class="n">nil</span>, exemplars : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>)? = <span class="n">nil</span>, min : Float64? = <span class="n">nil</span>, max : Float64? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil = <span class="n">nil</span>, start_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, count : UInt64 | Nil = <span class="n">nil</span>, sum : Float64 | Nil = <span class="n">nil</span>, scale : Int32 | Nil = <span class="n">nil</span>, zero_count : UInt64 | Nil = <span class="n">nil</span>, positive : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil = <span class="n">nil</span>, negative : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil = <span class="n">nil</span>, flags : UInt32 | Nil = <span class="n">nil</span>, exemplars : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>) | Nil = <span class="n">nil</span>, min : Float64 | Nil = <span class="n">nil</span>, max : Float64 | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%3Dnil%2Cstart_time_unix_nano%3AUInt64%3F%3Dnil%2Ctime_unix_nano%3AUInt64%3F%3Dnil%2Ccount%3AUInt64%3F%3Dnil%2Csum%3AFloat64%3F%3Dnil%2Cscale%3AInt32%3F%3Dnil%2Czero_count%3AUInt64%3F%3Dnil%2Cpositive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%3Dnil%2Cnegative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%3Dnil%2Cflags%3AUInt32%3F%3Dnil%2Cexemplars%3AArray%28Exemplar%29%3F%3Dnil%2Cmin%3AFloat64%3F%3Dnil%2Cmax%3AFloat64%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%3Dnil%2Cstart_time_unix_nano%3AUInt64%7CNil%3Dnil%2Ctime_unix_nano%3AUInt64%7CNil%3Dnil%2Ccount%3AUInt64%7CNil%3Dnil%2Csum%3AFloat64%7CNil%3Dnil%2Cscale%3AInt32%7CNil%3Dnil%2Czero_count%3AUInt64%7CNil%3Dnil%2Cpositive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%3Dnil%2Cnegative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%3Dnil%2Cflags%3AUInt32%7CNil%3Dnil%2Cexemplars%3AArray%28Exemplar%29%7CNil%3Dnil%2Cmin%3AFloat64%7CNil%3Dnil%2Cmax%3AFloat64%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1468,12 +1478,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?-instance-method">
+    <div class="entry-detail" id="attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>attributes</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)?
+        def <strong>attributes</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil
 
-        <a class="method-permalink" href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1482,12 +1492,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="attributes=(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?)-instance-method">
+    <div class="entry-detail" id="attributes=(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>attributes=</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)?)
+        def <strong>attributes=</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil)
 
-        <a class="method-permalink" href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1496,12 +1506,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="count:UInt64?-instance-method">
+    <div class="entry-detail" id="count:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>count</strong> : UInt64?
+        def <strong>count</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#count%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#count%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1510,12 +1520,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="count=(count:UInt64?)-instance-method">
+    <div class="entry-detail" id="count=(count:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>count=</strong>(count : UInt64?)
+        def <strong>count=</strong>(count : UInt64 | Nil)
 
-        <a class="method-permalink" href="#count%3D%28count%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#count%3D%28count%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1524,12 +1534,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="exemplars:Array(Exemplar)?-instance-method">
+    <div class="entry-detail" id="exemplars:Array(Exemplar)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>exemplars</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>)?
+        def <strong>exemplars</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>) | Nil
 
-        <a class="method-permalink" href="#exemplars%3AArray%28Exemplar%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#exemplars%3AArray%28Exemplar%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1538,12 +1548,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="exemplars=(exemplars:Array(Exemplar)?)-instance-method">
+    <div class="entry-detail" id="exemplars=(exemplars:Array(Exemplar)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>exemplars=</strong>(exemplars : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>)?)
+        def <strong>exemplars=</strong>(exemplars : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/Exemplar.html">Exemplar</a>) | Nil)
 
-        <a class="method-permalink" href="#exemplars%3D%28exemplars%3AArray%28Exemplar%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#exemplars%3D%28exemplars%3AArray%28Exemplar%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1552,12 +1562,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="flags:UInt32?-instance-method">
+    <div class="entry-detail" id="flags:UInt32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>flags</strong> : UInt32?
+        def <strong>flags</strong> : UInt32 | Nil
 
-        <a class="method-permalink" href="#flags%3AUInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#flags%3AUInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1566,12 +1576,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="flags=(flags:UInt32?)-instance-method">
+    <div class="entry-detail" id="flags=(flags:UInt32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>flags=</strong>(flags : UInt32?)
+        def <strong>flags=</strong>(flags : UInt32 | Nil)
 
-        <a class="method-permalink" href="#flags%3D%28flags%3AUInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#flags%3D%28flags%3AUInt32%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1580,12 +1590,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max:Float64?-instance-method">
+    <div class="entry-detail" id="max:Float64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>max</strong> : Float64?
+        def <strong>max</strong> : Float64 | Nil
 
-        <a class="method-permalink" href="#max%3AFloat64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#max%3AFloat64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1594,12 +1604,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="max=(max:Float64?)-instance-method">
+    <div class="entry-detail" id="max=(max:Float64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>max=</strong>(max : Float64?)
+        def <strong>max=</strong>(max : Float64 | Nil)
 
-        <a class="method-permalink" href="#max%3D%28max%3AFloat64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#max%3D%28max%3AFloat64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1608,12 +1618,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="min:Float64?-instance-method">
+    <div class="entry-detail" id="min:Float64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>min</strong> : Float64?
+        def <strong>min</strong> : Float64 | Nil
 
-        <a class="method-permalink" href="#min%3AFloat64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#min%3AFloat64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1622,12 +1632,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="min=(min:Float64?)-instance-method">
+    <div class="entry-detail" id="min=(min:Float64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>min=</strong>(min : Float64?)
+        def <strong>min=</strong>(min : Float64 | Nil)
 
-        <a class="method-permalink" href="#min%3D%28min%3AFloat64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#min%3D%28min%3AFloat64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1636,12 +1646,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="negative:ExponentialHistogramDataPoint::Buckets?-instance-method">
+    <div class="entry-detail" id="negative:ExponentialHistogramDataPoint::Buckets|Nil-instance-method">
       <div class="signature">
         
-        def <strong>negative</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>?
+        def <strong>negative</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil
 
-        <a class="method-permalink" href="#negative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F-instance-method">#</a>
+        <a class="method-permalink" href="#negative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1650,12 +1660,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="negative=(negative:ExponentialHistogramDataPoint::Buckets?)-instance-method">
+    <div class="entry-detail" id="negative=(negative:ExponentialHistogramDataPoint::Buckets|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>negative=</strong>(negative : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>?)
+        def <strong>negative=</strong>(negative : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil)
 
-        <a class="method-permalink" href="#negative%3D%28negative%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#negative%3D%28negative%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1664,12 +1674,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="positive:ExponentialHistogramDataPoint::Buckets?-instance-method">
+    <div class="entry-detail" id="positive:ExponentialHistogramDataPoint::Buckets|Nil-instance-method">
       <div class="signature">
         
-        def <strong>positive</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>?
+        def <strong>positive</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil
 
-        <a class="method-permalink" href="#positive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F-instance-method">#</a>
+        <a class="method-permalink" href="#positive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1678,12 +1688,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="positive=(positive:ExponentialHistogramDataPoint::Buckets?)-instance-method">
+    <div class="entry-detail" id="positive=(positive:ExponentialHistogramDataPoint::Buckets|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>positive=</strong>(positive : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a>?)
+        def <strong>positive=</strong>(positive : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogramDataPoint/Buckets.html">ExponentialHistogramDataPoint::Buckets</a> | Nil)
 
-        <a class="method-permalink" href="#positive%3D%28positive%3AExponentialHistogramDataPoint%3A%3ABuckets%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#positive%3D%28positive%3AExponentialHistogramDataPoint%3A%3ABuckets%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1692,12 +1702,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="scale:Int32?-instance-method">
+    <div class="entry-detail" id="scale:Int32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>scale</strong> : Int32?
+        def <strong>scale</strong> : Int32 | Nil
 
-        <a class="method-permalink" href="#scale%3AInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#scale%3AInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1706,12 +1716,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="scale=(scale:Int32?)-instance-method">
+    <div class="entry-detail" id="scale=(scale:Int32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>scale=</strong>(scale : Int32?)
+        def <strong>scale=</strong>(scale : Int32 | Nil)
 
-        <a class="method-permalink" href="#scale%3D%28scale%3AInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#scale%3D%28scale%3AInt32%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1720,12 +1730,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="start_time_unix_nano:UInt64?-instance-method">
+    <div class="entry-detail" id="start_time_unix_nano:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>start_time_unix_nano</strong> : UInt64?
+        def <strong>start_time_unix_nano</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#start_time_unix_nano%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#start_time_unix_nano%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1734,12 +1744,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="start_time_unix_nano=(start_time_unix_nano:UInt64?)-instance-method">
+    <div class="entry-detail" id="start_time_unix_nano=(start_time_unix_nano:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>start_time_unix_nano=</strong>(start_time_unix_nano : UInt64?)
+        def <strong>start_time_unix_nano=</strong>(start_time_unix_nano : UInt64 | Nil)
 
-        <a class="method-permalink" href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1748,12 +1758,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="sum:Float64?-instance-method">
+    <div class="entry-detail" id="sum:Float64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>sum</strong> : Float64?
+        def <strong>sum</strong> : Float64 | Nil
 
-        <a class="method-permalink" href="#sum%3AFloat64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#sum%3AFloat64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1762,12 +1772,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="sum=(sum:Float64?)-instance-method">
+    <div class="entry-detail" id="sum=(sum:Float64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>sum=</strong>(sum : Float64?)
+        def <strong>sum=</strong>(sum : Float64 | Nil)
 
-        <a class="method-permalink" href="#sum%3D%28sum%3AFloat64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#sum%3D%28sum%3AFloat64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1776,12 +1786,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="time_unix_nano:UInt64?-instance-method">
+    <div class="entry-detail" id="time_unix_nano:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>time_unix_nano</strong> : UInt64?
+        def <strong>time_unix_nano</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#time_unix_nano%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#time_unix_nano%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1790,12 +1800,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="time_unix_nano=(time_unix_nano:UInt64?)-instance-method">
+    <div class="entry-detail" id="time_unix_nano=(time_unix_nano:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>time_unix_nano=</strong>(time_unix_nano : UInt64?)
+        def <strong>time_unix_nano=</strong>(time_unix_nano : UInt64 | Nil)
 
-        <a class="method-permalink" href="#time_unix_nano%3D%28time_unix_nano%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#time_unix_nano%3D%28time_unix_nano%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1832,12 +1842,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="zero_count:UInt64?-instance-method">
+    <div class="entry-detail" id="zero_count:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>zero_count</strong> : UInt64?
+        def <strong>zero_count</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#zero_count%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#zero_count%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1846,12 +1856,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="zero_count=(zero_count:UInt64?)-instance-method">
+    <div class="entry-detail" id="zero_count=(zero_count:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>zero_count=</strong>(zero_count : UInt64?)
+        def <strong>zero_count=</strong>(zero_count : UInt64 | Nil)
 
-        <a class="method-permalink" href="#zero_count%3D%28zero_count%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#zero_count%3D%28zero_count%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

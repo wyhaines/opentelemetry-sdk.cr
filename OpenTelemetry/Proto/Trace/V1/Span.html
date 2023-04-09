@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Trace::V1::Span - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Trace::V1::Span - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:trace_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:span_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:trace_state</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> =&gt; {name: <span class="n">:parent_span_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> =&gt; {name: <span class="n">:name</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> =&gt; {name: <span class="n">:kind</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>, cast_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> =&gt; {name: <span class="n">:start_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> =&gt; {name: <span class="n">:end_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> =&gt; {name: <span class="n">:attributes</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> =&gt; {name: <span class="n">:dropped_attributes_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> =&gt; {name: <span class="n">:events</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">Event</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">Event</span>, cast_type: <span class="t">Array</span>(<span class="t">Span</span><span class="t">::</span><span class="t">Event</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">12</span> =&gt; {name: <span class="n">:dropped_events_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">13</span> =&gt; {name: <span class="n">:links</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">Link</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">Link</span>, cast_type: <span class="t">Array</span>(<span class="t">Span</span><span class="t">::</span><span class="t">Link</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">14</span> =&gt; {name: <span class="n">:dropped_links_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">15</span> =&gt; {name: <span class="n">:status</span>, pb_type: <span class="t">Status</span>, crystal_type: <span class="t">Status</span>, cast_type: <span class="t">Status</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:trace_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:span_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:trace_state</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">4</span> <span class="o">=&gt;</span> {name: <span class="n">:parent_span_id</span>, pb_type: <span class="n">:bytes</span>, crystal_type: <span class="t">Slice</span>(<span class="t">UInt8</span>), cast_type: <span class="t">Slice</span>(<span class="t">UInt8</span>)?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> <span class="o">=&gt;</span> {name: <span class="n">:name</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">6</span> <span class="o">=&gt;</span> {name: <span class="n">:kind</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>, cast_type: <span class="t">Span</span><span class="t">::</span><span class="t">SpanKind</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> <span class="o">=&gt;</span> {name: <span class="n">:start_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">8</span> <span class="o">=&gt;</span> {name: <span class="n">:end_time_unix_nano</span>, pb_type: <span class="n">:fixed64</span>, crystal_type: <span class="t">UInt64</span>, cast_type: <span class="t">UInt64</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> <span class="o">=&gt;</span> {name: <span class="n">:attributes</span>, pb_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, crystal_type: <span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>, cast_type: <span class="t">Array</span>(<span class="t">OpenTelemetry</span><span class="t">::</span><span class="t">Proto</span><span class="t">::</span><span class="t">Common</span><span class="t">::</span><span class="t">V1</span><span class="t">::</span><span class="t">KeyValue</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> <span class="o">=&gt;</span> {name: <span class="n">:dropped_attributes_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> <span class="o">=&gt;</span> {name: <span class="n">:events</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">Event</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">Event</span>, cast_type: <span class="t">Array</span>(<span class="t">Span</span><span class="t">::</span><span class="t">Event</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">12</span> <span class="o">=&gt;</span> {name: <span class="n">:dropped_events_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">13</span> <span class="o">=&gt;</span> {name: <span class="n">:links</span>, pb_type: <span class="t">Span</span><span class="t">::</span><span class="t">Link</span>, crystal_type: <span class="t">Span</span><span class="t">::</span><span class="t">Link</span>, cast_type: <span class="t">Array</span>(<span class="t">Span</span><span class="t">::</span><span class="t">Link</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">14</span> <span class="o">=&gt;</span> {name: <span class="n">:dropped_links_count</span>, pb_type: <span class="n">:uint32</span>, crystal_type: <span class="t">UInt32</span>, cast_type: <span class="t">UInt32</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">15</span> <span class="o">=&gt;</span> {name: <span class="n">:status</span>, pb_type: <span class="t">Status</span>, crystal_type: <span class="t">Status</span>, cast_type: <span class="t">Status</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28trace_id%3ASlice%28UInt8%29%3F%3Dnil%2Cspan_id%3ASlice%28UInt8%29%3F%3Dnil%2Ctrace_state%3AString%3F%3Dnil%2Cparent_span_id%3ASlice%28UInt8%29%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Ckind%3ASpan%3A%3ASpanKind%3F%3Dnil%2Cstart_time_unix_nano%3AUInt64%3F%3Dnil%2Cend_time_unix_nano%3AUInt64%3F%3Dnil%2Cattributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%3Dnil%2Cdropped_attributes_count%3AUInt32%3F%3Dnil%2Cevents%3AArray%28Span%3A%3AEvent%29%3F%3Dnil%2Cdropped_events_count%3AUInt32%3F%3Dnil%2Clinks%3AArray%28Span%3A%3ALink%29%3F%3Dnil%2Cdropped_links_count%3AUInt32%3F%3Dnil%2Cstatus%3AStatus%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(trace_id : Slice(UInt8)? = <span class="n">nil</span>, span_id : Slice(UInt8)? = <span class="n">nil</span>, trace_state : String? = <span class="n">nil</span>, parent_span_id : Slice(UInt8)? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, kind : Span::SpanKind? = <span class="n">nil</span>, start_time_unix_nano : UInt64? = <span class="n">nil</span>, end_time_unix_nano : UInt64? = <span class="n">nil</span>, attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue)? = <span class="n">nil</span>, dropped_attributes_count : UInt32? = <span class="n">nil</span>, events : Array(Span::Event)? = <span class="n">nil</span>, dropped_events_count : UInt32? = <span class="n">nil</span>, links : Array(Span::Link)? = <span class="n">nil</span>, dropped_links_count : UInt32? = <span class="n">nil</span>, status : Status? = <span class="n">nil</span>)</a>
+        <a href="#new%28trace_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Cspan_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Ctrace_state%3AString%7CNil%3Dnil%2Cparent_span_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Cname%3AString%7CNil%3Dnil%2Ckind%3ASpan%3A%3ASpanKind%7CNil%3Dnil%2Cstart_time_unix_nano%3AUInt64%7CNil%3Dnil%2Cend_time_unix_nano%3AUInt64%7CNil%3Dnil%2Cattributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%3Dnil%2Cdropped_attributes_count%3AUInt32%7CNil%3Dnil%2Cevents%3AArray%28Span%3A%3AEvent%29%7CNil%3Dnil%2Cdropped_events_count%3AUInt32%7CNil%3Dnil%2Clinks%3AArray%28Span%3A%3ALink%29%7CNil%3Dnil%2Cdropped_links_count%3AUInt32%7CNil%3Dnil%2Cstatus%3AStatus%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(trace_id : Slice(UInt8) | Nil = <span class="n">nil</span>, span_id : Slice(UInt8) | Nil = <span class="n">nil</span>, trace_state : String | Nil = <span class="n">nil</span>, parent_span_id : Slice(UInt8) | Nil = <span class="n">nil</span>, name : String | Nil = <span class="n">nil</span>, kind : Span::SpanKind | Nil = <span class="n">nil</span>, start_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, end_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil = <span class="n">nil</span>, dropped_attributes_count : UInt32 | Nil = <span class="n">nil</span>, events : Array(Span::Event) | Nil = <span class="n">nil</span>, dropped_events_count : UInt32 | Nil = <span class="n">nil</span>, links : Array(Span::Link) | Nil = <span class="n">nil</span>, dropped_links_count : UInt32 | Nil = <span class="n">nil</span>, status : Status | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,132 +1199,132 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F-instance-method" class="signature"><strong>#attributes</strong> : Array(OpenTelemetry::Proto::Common::V1::KeyValue)?</a>
+        <a href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil-instance-method" class="signature"><strong>#attributes</strong> : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%29-instance-method" class="signature"><strong>#attributes=</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue)?)</a>
+        <a href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%29-instance-method" class="signature"><strong>#attributes=</strong>(attributes : Array(OpenTelemetry::Proto::Common::V1::KeyValue) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_attributes_count%3AUInt32%3F-instance-method" class="signature"><strong>#dropped_attributes_count</strong> : UInt32?</a>
+        <a href="#dropped_attributes_count%3AUInt32%7CNil-instance-method" class="signature"><strong>#dropped_attributes_count</strong> : UInt32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_attributes_count%3D%28dropped_attributes_count%3AUInt32%3F%29-instance-method" class="signature"><strong>#dropped_attributes_count=</strong>(dropped_attributes_count : UInt32?)</a>
+        <a href="#dropped_attributes_count%3D%28dropped_attributes_count%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#dropped_attributes_count=</strong>(dropped_attributes_count : UInt32 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_events_count%3AUInt32%3F-instance-method" class="signature"><strong>#dropped_events_count</strong> : UInt32?</a>
+        <a href="#dropped_events_count%3AUInt32%7CNil-instance-method" class="signature"><strong>#dropped_events_count</strong> : UInt32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_events_count%3D%28dropped_events_count%3AUInt32%3F%29-instance-method" class="signature"><strong>#dropped_events_count=</strong>(dropped_events_count : UInt32?)</a>
+        <a href="#dropped_events_count%3D%28dropped_events_count%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#dropped_events_count=</strong>(dropped_events_count : UInt32 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_links_count%3AUInt32%3F-instance-method" class="signature"><strong>#dropped_links_count</strong> : UInt32?</a>
+        <a href="#dropped_links_count%3AUInt32%7CNil-instance-method" class="signature"><strong>#dropped_links_count</strong> : UInt32 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dropped_links_count%3D%28dropped_links_count%3AUInt32%3F%29-instance-method" class="signature"><strong>#dropped_links_count=</strong>(dropped_links_count : UInt32?)</a>
+        <a href="#dropped_links_count%3D%28dropped_links_count%3AUInt32%7CNil%29-instance-method" class="signature"><strong>#dropped_links_count=</strong>(dropped_links_count : UInt32 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#end_time_unix_nano%3AUInt64%3F-instance-method" class="signature"><strong>#end_time_unix_nano</strong> : UInt64?</a>
+        <a href="#end_time_unix_nano%3AUInt64%7CNil-instance-method" class="signature"><strong>#end_time_unix_nano</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#end_time_unix_nano%3D%28end_time_unix_nano%3AUInt64%3F%29-instance-method" class="signature"><strong>#end_time_unix_nano=</strong>(end_time_unix_nano : UInt64?)</a>
+        <a href="#end_time_unix_nano%3D%28end_time_unix_nano%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#end_time_unix_nano=</strong>(end_time_unix_nano : UInt64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#events%3AArray%28Span%3A%3AEvent%29%3F-instance-method" class="signature"><strong>#events</strong> : Array(Span::Event)?</a>
+        <a href="#events%3AArray%28Span%3A%3AEvent%29%7CNil-instance-method" class="signature"><strong>#events</strong> : Array(Span::Event) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#events%3D%28events%3AArray%28Span%3A%3AEvent%29%3F%29-instance-method" class="signature"><strong>#events=</strong>(events : Array(Span::Event)?)</a>
+        <a href="#events%3D%28events%3AArray%28Span%3A%3AEvent%29%7CNil%29-instance-method" class="signature"><strong>#events=</strong>(events : Array(Span::Event) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#kind%3ASpan%3A%3ASpanKind%3F-instance-method" class="signature"><strong>#kind</strong> : Span::SpanKind?</a>
+        <a href="#kind%3ASpan%3A%3ASpanKind%7CNil-instance-method" class="signature"><strong>#kind</strong> : Span::SpanKind | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#kind%3D%28kind%3ASpan%3A%3ASpanKind%3F%29-instance-method" class="signature"><strong>#kind=</strong>(kind : Span::SpanKind?)</a>
+        <a href="#kind%3D%28kind%3ASpan%3A%3ASpanKind%7CNil%29-instance-method" class="signature"><strong>#kind=</strong>(kind : Span::SpanKind | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#links%3AArray%28Span%3A%3ALink%29%3F-instance-method" class="signature"><strong>#links</strong> : Array(Span::Link)?</a>
+        <a href="#links%3AArray%28Span%3A%3ALink%29%7CNil-instance-method" class="signature"><strong>#links</strong> : Array(Span::Link) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#links%3D%28links%3AArray%28Span%3A%3ALink%29%3F%29-instance-method" class="signature"><strong>#links=</strong>(links : Array(Span::Link)?)</a>
+        <a href="#links%3D%28links%3AArray%28Span%3A%3ALink%29%7CNil%29-instance-method" class="signature"><strong>#links=</strong>(links : Array(Span::Link) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3AString%3F-instance-method" class="signature"><strong>#name</strong> : String?</a>
+        <a href="#name%3AString%7CNil-instance-method" class="signature"><strong>#name</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3D%28name%3AString%3F%29-instance-method" class="signature"><strong>#name=</strong>(name : String?)</a>
+        <a href="#name%3D%28name%3AString%7CNil%29-instance-method" class="signature"><strong>#name=</strong>(name : String | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parent_span_id%3ASlice%28UInt8%29%3F-instance-method" class="signature"><strong>#parent_span_id</strong> : Slice(UInt8)?</a>
+        <a href="#parent_span_id%3ASlice%28UInt8%29%7CNil-instance-method" class="signature"><strong>#parent_span_id</strong> : Slice(UInt8) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parent_span_id%3D%28parent_span_id%3ASlice%28UInt8%29%3F%29-instance-method" class="signature"><strong>#parent_span_id=</strong>(parent_span_id : Slice(UInt8)?)</a>
+        <a href="#parent_span_id%3D%28parent_span_id%3ASlice%28UInt8%29%7CNil%29-instance-method" class="signature"><strong>#parent_span_id=</strong>(parent_span_id : Slice(UInt8) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#span_id%3ASlice%28UInt8%29%3F-instance-method" class="signature"><strong>#span_id</strong> : Slice(UInt8)?</a>
+        <a href="#span_id%3ASlice%28UInt8%29%7CNil-instance-method" class="signature"><strong>#span_id</strong> : Slice(UInt8) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#span_id%3D%28span_id%3ASlice%28UInt8%29%3F%29-instance-method" class="signature"><strong>#span_id=</strong>(span_id : Slice(UInt8)?)</a>
+        <a href="#span_id%3D%28span_id%3ASlice%28UInt8%29%7CNil%29-instance-method" class="signature"><strong>#span_id=</strong>(span_id : Slice(UInt8) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#start_time_unix_nano%3AUInt64%3F-instance-method" class="signature"><strong>#start_time_unix_nano</strong> : UInt64?</a>
+        <a href="#start_time_unix_nano%3AUInt64%7CNil-instance-method" class="signature"><strong>#start_time_unix_nano</strong> : UInt64 | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%3F%29-instance-method" class="signature"><strong>#start_time_unix_nano=</strong>(start_time_unix_nano : UInt64?)</a>
+        <a href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%7CNil%29-instance-method" class="signature"><strong>#start_time_unix_nano=</strong>(start_time_unix_nano : UInt64 | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status%3AStatus%3F-instance-method" class="signature"><strong>#status</strong> : Status?</a>
+        <a href="#status%3AStatus%7CNil-instance-method" class="signature"><strong>#status</strong> : Status | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status%3D%28status%3AStatus%3F%29-instance-method" class="signature"><strong>#status=</strong>(status : Status?)</a>
+        <a href="#status%3D%28status%3AStatus%7CNil%29-instance-method" class="signature"><strong>#status=</strong>(status : Status | Nil)</a>
         
       </li>
     
@@ -1329,22 +1339,22 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_id%3ASlice%28UInt8%29%3F-instance-method" class="signature"><strong>#trace_id</strong> : Slice(UInt8)?</a>
+        <a href="#trace_id%3ASlice%28UInt8%29%7CNil-instance-method" class="signature"><strong>#trace_id</strong> : Slice(UInt8) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_id%3D%28trace_id%3ASlice%28UInt8%29%3F%29-instance-method" class="signature"><strong>#trace_id=</strong>(trace_id : Slice(UInt8)?)</a>
+        <a href="#trace_id%3D%28trace_id%3ASlice%28UInt8%29%7CNil%29-instance-method" class="signature"><strong>#trace_id=</strong>(trace_id : Slice(UInt8) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_state%3AString%3F-instance-method" class="signature"><strong>#trace_state</strong> : String?</a>
+        <a href="#trace_state%3AString%7CNil-instance-method" class="signature"><strong>#trace_state</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#trace_state%3D%28trace_state%3AString%3F%29-instance-method" class="signature"><strong>#trace_state=</strong>(trace_state : String?)</a>
+        <a href="#trace_state%3D%28trace_state%3AString%7CNil%29-instance-method" class="signature"><strong>#trace_state=</strong>(trace_state : String | Nil)</a>
         
       </li>
     
@@ -1422,12 +1432,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(trace_id:Slice(UInt8)?=nil,span_id:Slice(UInt8)?=nil,trace_state:String?=nil,parent_span_id:Slice(UInt8)?=nil,name:String?=nil,kind:Span::SpanKind?=nil,start_time_unix_nano:UInt64?=nil,end_time_unix_nano:UInt64?=nil,attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?=nil,dropped_attributes_count:UInt32?=nil,events:Array(Span::Event)?=nil,dropped_events_count:UInt32?=nil,links:Array(Span::Link)?=nil,dropped_links_count:UInt32?=nil,status:Status?=nil)-class-method">
+    <div class="entry-detail" id="new(trace_id:Slice(UInt8)|Nil=nil,span_id:Slice(UInt8)|Nil=nil,trace_state:String|Nil=nil,parent_span_id:Slice(UInt8)|Nil=nil,name:String|Nil=nil,kind:Span::SpanKind|Nil=nil,start_time_unix_nano:UInt64|Nil=nil,end_time_unix_nano:UInt64|Nil=nil,attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil=nil,dropped_attributes_count:UInt32|Nil=nil,events:Array(Span::Event)|Nil=nil,dropped_events_count:UInt32|Nil=nil,links:Array(Span::Link)|Nil=nil,dropped_links_count:UInt32|Nil=nil,status:Status|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(trace_id : Slice(UInt8)? = <span class="n">nil</span>, span_id : Slice(UInt8)? = <span class="n">nil</span>, trace_state : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, parent_span_id : Slice(UInt8)? = <span class="n">nil</span>, name : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, kind : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a>? = <span class="n">nil</span>, start_time_unix_nano : UInt64? = <span class="n">nil</span>, end_time_unix_nano : UInt64? = <span class="n">nil</span>, attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)? = <span class="n">nil</span>, dropped_attributes_count : UInt32? = <span class="n">nil</span>, events : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>)? = <span class="n">nil</span>, dropped_events_count : UInt32? = <span class="n">nil</span>, links : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>)? = <span class="n">nil</span>, dropped_links_count : UInt32? = <span class="n">nil</span>, status : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a>? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(trace_id : Slice(UInt8) | Nil = <span class="n">nil</span>, span_id : Slice(UInt8) | Nil = <span class="n">nil</span>, trace_state : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, parent_span_id : Slice(UInt8) | Nil = <span class="n">nil</span>, name : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, kind : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a> | Nil = <span class="n">nil</span>, start_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, end_time_unix_nano : UInt64 | Nil = <span class="n">nil</span>, attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil = <span class="n">nil</span>, dropped_attributes_count : UInt32 | Nil = <span class="n">nil</span>, events : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>) | Nil = <span class="n">nil</span>, dropped_events_count : UInt32 | Nil = <span class="n">nil</span>, links : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>) | Nil = <span class="n">nil</span>, dropped_links_count : UInt32 | Nil = <span class="n">nil</span>, status : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a> | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28trace_id%3ASlice%28UInt8%29%3F%3Dnil%2Cspan_id%3ASlice%28UInt8%29%3F%3Dnil%2Ctrace_state%3AString%3F%3Dnil%2Cparent_span_id%3ASlice%28UInt8%29%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Ckind%3ASpan%3A%3ASpanKind%3F%3Dnil%2Cstart_time_unix_nano%3AUInt64%3F%3Dnil%2Cend_time_unix_nano%3AUInt64%3F%3Dnil%2Cattributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%3Dnil%2Cdropped_attributes_count%3AUInt32%3F%3Dnil%2Cevents%3AArray%28Span%3A%3AEvent%29%3F%3Dnil%2Cdropped_events_count%3AUInt32%3F%3Dnil%2Clinks%3AArray%28Span%3A%3ALink%29%3F%3Dnil%2Cdropped_links_count%3AUInt32%3F%3Dnil%2Cstatus%3AStatus%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28trace_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Cspan_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Ctrace_state%3AString%7CNil%3Dnil%2Cparent_span_id%3ASlice%28UInt8%29%7CNil%3Dnil%2Cname%3AString%7CNil%3Dnil%2Ckind%3ASpan%3A%3ASpanKind%7CNil%3Dnil%2Cstart_time_unix_nano%3AUInt64%7CNil%3Dnil%2Cend_time_unix_nano%3AUInt64%7CNil%3Dnil%2Cattributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%3Dnil%2Cdropped_attributes_count%3AUInt32%7CNil%3Dnil%2Cevents%3AArray%28Span%3A%3AEvent%29%7CNil%3Dnil%2Cdropped_events_count%3AUInt32%7CNil%3Dnil%2Clinks%3AArray%28Span%3A%3ALink%29%7CNil%3Dnil%2Cdropped_links_count%3AUInt32%7CNil%3Dnil%2Cstatus%3AStatus%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1488,12 +1498,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?-instance-method">
+    <div class="entry-detail" id="attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>attributes</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)?
+        def <strong>attributes</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil
 
-        <a class="method-permalink" href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1502,12 +1512,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="attributes=(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)?)-instance-method">
+    <div class="entry-detail" id="attributes=(attributes:Array(OpenTelemetry::Proto::Common::V1::KeyValue)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>attributes=</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>)?)
+        def <strong>attributes=</strong>(attributes : Array(<a href="../../../../OpenTelemetry/Proto/Common/V1/KeyValue.html">OpenTelemetry::Proto::Common::V1::KeyValue</a>) | Nil)
 
-        <a class="method-permalink" href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#attributes%3D%28attributes%3AArray%28OpenTelemetry%3A%3AProto%3A%3ACommon%3A%3AV1%3A%3AKeyValue%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1516,12 +1526,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_attributes_count:UInt32?-instance-method">
+    <div class="entry-detail" id="dropped_attributes_count:UInt32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>dropped_attributes_count</strong> : UInt32?
+        def <strong>dropped_attributes_count</strong> : UInt32 | Nil
 
-        <a class="method-permalink" href="#dropped_attributes_count%3AUInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_attributes_count%3AUInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1530,12 +1540,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_attributes_count=(dropped_attributes_count:UInt32?)-instance-method">
+    <div class="entry-detail" id="dropped_attributes_count=(dropped_attributes_count:UInt32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>dropped_attributes_count=</strong>(dropped_attributes_count : UInt32?)
+        def <strong>dropped_attributes_count=</strong>(dropped_attributes_count : UInt32 | Nil)
 
-        <a class="method-permalink" href="#dropped_attributes_count%3D%28dropped_attributes_count%3AUInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_attributes_count%3D%28dropped_attributes_count%3AUInt32%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1544,12 +1554,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_events_count:UInt32?-instance-method">
+    <div class="entry-detail" id="dropped_events_count:UInt32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>dropped_events_count</strong> : UInt32?
+        def <strong>dropped_events_count</strong> : UInt32 | Nil
 
-        <a class="method-permalink" href="#dropped_events_count%3AUInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_events_count%3AUInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1558,12 +1568,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_events_count=(dropped_events_count:UInt32?)-instance-method">
+    <div class="entry-detail" id="dropped_events_count=(dropped_events_count:UInt32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>dropped_events_count=</strong>(dropped_events_count : UInt32?)
+        def <strong>dropped_events_count=</strong>(dropped_events_count : UInt32 | Nil)
 
-        <a class="method-permalink" href="#dropped_events_count%3D%28dropped_events_count%3AUInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_events_count%3D%28dropped_events_count%3AUInt32%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1572,12 +1582,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_links_count:UInt32?-instance-method">
+    <div class="entry-detail" id="dropped_links_count:UInt32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>dropped_links_count</strong> : UInt32?
+        def <strong>dropped_links_count</strong> : UInt32 | Nil
 
-        <a class="method-permalink" href="#dropped_links_count%3AUInt32%3F-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_links_count%3AUInt32%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1586,12 +1596,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="dropped_links_count=(dropped_links_count:UInt32?)-instance-method">
+    <div class="entry-detail" id="dropped_links_count=(dropped_links_count:UInt32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>dropped_links_count=</strong>(dropped_links_count : UInt32?)
+        def <strong>dropped_links_count=</strong>(dropped_links_count : UInt32 | Nil)
 
-        <a class="method-permalink" href="#dropped_links_count%3D%28dropped_links_count%3AUInt32%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#dropped_links_count%3D%28dropped_links_count%3AUInt32%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1600,12 +1610,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="end_time_unix_nano:UInt64?-instance-method">
+    <div class="entry-detail" id="end_time_unix_nano:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>end_time_unix_nano</strong> : UInt64?
+        def <strong>end_time_unix_nano</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#end_time_unix_nano%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#end_time_unix_nano%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1614,12 +1624,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="end_time_unix_nano=(end_time_unix_nano:UInt64?)-instance-method">
+    <div class="entry-detail" id="end_time_unix_nano=(end_time_unix_nano:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>end_time_unix_nano=</strong>(end_time_unix_nano : UInt64?)
+        def <strong>end_time_unix_nano=</strong>(end_time_unix_nano : UInt64 | Nil)
 
-        <a class="method-permalink" href="#end_time_unix_nano%3D%28end_time_unix_nano%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#end_time_unix_nano%3D%28end_time_unix_nano%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1628,12 +1638,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="events:Array(Span::Event)?-instance-method">
+    <div class="entry-detail" id="events:Array(Span::Event)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>events</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>)?
+        def <strong>events</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>) | Nil
 
-        <a class="method-permalink" href="#events%3AArray%28Span%3A%3AEvent%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#events%3AArray%28Span%3A%3AEvent%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1642,12 +1652,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="events=(events:Array(Span::Event)?)-instance-method">
+    <div class="entry-detail" id="events=(events:Array(Span::Event)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>events=</strong>(events : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>)?)
+        def <strong>events=</strong>(events : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Event.html">Span::Event</a>) | Nil)
 
-        <a class="method-permalink" href="#events%3D%28events%3AArray%28Span%3A%3AEvent%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#events%3D%28events%3AArray%28Span%3A%3AEvent%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1656,12 +1666,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="kind:Span::SpanKind?-instance-method">
+    <div class="entry-detail" id="kind:Span::SpanKind|Nil-instance-method">
       <div class="signature">
         
-        def <strong>kind</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a>?
+        def <strong>kind</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a> | Nil
 
-        <a class="method-permalink" href="#kind%3ASpan%3A%3ASpanKind%3F-instance-method">#</a>
+        <a class="method-permalink" href="#kind%3ASpan%3A%3ASpanKind%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1670,12 +1680,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="kind=(kind:Span::SpanKind?)-instance-method">
+    <div class="entry-detail" id="kind=(kind:Span::SpanKind|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>kind=</strong>(kind : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a>?)
+        def <strong>kind=</strong>(kind : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/SpanKind.html">Span::SpanKind</a> | Nil)
 
-        <a class="method-permalink" href="#kind%3D%28kind%3ASpan%3A%3ASpanKind%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#kind%3D%28kind%3ASpan%3A%3ASpanKind%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1684,12 +1694,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="links:Array(Span::Link)?-instance-method">
+    <div class="entry-detail" id="links:Array(Span::Link)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>links</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>)?
+        def <strong>links</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>) | Nil
 
-        <a class="method-permalink" href="#links%3AArray%28Span%3A%3ALink%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#links%3AArray%28Span%3A%3ALink%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1698,12 +1708,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="links=(links:Array(Span::Link)?)-instance-method">
+    <div class="entry-detail" id="links=(links:Array(Span::Link)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>links=</strong>(links : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>)?)
+        def <strong>links=</strong>(links : Array(<a href="../../../../OpenTelemetry/Proto/Trace/V1/Span/Link.html">Span::Link</a>) | Nil)
 
-        <a class="method-permalink" href="#links%3D%28links%3AArray%28Span%3A%3ALink%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#links%3D%28links%3AArray%28Span%3A%3ALink%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1712,12 +1722,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name:String?-instance-method">
+    <div class="entry-detail" id="name:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>name</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#name%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1726,12 +1736,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name=(name:String?)-instance-method">
+    <div class="entry-detail" id="name=(name:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>name=</strong>(name : <a href="../../../../String.html">String</a>?)
+        def <strong>name=</strong>(name : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#name%3D%28name%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#name%3D%28name%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1740,12 +1750,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="parent_span_id:Slice(UInt8)?-instance-method">
+    <div class="entry-detail" id="parent_span_id:Slice(UInt8)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>parent_span_id</strong> : Slice(UInt8)?
+        def <strong>parent_span_id</strong> : Slice(UInt8) | Nil
 
-        <a class="method-permalink" href="#parent_span_id%3ASlice%28UInt8%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#parent_span_id%3ASlice%28UInt8%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1754,12 +1764,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="parent_span_id=(parent_span_id:Slice(UInt8)?)-instance-method">
+    <div class="entry-detail" id="parent_span_id=(parent_span_id:Slice(UInt8)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>parent_span_id=</strong>(parent_span_id : Slice(UInt8)?)
+        def <strong>parent_span_id=</strong>(parent_span_id : Slice(UInt8) | Nil)
 
-        <a class="method-permalink" href="#parent_span_id%3D%28parent_span_id%3ASlice%28UInt8%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#parent_span_id%3D%28parent_span_id%3ASlice%28UInt8%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1768,12 +1778,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="span_id:Slice(UInt8)?-instance-method">
+    <div class="entry-detail" id="span_id:Slice(UInt8)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>span_id</strong> : Slice(UInt8)?
+        def <strong>span_id</strong> : Slice(UInt8) | Nil
 
-        <a class="method-permalink" href="#span_id%3ASlice%28UInt8%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#span_id%3ASlice%28UInt8%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1782,12 +1792,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="span_id=(span_id:Slice(UInt8)?)-instance-method">
+    <div class="entry-detail" id="span_id=(span_id:Slice(UInt8)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>span_id=</strong>(span_id : Slice(UInt8)?)
+        def <strong>span_id=</strong>(span_id : Slice(UInt8) | Nil)
 
-        <a class="method-permalink" href="#span_id%3D%28span_id%3ASlice%28UInt8%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#span_id%3D%28span_id%3ASlice%28UInt8%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1796,12 +1806,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="start_time_unix_nano:UInt64?-instance-method">
+    <div class="entry-detail" id="start_time_unix_nano:UInt64|Nil-instance-method">
       <div class="signature">
         
-        def <strong>start_time_unix_nano</strong> : UInt64?
+        def <strong>start_time_unix_nano</strong> : UInt64 | Nil
 
-        <a class="method-permalink" href="#start_time_unix_nano%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#start_time_unix_nano%3AUInt64%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1810,12 +1820,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="start_time_unix_nano=(start_time_unix_nano:UInt64?)-instance-method">
+    <div class="entry-detail" id="start_time_unix_nano=(start_time_unix_nano:UInt64|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>start_time_unix_nano=</strong>(start_time_unix_nano : UInt64?)
+        def <strong>start_time_unix_nano=</strong>(start_time_unix_nano : UInt64 | Nil)
 
-        <a class="method-permalink" href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#start_time_unix_nano%3D%28start_time_unix_nano%3AUInt64%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1824,12 +1834,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="status:Status?-instance-method">
+    <div class="entry-detail" id="status:Status|Nil-instance-method">
       <div class="signature">
         
-        def <strong>status</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a>?
+        def <strong>status</strong> : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a> | Nil
 
-        <a class="method-permalink" href="#status%3AStatus%3F-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1838,12 +1848,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="status=(status:Status?)-instance-method">
+    <div class="entry-detail" id="status=(status:Status|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>status=</strong>(status : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a>?)
+        def <strong>status=</strong>(status : <a href="../../../../OpenTelemetry/Proto/Trace/V1/Status.html">Status</a> | Nil)
 
-        <a class="method-permalink" href="#status%3D%28status%3AStatus%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#status%3D%28status%3AStatus%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1880,12 +1890,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_id:Slice(UInt8)?-instance-method">
+    <div class="entry-detail" id="trace_id:Slice(UInt8)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>trace_id</strong> : Slice(UInt8)?
+        def <strong>trace_id</strong> : Slice(UInt8) | Nil
 
-        <a class="method-permalink" href="#trace_id%3ASlice%28UInt8%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#trace_id%3ASlice%28UInt8%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1894,12 +1904,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_id=(trace_id:Slice(UInt8)?)-instance-method">
+    <div class="entry-detail" id="trace_id=(trace_id:Slice(UInt8)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>trace_id=</strong>(trace_id : Slice(UInt8)?)
+        def <strong>trace_id=</strong>(trace_id : Slice(UInt8) | Nil)
 
-        <a class="method-permalink" href="#trace_id%3D%28trace_id%3ASlice%28UInt8%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#trace_id%3D%28trace_id%3ASlice%28UInt8%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1908,12 +1918,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_state:String?-instance-method">
+    <div class="entry-detail" id="trace_state:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>trace_state</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>trace_state</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#trace_state%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#trace_state%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1922,12 +1932,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="trace_state=(trace_state:String?)-instance-method">
+    <div class="entry-detail" id="trace_state=(trace_state:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>trace_state=</strong>(trace_state : <a href="../../../../String.html">String</a>?)
+        def <strong>trace_state=</strong>(trace_state : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#trace_state%3D%28trace_state%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#trace_state%3D%28trace_state%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

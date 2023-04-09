@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Metrics::V1::Metric - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Metrics::V1::Metric - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:name</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:description</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:unit</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> =&gt; {name: <span class="n">:gauge</span>, pb_type: <span class="t">Gauge</span>, crystal_type: <span class="t">Gauge</span>, cast_type: <span class="t">Gauge</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> =&gt; {name: <span class="n">:sum</span>, pb_type: <span class="t">Sum</span>, crystal_type: <span class="t">Sum</span>, cast_type: <span class="t">Sum</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> =&gt; {name: <span class="n">:histogram</span>, pb_type: <span class="t">Histogram</span>, crystal_type: <span class="t">Histogram</span>, cast_type: <span class="t">Histogram</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> =&gt; {name: <span class="n">:exponential_histogram</span>, pb_type: <span class="t">ExponentialHistogram</span>, crystal_type: <span class="t">ExponentialHistogram</span>, cast_type: <span class="t">ExponentialHistogram</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> =&gt; {name: <span class="n">:summary</span>, pb_type: <span class="t">Summary</span>, crystal_type: <span class="t">Summary</span>, cast_type: <span class="t">Summary</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:name</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:description</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:unit</span>, pb_type: <span class="n">:string</span>, crystal_type: <span class="t">String</span>, cast_type: <span class="t">String</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">5</span> <span class="o">=&gt;</span> {name: <span class="n">:gauge</span>, pb_type: <span class="t">Gauge</span>, crystal_type: <span class="t">Gauge</span>, cast_type: <span class="t">Gauge</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">7</span> <span class="o">=&gt;</span> {name: <span class="n">:sum</span>, pb_type: <span class="t">Sum</span>, crystal_type: <span class="t">Sum</span>, cast_type: <span class="t">Sum</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">9</span> <span class="o">=&gt;</span> {name: <span class="n">:histogram</span>, pb_type: <span class="t">Histogram</span>, crystal_type: <span class="t">Histogram</span>, cast_type: <span class="t">Histogram</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">10</span> <span class="o">=&gt;</span> {name: <span class="n">:exponential_histogram</span>, pb_type: <span class="t">ExponentialHistogram</span>, crystal_type: <span class="t">ExponentialHistogram</span>, cast_type: <span class="t">ExponentialHistogram</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">11</span> <span class="o">=&gt;</span> {name: <span class="n">:summary</span>, pb_type: <span class="t">Summary</span>, crystal_type: <span class="t">Summary</span>, cast_type: <span class="t">Summary</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cunit%3AString%3F%3Dnil%2Cgauge%3AGauge%3F%3Dnil%2Csum%3ASum%3F%3Dnil%2Chistogram%3AHistogram%3F%3Dnil%2Cexponential_histogram%3AExponentialHistogram%3F%3Dnil%2Csummary%3ASummary%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, unit : String? = <span class="n">nil</span>, gauge : Gauge? = <span class="n">nil</span>, sum : Sum? = <span class="n">nil</span>, histogram : Histogram? = <span class="n">nil</span>, exponential_histogram : ExponentialHistogram? = <span class="n">nil</span>, summary : Summary? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%7CNil%3Dnil%2Cdescription%3AString%7CNil%3Dnil%2Cunit%3AString%7CNil%3Dnil%2Cgauge%3AGauge%7CNil%3Dnil%2Csum%3ASum%7CNil%3Dnil%2Chistogram%3AHistogram%7CNil%3Dnil%2Cexponential_histogram%3AExponentialHistogram%7CNil%3Dnil%2Csummary%3ASummary%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String | Nil = <span class="n">nil</span>, description : String | Nil = <span class="n">nil</span>, unit : String | Nil = <span class="n">nil</span>, gauge : Gauge | Nil = <span class="n">nil</span>, sum : Sum | Nil = <span class="n">nil</span>, histogram : Histogram | Nil = <span class="n">nil</span>, exponential_histogram : ExponentialHistogram | Nil = <span class="n">nil</span>, summary : Summary | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,72 +1199,72 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3AString%7CNil-instance-method" class="signature"><strong>#description</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3D%28description%3AString%3F%29-instance-method" class="signature"><strong>#description=</strong>(description : String?)</a>
+        <a href="#description%3D%28description%3AString%7CNil%29-instance-method" class="signature"><strong>#description=</strong>(description : String | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exponential_histogram%3AExponentialHistogram%3F-instance-method" class="signature"><strong>#exponential_histogram</strong> : ExponentialHistogram?</a>
+        <a href="#exponential_histogram%3AExponentialHistogram%7CNil-instance-method" class="signature"><strong>#exponential_histogram</strong> : ExponentialHistogram | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exponential_histogram%3D%28exponential_histogram%3AExponentialHistogram%3F%29-instance-method" class="signature"><strong>#exponential_histogram=</strong>(exponential_histogram : ExponentialHistogram?)</a>
+        <a href="#exponential_histogram%3D%28exponential_histogram%3AExponentialHistogram%7CNil%29-instance-method" class="signature"><strong>#exponential_histogram=</strong>(exponential_histogram : ExponentialHistogram | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gauge%3AGauge%3F-instance-method" class="signature"><strong>#gauge</strong> : Gauge?</a>
+        <a href="#gauge%3AGauge%7CNil-instance-method" class="signature"><strong>#gauge</strong> : Gauge | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gauge%3D%28gauge%3AGauge%3F%29-instance-method" class="signature"><strong>#gauge=</strong>(gauge : Gauge?)</a>
+        <a href="#gauge%3D%28gauge%3AGauge%7CNil%29-instance-method" class="signature"><strong>#gauge=</strong>(gauge : Gauge | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#histogram%3AHistogram%3F-instance-method" class="signature"><strong>#histogram</strong> : Histogram?</a>
+        <a href="#histogram%3AHistogram%7CNil-instance-method" class="signature"><strong>#histogram</strong> : Histogram | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#histogram%3D%28histogram%3AHistogram%3F%29-instance-method" class="signature"><strong>#histogram=</strong>(histogram : Histogram?)</a>
+        <a href="#histogram%3D%28histogram%3AHistogram%7CNil%29-instance-method" class="signature"><strong>#histogram=</strong>(histogram : Histogram | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3AString%3F-instance-method" class="signature"><strong>#name</strong> : String?</a>
+        <a href="#name%3AString%7CNil-instance-method" class="signature"><strong>#name</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3D%28name%3AString%3F%29-instance-method" class="signature"><strong>#name=</strong>(name : String?)</a>
+        <a href="#name%3D%28name%3AString%7CNil%29-instance-method" class="signature"><strong>#name=</strong>(name : String | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sum%3ASum%3F-instance-method" class="signature"><strong>#sum</strong> : Sum?</a>
+        <a href="#sum%3ASum%7CNil-instance-method" class="signature"><strong>#sum</strong> : Sum | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sum%3D%28sum%3ASum%3F%29-instance-method" class="signature"><strong>#sum=</strong>(sum : Sum?)</a>
+        <a href="#sum%3D%28sum%3ASum%7CNil%29-instance-method" class="signature"><strong>#sum=</strong>(sum : Sum | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#summary%3ASummary%3F-instance-method" class="signature"><strong>#summary</strong> : Summary?</a>
+        <a href="#summary%3ASummary%7CNil-instance-method" class="signature"><strong>#summary</strong> : Summary | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#summary%3D%28summary%3ASummary%3F%29-instance-method" class="signature"><strong>#summary=</strong>(summary : Summary?)</a>
+        <a href="#summary%3D%28summary%3ASummary%7CNil%29-instance-method" class="signature"><strong>#summary=</strong>(summary : Summary | Nil)</a>
         
       </li>
     
@@ -1269,12 +1279,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#unit%3AString%3F-instance-method" class="signature"><strong>#unit</strong> : String?</a>
+        <a href="#unit%3AString%7CNil-instance-method" class="signature"><strong>#unit</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unit%3D%28unit%3AString%3F%29-instance-method" class="signature"><strong>#unit=</strong>(unit : String?)</a>
+        <a href="#unit%3D%28unit%3AString%7CNil%29-instance-method" class="signature"><strong>#unit=</strong>(unit : String | Nil)</a>
         
       </li>
     
@@ -1352,12 +1362,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(name:String?=nil,description:String?=nil,unit:String?=nil,gauge:Gauge?=nil,sum:Sum?=nil,histogram:Histogram?=nil,exponential_histogram:ExponentialHistogram?=nil,summary:Summary?=nil)-class-method">
+    <div class="entry-detail" id="new(name:String|Nil=nil,description:String|Nil=nil,unit:String|Nil=nil,gauge:Gauge|Nil=nil,sum:Sum|Nil=nil,histogram:Histogram|Nil=nil,exponential_histogram:ExponentialHistogram|Nil=nil,summary:Summary|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, description : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, unit : <a href="../../../../String.html">String</a>? = <span class="n">nil</span>, gauge : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a>? = <span class="n">nil</span>, sum : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a>? = <span class="n">nil</span>, histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a>? = <span class="n">nil</span>, exponential_histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a>? = <span class="n">nil</span>, summary : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a>? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(name : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, description : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, unit : <a href="../../../../String.html">String</a> | Nil = <span class="n">nil</span>, gauge : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a> | Nil = <span class="n">nil</span>, sum : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a> | Nil = <span class="n">nil</span>, histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a> | Nil = <span class="n">nil</span>, exponential_histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a> | Nil = <span class="n">nil</span>, summary : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a> | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28name%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cunit%3AString%3F%3Dnil%2Cgauge%3AGauge%3F%3Dnil%2Csum%3ASum%3F%3Dnil%2Chistogram%3AHistogram%3F%3Dnil%2Cexponential_histogram%3AExponentialHistogram%3F%3Dnil%2Csummary%3ASummary%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%7CNil%3Dnil%2Cdescription%3AString%7CNil%3Dnil%2Cunit%3AString%7CNil%3Dnil%2Cgauge%3AGauge%7CNil%3Dnil%2Csum%3ASum%7CNil%3Dnil%2Chistogram%3AHistogram%7CNil%3Dnil%2Cexponential_histogram%3AExponentialHistogram%7CNil%3Dnil%2Csummary%3ASummary%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1418,12 +1428,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="description:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>description</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1432,12 +1442,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="description=(description:String?)-instance-method">
+    <div class="entry-detail" id="description=(description:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>description=</strong>(description : <a href="../../../../String.html">String</a>?)
+        def <strong>description=</strong>(description : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#description%3D%28description%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28description%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1446,12 +1456,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="exponential_histogram:ExponentialHistogram?-instance-method">
+    <div class="entry-detail" id="exponential_histogram:ExponentialHistogram|Nil-instance-method">
       <div class="signature">
         
-        def <strong>exponential_histogram</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a>?
+        def <strong>exponential_histogram</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a> | Nil
 
-        <a class="method-permalink" href="#exponential_histogram%3AExponentialHistogram%3F-instance-method">#</a>
+        <a class="method-permalink" href="#exponential_histogram%3AExponentialHistogram%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1460,12 +1470,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="exponential_histogram=(exponential_histogram:ExponentialHistogram?)-instance-method">
+    <div class="entry-detail" id="exponential_histogram=(exponential_histogram:ExponentialHistogram|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>exponential_histogram=</strong>(exponential_histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a>?)
+        def <strong>exponential_histogram=</strong>(exponential_histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/ExponentialHistogram.html">ExponentialHistogram</a> | Nil)
 
-        <a class="method-permalink" href="#exponential_histogram%3D%28exponential_histogram%3AExponentialHistogram%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#exponential_histogram%3D%28exponential_histogram%3AExponentialHistogram%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1474,12 +1484,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="gauge:Gauge?-instance-method">
+    <div class="entry-detail" id="gauge:Gauge|Nil-instance-method">
       <div class="signature">
         
-        def <strong>gauge</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a>?
+        def <strong>gauge</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a> | Nil
 
-        <a class="method-permalink" href="#gauge%3AGauge%3F-instance-method">#</a>
+        <a class="method-permalink" href="#gauge%3AGauge%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1488,12 +1498,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="gauge=(gauge:Gauge?)-instance-method">
+    <div class="entry-detail" id="gauge=(gauge:Gauge|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>gauge=</strong>(gauge : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a>?)
+        def <strong>gauge=</strong>(gauge : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Gauge.html">Gauge</a> | Nil)
 
-        <a class="method-permalink" href="#gauge%3D%28gauge%3AGauge%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#gauge%3D%28gauge%3AGauge%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1502,12 +1512,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="histogram:Histogram?-instance-method">
+    <div class="entry-detail" id="histogram:Histogram|Nil-instance-method">
       <div class="signature">
         
-        def <strong>histogram</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a>?
+        def <strong>histogram</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a> | Nil
 
-        <a class="method-permalink" href="#histogram%3AHistogram%3F-instance-method">#</a>
+        <a class="method-permalink" href="#histogram%3AHistogram%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1516,12 +1526,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="histogram=(histogram:Histogram?)-instance-method">
+    <div class="entry-detail" id="histogram=(histogram:Histogram|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>histogram=</strong>(histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a>?)
+        def <strong>histogram=</strong>(histogram : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Histogram.html">Histogram</a> | Nil)
 
-        <a class="method-permalink" href="#histogram%3D%28histogram%3AHistogram%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#histogram%3D%28histogram%3AHistogram%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1530,12 +1540,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name:String?-instance-method">
+    <div class="entry-detail" id="name:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>name</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#name%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1544,12 +1554,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="name=(name:String?)-instance-method">
+    <div class="entry-detail" id="name=(name:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>name=</strong>(name : <a href="../../../../String.html">String</a>?)
+        def <strong>name=</strong>(name : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#name%3D%28name%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#name%3D%28name%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1558,12 +1568,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="sum:Sum?-instance-method">
+    <div class="entry-detail" id="sum:Sum|Nil-instance-method">
       <div class="signature">
         
-        def <strong>sum</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a>?
+        def <strong>sum</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a> | Nil
 
-        <a class="method-permalink" href="#sum%3ASum%3F-instance-method">#</a>
+        <a class="method-permalink" href="#sum%3ASum%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1572,12 +1582,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="sum=(sum:Sum?)-instance-method">
+    <div class="entry-detail" id="sum=(sum:Sum|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>sum=</strong>(sum : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a>?)
+        def <strong>sum=</strong>(sum : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Sum.html">Sum</a> | Nil)
 
-        <a class="method-permalink" href="#sum%3D%28sum%3ASum%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#sum%3D%28sum%3ASum%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1586,12 +1596,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="summary:Summary?-instance-method">
+    <div class="entry-detail" id="summary:Summary|Nil-instance-method">
       <div class="signature">
         
-        def <strong>summary</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a>?
+        def <strong>summary</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a> | Nil
 
-        <a class="method-permalink" href="#summary%3ASummary%3F-instance-method">#</a>
+        <a class="method-permalink" href="#summary%3ASummary%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1600,12 +1610,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="summary=(summary:Summary?)-instance-method">
+    <div class="entry-detail" id="summary=(summary:Summary|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>summary=</strong>(summary : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a>?)
+        def <strong>summary=</strong>(summary : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/Summary.html">Summary</a> | Nil)
 
-        <a class="method-permalink" href="#summary%3D%28summary%3ASummary%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#summary%3D%28summary%3ASummary%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1642,12 +1652,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unit:String?-instance-method">
+    <div class="entry-detail" id="unit:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>unit</strong> : <a href="../../../../String.html">String</a>?
+        def <strong>unit</strong> : <a href="../../../../String.html">String</a> | Nil
 
-        <a class="method-permalink" href="#unit%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#unit%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1656,12 +1666,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="unit=(unit:String?)-instance-method">
+    <div class="entry-detail" id="unit=(unit:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>unit=</strong>(unit : <a href="../../../../String.html">String</a>?)
+        def <strong>unit=</strong>(unit : <a href="../../../../String.html">String</a> | Nil)
 
-        <a class="method-permalink" href="#unit%3D%28unit%3AString%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#unit%3D%28unit%3AString%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

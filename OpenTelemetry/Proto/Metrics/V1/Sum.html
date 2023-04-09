@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Proto::Metrics::V1::Sum - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Proto::Metrics::V1::Sum - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1122,7 +1132,7 @@
   <dl>
     
       <dt class="entry-const" id="FIELDS">
-        <strong>FIELDS</strong> = <code>{<span class="n">1</span> =&gt; {name: <span class="n">:data_points</span>, pb_type: <span class="t">NumberDataPoint</span>, crystal_type: <span class="t">NumberDataPoint</span>, cast_type: <span class="t">Array</span>(<span class="t">NumberDataPoint</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> =&gt; {name: <span class="n">:aggregation_temporality</span>, pb_type: <span class="t">AggregationTemporality</span>, crystal_type: <span class="t">AggregationTemporality</span>, cast_type: <span class="t">AggregationTemporality</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> =&gt; {name: <span class="n">:is_monotonic</span>, pb_type: <span class="n">:bool</span>, crystal_type: <span class="t">Bool</span>, cast_type: <span class="t">Bool</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> =&gt; <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
+        <strong>FIELDS</strong> = <code>{<span class="n">1</span> <span class="o">=&gt;</span> {name: <span class="n">:data_points</span>, pb_type: <span class="t">NumberDataPoint</span>, crystal_type: <span class="t">NumberDataPoint</span>, cast_type: <span class="t">Array</span>(<span class="t">NumberDataPoint</span>)?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">true</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">2</span> <span class="o">=&gt;</span> {name: <span class="n">:aggregation_temporality</span>, pb_type: <span class="t">AggregationTemporality</span>, crystal_type: <span class="t">AggregationTemporality</span>, cast_type: <span class="t">AggregationTemporality</span>?, native: <span class="n">false</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}, <span class="n">3</span> <span class="o">=&gt;</span> {name: <span class="n">:is_monotonic</span>, pb_type: <span class="n">:bool</span>, crystal_type: <span class="t">Bool</span>, cast_type: <span class="t">Bool</span>?, native: <span class="n">true</span>, optional: <span class="n">true</span>, repeated: <span class="n">false</span>, default: <span class="n">nil</span>, packed: <span class="n">false</span>}} <span class="k">of</span> <span class="t">Int32</span> <span class="o">=&gt;</span> <span class="t">HashLiteral</span>(<span class="t">Symbol</span>, <span class="t">ASTNode</span>)</code>
       </dt>
       
     
@@ -1146,7 +1156,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28data_points%3AArray%28NumberDataPoint%29%3F%3Dnil%2Caggregation_temporality%3AAggregationTemporality%3F%3Dnil%2Cis_monotonic%3ABool%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(data_points : Array(NumberDataPoint)? = <span class="n">nil</span>, aggregation_temporality : AggregationTemporality? = <span class="n">nil</span>, is_monotonic : Bool? = <span class="n">nil</span>)</a>
+        <a href="#new%28data_points%3AArray%28NumberDataPoint%29%7CNil%3Dnil%2Caggregation_temporality%3AAggregationTemporality%7CNil%3Dnil%2Cis_monotonic%3ABool%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(data_points : Array(NumberDataPoint) | Nil = <span class="n">nil</span>, aggregation_temporality : AggregationTemporality | Nil = <span class="n">nil</span>, is_monotonic : Bool | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -1189,32 +1199,32 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#aggregation_temporality%3AAggregationTemporality%3F-instance-method" class="signature"><strong>#aggregation_temporality</strong> : AggregationTemporality?</a>
+        <a href="#aggregation_temporality%3AAggregationTemporality%7CNil-instance-method" class="signature"><strong>#aggregation_temporality</strong> : AggregationTemporality | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#aggregation_temporality%3D%28aggregation_temporality%3AAggregationTemporality%3F%29-instance-method" class="signature"><strong>#aggregation_temporality=</strong>(aggregation_temporality : AggregationTemporality?)</a>
+        <a href="#aggregation_temporality%3D%28aggregation_temporality%3AAggregationTemporality%7CNil%29-instance-method" class="signature"><strong>#aggregation_temporality=</strong>(aggregation_temporality : AggregationTemporality | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#data_points%3AArray%28NumberDataPoint%29%3F-instance-method" class="signature"><strong>#data_points</strong> : Array(NumberDataPoint)?</a>
+        <a href="#data_points%3AArray%28NumberDataPoint%29%7CNil-instance-method" class="signature"><strong>#data_points</strong> : Array(NumberDataPoint) | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#data_points%3D%28data_points%3AArray%28NumberDataPoint%29%3F%29-instance-method" class="signature"><strong>#data_points=</strong>(data_points : Array(NumberDataPoint)?)</a>
+        <a href="#data_points%3D%28data_points%3AArray%28NumberDataPoint%29%7CNil%29-instance-method" class="signature"><strong>#data_points=</strong>(data_points : Array(NumberDataPoint) | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#is_monotonic%3ABool%3F-instance-method" class="signature"><strong>#is_monotonic</strong> : Bool?</a>
+        <a href="#is_monotonic%3ABool%7CNil-instance-method" class="signature"><strong>#is_monotonic</strong> : Bool | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#is_monotonic%3D%28is_monotonic%3ABool%3F%29-instance-method" class="signature"><strong>#is_monotonic=</strong>(is_monotonic : Bool?)</a>
+        <a href="#is_monotonic%3D%28is_monotonic%3ABool%7CNil%29-instance-method" class="signature"><strong>#is_monotonic=</strong>(is_monotonic : Bool | Nil)</a>
         
       </li>
     
@@ -1302,12 +1312,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="new(data_points:Array(NumberDataPoint)?=nil,aggregation_temporality:AggregationTemporality?=nil,is_monotonic:Bool?=nil)-class-method">
+    <div class="entry-detail" id="new(data_points:Array(NumberDataPoint)|Nil=nil,aggregation_temporality:AggregationTemporality|Nil=nil,is_monotonic:Bool|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(data_points : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>)? = <span class="n">nil</span>, aggregation_temporality : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a>? = <span class="n">nil</span>, is_monotonic : Bool? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(data_points : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>) | Nil = <span class="n">nil</span>, aggregation_temporality : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a> | Nil = <span class="n">nil</span>, is_monotonic : Bool | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28data_points%3AArray%28NumberDataPoint%29%3F%3Dnil%2Caggregation_temporality%3AAggregationTemporality%3F%3Dnil%2Cis_monotonic%3ABool%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28data_points%3AArray%28NumberDataPoint%29%7CNil%3Dnil%2Caggregation_temporality%3AAggregationTemporality%7CNil%3Dnil%2Cis_monotonic%3ABool%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -1368,12 +1378,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="aggregation_temporality:AggregationTemporality?-instance-method">
+    <div class="entry-detail" id="aggregation_temporality:AggregationTemporality|Nil-instance-method">
       <div class="signature">
         
-        def <strong>aggregation_temporality</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a>?
+        def <strong>aggregation_temporality</strong> : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a> | Nil
 
-        <a class="method-permalink" href="#aggregation_temporality%3AAggregationTemporality%3F-instance-method">#</a>
+        <a class="method-permalink" href="#aggregation_temporality%3AAggregationTemporality%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1382,12 +1392,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="aggregation_temporality=(aggregation_temporality:AggregationTemporality?)-instance-method">
+    <div class="entry-detail" id="aggregation_temporality=(aggregation_temporality:AggregationTemporality|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>aggregation_temporality=</strong>(aggregation_temporality : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a>?)
+        def <strong>aggregation_temporality=</strong>(aggregation_temporality : <a href="../../../../OpenTelemetry/Proto/Metrics/V1/AggregationTemporality.html">AggregationTemporality</a> | Nil)
 
-        <a class="method-permalink" href="#aggregation_temporality%3D%28aggregation_temporality%3AAggregationTemporality%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#aggregation_temporality%3D%28aggregation_temporality%3AAggregationTemporality%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1396,12 +1406,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="data_points:Array(NumberDataPoint)?-instance-method">
+    <div class="entry-detail" id="data_points:Array(NumberDataPoint)|Nil-instance-method">
       <div class="signature">
         
-        def <strong>data_points</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>)?
+        def <strong>data_points</strong> : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>) | Nil
 
-        <a class="method-permalink" href="#data_points%3AArray%28NumberDataPoint%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#data_points%3AArray%28NumberDataPoint%29%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1410,12 +1420,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="data_points=(data_points:Array(NumberDataPoint)?)-instance-method">
+    <div class="entry-detail" id="data_points=(data_points:Array(NumberDataPoint)|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>data_points=</strong>(data_points : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>)?)
+        def <strong>data_points=</strong>(data_points : Array(<a href="../../../../OpenTelemetry/Proto/Metrics/V1/NumberDataPoint.html">NumberDataPoint</a>) | Nil)
 
-        <a class="method-permalink" href="#data_points%3D%28data_points%3AArray%28NumberDataPoint%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#data_points%3D%28data_points%3AArray%28NumberDataPoint%29%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1424,12 +1434,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="is_monotonic:Bool?-instance-method">
+    <div class="entry-detail" id="is_monotonic:Bool|Nil-instance-method">
       <div class="signature">
         
-        def <strong>is_monotonic</strong> : Bool?
+        def <strong>is_monotonic</strong> : Bool | Nil
 
-        <a class="method-permalink" href="#is_monotonic%3ABool%3F-instance-method">#</a>
+        <a class="method-permalink" href="#is_monotonic%3ABool%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1438,12 +1448,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="is_monotonic=(is_monotonic:Bool?)-instance-method">
+    <div class="entry-detail" id="is_monotonic=(is_monotonic:Bool|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>is_monotonic=</strong>(is_monotonic : Bool?)
+        def <strong>is_monotonic=</strong>(is_monotonic : Bool | Nil)
 
-        <a class="method-permalink" href="#is_monotonic%3D%28is_monotonic%3ABool%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#is_monotonic%3D%28is_monotonic%3ABool%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>

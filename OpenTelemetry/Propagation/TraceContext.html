@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.4.1">
-<meta name="crystal_docs.project_version" content="0.5.1">
+<meta name="generator" content="Crystal Docs 1.6.2">
+<meta name="crystal_docs.project_version" content="0.6.0">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::Propagation::TraceContext - opentelemetry-sdk 0.5.1</title>
+  <title>OpenTelemetry::Propagation::TraceContext - opentelemetry-sdk 0.6.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.5.1
+        0.6.0
       </span>
     </div>
   </div>
@@ -80,6 +80,11 @@
       <a href="../../OpenTelemetry.html">OpenTelemetry</a>
       
         <ul>
+  
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/Clock" data-name="opentelemetry::clock">
+      <a href="../../OpenTelemetry/Clock.html">Clock</a>
+      
+    </li>
   
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Context" data-name="opentelemetry::context">
       <a href="../../OpenTelemetry/Context.html">Context</a>
@@ -1001,6 +1006,11 @@
       
     </li>
   
+  <li class=" " data-id="opentelemetry-sdk/OpenTelemetry/TimeClock" data-name="opentelemetry::timeclock">
+      <a href="../../OpenTelemetry/TimeClock.html">TimeClock</a>
+      
+    </li>
+  
   <li class="parent " data-id="opentelemetry-sdk/OpenTelemetry/Trace" data-name="opentelemetry::trace">
       <a href="../../OpenTelemetry/Trace.html">Trace</a>
       
@@ -1173,17 +1183,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#context%3AContext%3F-instance-method" class="signature"><strong>#context</strong> : Context?</a>
+        <a href="#context%3AContext%7CNil-instance-method" class="signature"><strong>#context</strong> : Context | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#context%3D%28context%3AContext%3F%29-instance-method" class="signature"><strong>#context=</strong>(context : Context?)</a>
+        <a href="#context%3D%28context%3AContext%7CNil%29-instance-method" class="signature"><strong>#context=</strong>(context : Context | Nil)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extract%28carrier%2Ccontext%3AContext%3F%3Dnil%2Cgetter%3ATextMapGetter.class%3DTextMapGetter%29-instance-method" class="signature"><strong>#extract</strong>(carrier, context : Context? = <span class="n">nil</span>, getter : <span class="t">TextMapGetter</span>.<span class="k">class</span> = <span class="t">TextMapGetter</span>)</a>
+        <a href="#extract%28carrier%2Ccontext%3AContext%7CNil%3Dnil%2Cgetter%3ATextMapGetter.class%3DTextMapGetter%29-instance-method" class="signature"><strong>#extract</strong>(carrier, context : Context | Nil = <span class="n">nil</span>, getter : <span class="t">TextMapGetter</span>.<span class="k">class</span> = <span class="t">TextMapGetter</span>)</a>
         
       </li>
     
@@ -1193,7 +1203,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#inject%28carrier%2Ccontext%3AContext%3F%3Dnil%2Csetter%3ATextMapSetter.class%3DTextMapSetter%29-instance-method" class="signature"><strong>#inject</strong>(carrier, context : Context? = <span class="n">nil</span>, setter : <span class="t">TextMapSetter</span>.<span class="k">class</span> = <span class="t">TextMapSetter</span>)</a>
+        <a href="#inject%28carrier%2Ccontext%3AContext%7CNil%3Dnil%2Csetter%3ATextMapSetter.class%3DTextMapSetter%29-instance-method" class="signature"><strong>#inject</strong>(carrier, context : Context | Nil = <span class="n">nil</span>, setter : <span class="t">TextMapSetter</span>.<span class="k">class</span> = <span class="t">TextMapSetter</span>)</a>
         
       </li>
     
@@ -1413,12 +1423,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="context:Context?-instance-method">
+    <div class="entry-detail" id="context:Context|Nil-instance-method">
       <div class="signature">
         
-        def <strong>context</strong> : <a href="../../OpenTelemetry/Context.html">Context</a>?
+        def <strong>context</strong> : <a href="../../OpenTelemetry/Context.html">Context</a> | Nil
 
-        <a class="method-permalink" href="#context%3AContext%3F-instance-method">#</a>
+        <a class="method-permalink" href="#context%3AContext%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -1427,12 +1437,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="context=(context:Context?)-instance-method">
+    <div class="entry-detail" id="context=(context:Context|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>context=</strong>(context : <a href="../../OpenTelemetry/Context.html">Context</a>?)
+        def <strong>context=</strong>(context : <a href="../../OpenTelemetry/Context.html">Context</a> | Nil)
 
-        <a class="method-permalink" href="#context%3D%28context%3AContext%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#context%3D%28context%3AContext%7CNil%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1441,12 +1451,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="extract(carrier,context:Context?=nil,getter:TextMapGetter.class=TextMapGetter)-instance-method">
+    <div class="entry-detail" id="extract(carrier,context:Context|Nil=nil,getter:TextMapGetter.class=TextMapGetter)-instance-method">
       <div class="signature">
         
-        def <strong>extract</strong>(carrier, context : <a href="../../OpenTelemetry/Context.html">Context</a>? = <span class="n">nil</span>, getter : <span class="t">TextMapGetter</span>.<span class="k">class</span> = <span class="t">TextMapGetter</span>)
+        def <strong>extract</strong>(carrier, context : <a href="../../OpenTelemetry/Context.html">Context</a> | Nil = <span class="n">nil</span>, getter : <span class="t">TextMapGetter</span>.<span class="k">class</span> = <span class="t">TextMapGetter</span>)
 
-        <a class="method-permalink" href="#extract%28carrier%2Ccontext%3AContext%3F%3Dnil%2Cgetter%3ATextMapGetter.class%3DTextMapGetter%29-instance-method">#</a>
+        <a class="method-permalink" href="#extract%28carrier%2Ccontext%3AContext%7CNil%3Dnil%2Cgetter%3ATextMapGetter.class%3DTextMapGetter%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -1469,12 +1479,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="inject(carrier,context:Context?=nil,setter:TextMapSetter.class=TextMapSetter)-instance-method">
+    <div class="entry-detail" id="inject(carrier,context:Context|Nil=nil,setter:TextMapSetter.class=TextMapSetter)-instance-method">
       <div class="signature">
         
-        def <strong>inject</strong>(carrier, context : <a href="../../OpenTelemetry/Context.html">Context</a>? = <span class="n">nil</span>, setter : <span class="t">TextMapSetter</span>.<span class="k">class</span> = <span class="t">TextMapSetter</span>)
+        def <strong>inject</strong>(carrier, context : <a href="../../OpenTelemetry/Context.html">Context</a> | Nil = <span class="n">nil</span>, setter : <span class="t">TextMapSetter</span>.<span class="k">class</span> = <span class="t">TextMapSetter</span>)
 
-        <a class="method-permalink" href="#inject%28carrier%2Ccontext%3AContext%3F%3Dnil%2Csetter%3ATextMapSetter.class%3DTextMapSetter%29-instance-method">#</a>
+        <a class="method-permalink" href="#inject%28carrier%2Ccontext%3AContext%7CNil%3Dnil%2Csetter%3ATextMapSetter.class%3DTextMapSetter%29-instance-method">#</a>
       </div>
       
       <br/>
