@@ -91,3 +91,16 @@ class FindJson
     json
   end
 end
+
+class FixedClock < OpenTelemetry::Clock
+  def initialize(@now : Time, @monotonic : Time::Span)
+  end
+
+  def utc : Time
+    @now
+  end
+
+  def monotonic : Time::Span
+    @monotonic
+  end
+end

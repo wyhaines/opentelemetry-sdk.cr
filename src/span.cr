@@ -11,8 +11,8 @@ module OpenTelemetry
     include Sendable
 
     property name : String = ""
-    property start : Time::Span = Time.monotonic
-    property wall_start : Time = Time.utc
+    property start : Time::Span = OpenTelemetry.clock.monotonic
+    property wall_start : Time = OpenTelemetry.clock.utc
     property finish : Time::Span? = nil
     property wall_finish : Time? = nil
     property events : Array(Event) = [] of Event
