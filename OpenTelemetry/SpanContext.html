@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.7.3">
-<meta name="crystal_docs.project_version" content="0.6.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.12.2">
+<meta name="crystal_docs.project_version" content="0.6.3">
 <meta name="crystal_docs.project_name" content="opentelemetry-sdk">
 
 
@@ -13,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="opentelemetry-sdk">
-  <title>OpenTelemetry::SpanContext - opentelemetry-sdk 0.6.1</title>
+  <title>OpenTelemetry::SpanContext - opentelemetry-sdk 0.6.3</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -22,9 +23,14 @@
 
 <svg class="hidden">
   <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
   </symbol>
 </svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -39,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        0.6.1
+        0.6.3
       </span>
     </div>
   </div>
@@ -1065,7 +1071,7 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> OpenTelemetry::SpanContext
+  <span class="kind">struct</span> OpenTelemetry::<wbr>SpanContext
 
 </h1>
 
@@ -1165,6 +1171,8 @@
 
 
 
+
+
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -1193,14 +1201,14 @@
       <li class="entry-summary">
         <a href="#is_remote-instance-method" class="signature"><strong>#is_remote</strong></a>
         
-          <div class="summary"><p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid</p></div>
+          <div class="summary"><p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid ameba:disable Naming/PredicateName</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#is_valid-instance-method" class="signature"><strong>#is_valid</strong></a>
         
-          <div class="summary"><p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid</p></div>
+          <div class="summary"><p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid ameba:disable Naming/PredicateName</p></div>
         
       </li>
     
@@ -1219,12 +1227,14 @@
       <li class="entry-summary">
         <a href="#remote%3ABool-instance-method" class="signature"><strong>#remote</strong> : Bool</a>
         
-          <div class="summary"><p>This is probably going to be a property</p></div>
+          <div class="summary"><p>ameba:disable Naming/QueryBoolMethods</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#remote%3D%28remote%3ABool%29-instance-method" class="signature"><strong>#remote=</strong>(remote : Bool)</a>
+        
+          <div class="summary"><p>ameba:disable Naming/QueryBoolMethods</p></div>
         
       </li>
     
@@ -1272,14 +1282,14 @@
       <li class="entry-summary">
         <a href="#trace_state%3AHash%28String%2CString%29-instance-method" class="signature"><strong>#trace_state</strong> : Hash(String, String)</a>
         
-          <div class="summary"><p><span class="flag orange">TODO</span>  We're currenty playing fast and loose with TraceState.</p></div>
+          <div class="summary"><p>We're currenty playing fast and loose with TraceState.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#trace_state%3D%28trace_state%3AHash%28String%2CString%29%29-instance-method" class="signature"><strong>#trace_state=</strong>(trace_state : Hash(String, String))</a>
         
-          <div class="summary"><p><span class="flag orange">TODO</span>  We're currenty playing fast and loose with TraceState.</p></div>
+          <div class="summary"><p>We're currenty playing fast and loose with TraceState.</p></div>
         
       </li>
     
@@ -1294,8 +1304,6 @@
 
 
 
-
-
 <div class="methods-inherited">
   
     
@@ -1307,13 +1315,6 @@
     
 
 
-  
-    
-
-
-    
-
-
     
 
 
@@ -1327,7 +1328,26 @@
     
 
 
+    
+
+
   
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
     
 
 
@@ -1435,6 +1455,8 @@
 
 
 
+
+
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -1496,7 +1518,8 @@
       
         <div class="doc">
           
-          <p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid</p>
+          <p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid
+ameba:disable Naming/PredicateName</p>
         </div>
       
       <br/>
@@ -1515,7 +1538,8 @@
       
         <div class="doc">
           
-          <p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid</p>
+          <p>The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid
+ameba:disable Naming/PredicateName</p>
         </div>
       
       <br/>
@@ -1571,11 +1595,7 @@
       
         <div class="doc">
           
-            <div class="doc-inherited">
-              Description copied from struct OpenTelemetry::API::AbstractSpanContext
-            </div>
-          
-          <p>This is probably going to be a property</p>
+          <p>ameba:disable Naming/QueryBoolMethods</p>
         </div>
       
       <br/>
@@ -1591,6 +1611,11 @@
 
         <a class="method-permalink" href="#remote%3D%28remote%3ABool%29-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>ameba:disable Naming/QueryBoolMethods</p>
+        </div>
       
       <br/>
       <div>
@@ -1733,7 +1758,7 @@
       
         <div class="doc">
           
-          <p><span class="flag orange">TODO</span>  We're currenty playing fast and loose with TraceState. TraceState, per the spec,
+          <p>We're currenty playing fast and loose with TraceState. TraceState, per the spec,
 should be immutable, however, so this will need to be revised.</p>
         </div>
       
@@ -1753,7 +1778,7 @@ should be immutable, however, so this will need to be revised.</p>
       
         <div class="doc">
           
-          <p><span class="flag orange">TODO</span>  We're currenty playing fast and loose with TraceState. TraceState, per the spec,
+          <p>We're currenty playing fast and loose with TraceState. TraceState, per the spec,
 should be immutable, however, so this will need to be revised.</p>
         </div>
       
@@ -1782,8 +1807,6 @@ should be immutable, however, so this will need to be revised.</p>
       </div>
     </div>
   
-
-
 
 
 </div>
