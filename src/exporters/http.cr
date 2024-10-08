@@ -44,7 +44,7 @@ module OpenTelemetry
         start
       end
 
-      def initialize
+      def initialize(&)
         @clients_are_initialized = false
         @clients = uninitialized DB::Pool(HTTP::Client)
         yield self
@@ -67,7 +67,7 @@ module OpenTelemetry
         @clients_are_initialized = true
       end
 
-      # TODO: Once we support more than just traces, how this all works will have to be revised.
+      # Once we support more than just traces, how this all works will have to be revised.
       def self.normalized_traces_endpoint_uri(endpoint_uri : String)
         parsed_endpoint_uri = URI.parse(endpoint_uri)
         parsed_endpoint_uri.path.ends_with?("traces") ? parsed_endpoint_uri : URI.parse(
@@ -98,7 +98,7 @@ module OpenTelemetry
       end
 
       private def add_env_based_headers(headers)
-        # TODO: This behavior is not spec-conformant, and will be broken as soon
+        # This behavior is not spec-conformant, and will be broken as soon
         # as more than just Traces are implemented, so clean this up and make it
         # right sooner rather than later.
         extra_headers = [] of String
@@ -175,7 +175,7 @@ module OpenTelemetry
       end
 
       def collate(elements)
-        # TODO: Expand this to support metrics and logs, too.
+        # Expand this to support metrics and logs, too.
         batches = {
           traces: [] of Proto::Trace::V1::ResourceSpans,
         }

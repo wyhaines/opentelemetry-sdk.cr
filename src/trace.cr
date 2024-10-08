@@ -165,16 +165,17 @@ module OpenTelemetry
 
     # Start a new span in the current trace. The block provided will be executed within the context of the new span,
     # and the span will be closed automatically when the block returns.
-    def in_span(span_name)
+    def in_span(span_name, &)
       @lock.synchronize do
         span = in_span_impl(span_name)
 
         exception = nil
+        # ameba:disable Lint/NotNil
         current_trace = Fiber.current.current_trace.not_nil!
         begin
           result = yield span
         rescue exception
-          unless exception.span_status_message_set
+          unless exception.span_status_message_set?
             # If there was an error, then we have to set the span status accordingly, and set the message.
             span.status.error!(exception.message)
             span.add_event("exception") do |event|
@@ -206,6 +207,7 @@ module OpenTelemetry
           result.as(typeof(yield span)) # `typeof` is evaluated at compile_time, which means that the yield is not actually called twice, despite what this looks like.
         rescue ex : TypeCastError
           # Sometimes, the above still fails to protect us. I feel like there has to be a better way to do this, but for now, this works.
+          # ameba:disable Lint/NotNil
           result.not_nil!
         end
       end
@@ -219,7 +221,7 @@ module OpenTelemetry
         end
       end
 
-      # TODO: Is there a more efficient way to do this than creating and throwing away
+      # Is there a more efficient way to do this than creating and throwing away
       # multiple Span::Context structs?
       span.context = set_sampling(span)
 
@@ -241,6 +243,7 @@ module OpenTelemetry
     end
 
     @[AlwaysInline]
+    # ameba:disable Naming/AccessorMethodName
     def set_sampling(span)
       ctx = span.context
       case @provider.config.sampler.should_sample(span).decision
@@ -271,7 +274,7 @@ module OpenTelemetry
       end
       if span == @root_span && !@exported # && (_exporter = @exporter)
         if _exporter = exporter
-          # TODO: Re-examine how this works. Currently, all spans,
+          # Re-examine how this works. Currently, all spans,
           # even those which have been sampled out, are sent to the
           # exporter, but the ones which are sampled out won't get
           # sent. It would be better if the ones which are sampled
@@ -301,8 +304,8 @@ module OpenTelemetry
     end
 
     private def iterate_span_nodes(span, buffer)
-      iterate_span_nodes(span) do |s|
-        buffer << s if s && s.can_export?
+      iterate_span_nodes(span) do |node|
+        buffer << node if node && node.can_export?
       end
 
       buffer

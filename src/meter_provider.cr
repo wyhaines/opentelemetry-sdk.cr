@@ -30,7 +30,7 @@ module OpenTelemetry
       new_meter
     end
 
-    def meter
+    def meter(&)
       new_meter = meter
       new_meter.provider = self
       yield new_meter

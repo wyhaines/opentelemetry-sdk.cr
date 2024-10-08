@@ -35,7 +35,7 @@ describe OpenTelemetry::Span, tags: ["Span"] do
       span.kind.should eq OpenTelemetry::Span::Kind::Server
 
       span.to_protobuf
-      # TODO: validate the protobuf structure.
+      # validate the protobuf structure.
     end
   end
 
@@ -44,26 +44,26 @@ describe OpenTelemetry::Span, tags: ["Span"] do
       span = OpenTelemetry::Span.new
       span.set_attribute("verb", "GET")
       span.set_attribute("url", "http://example.com/foo")
-      span.add_event("dispatching to handler") do |e|
-        e["verb"] = "GET"
-        e["url"] = "http://example.com/foo"
+      span.add_event("dispatching to handler") do |event|
+        event["verb"] = "GET"
+        event["url"] = "http://example.com/foo"
       end
       error_time = Time.utc.to_s
-      span.add_event("error") do |e|
-        e["error"] = "error"
-        e["time"] = error_time
-        e["message"] = "There was a really bad error."
+      span.add_event("error") do |event|
+        event["error"] = "error"
+        event["time"] = error_time
+        event["message"] = "There was a really bad error."
       end
       span.events.size.should eq 2
-      e = span.events.first
-      e.name.should eq "dispatching to handler"
-      e.attributes["verb"].value.should eq "GET"
-      e.attributes["url"].value.should eq "http://example.com/foo"
-      e = span.events.last
-      e.name.should eq "error"
-      e.attributes["error"].value.should eq "error"
-      e.attributes["time"].value.should eq error_time
-      e.attributes["message"].value.should eq "There was a really bad error."
+      event = span.events.first
+      event.name.should eq "dispatching to handler"
+      event.attributes["verb"].value.should eq "GET"
+      event.attributes["url"].value.should eq "http://example.com/foo"
+      event = span.events.last
+      event.name.should eq "error"
+      event.attributes["error"].value.should eq "error"
+      event.attributes["time"].value.should eq error_time
+      event.attributes["message"].value.should eq "There was a really bad error."
     end
   end
 
@@ -73,9 +73,9 @@ describe OpenTelemetry::Span, tags: ["Span"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new(variant: :null))
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
       end
       trace.in_span("request") do |span|
         span.set_attribute("verb", "GET")
@@ -114,9 +114,9 @@ describe OpenTelemetry::Span, tags: ["Span"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new(variant: :null))
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
       end
       trace.in_span("request") do |span|
         span.set_attribute("verb", "GET")

@@ -44,7 +44,7 @@ module OpenTelemetry
 
     # Create a new, uninitialized trace, and pass it to the provided block to
     # complete its initialization.
-    def trace
+    def trace(&)
       new_trace = trace
       new_trace.provider = self
       yield new_trace
@@ -58,7 +58,7 @@ module OpenTelemetry
     # consistent naming, but that violates the spec. Future versions will move towards
     # deprecating the uniform naming, in places where that naming violates the spec.
     # This is here to start preparing for that transition.
-    def tracer
+    def tracer(&)
       new_trace = trace
       new_trace.provider = self
       yield new_trace

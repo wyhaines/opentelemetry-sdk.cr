@@ -4,7 +4,7 @@ class Fiber
   property context_stack : Array(OpenTelemetry::Context) = [] of OpenTelemetry::Context
 
   # This permits Fiber instances to be sorted.
-  def <=>(val)
+  def <=>(other)
     self.object_id <=> val.object_id
   end
 end

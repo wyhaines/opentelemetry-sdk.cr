@@ -17,7 +17,7 @@ module OpenTelemetry
 
     def initialize(variant : String | Symbol = "unique")
       case variant.to_s.downcase
-      # TODO: generate this via a macro
+      # generate this via a macro
       when "unique"
         @generator = OpenTelemetry::IdGenerator::Unique.new
       when "random"

@@ -26,7 +26,7 @@ describe OpenTelemetry::Resource, tags: ["Resource"] do
   end
 
   it "can createa protobuf representation of a resource" do
-    # TODO; Check that this structure is correct.
+    # Check that this structure is correct.
   end
 
   it "can create a json representation of a resource" do

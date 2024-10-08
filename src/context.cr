@@ -48,7 +48,7 @@ module OpenTelemetry
       calls_matched
     end
 
-    def self.attach(context : Context)
+    def self.attach(context : Context, &)
       token = context.object_id
       stack << context
       yield context
@@ -56,23 +56,23 @@ module OpenTelemetry
       detach(token)
     end
 
-    def self.attach(entries)
+    def self.attach(entries, &)
       attach(Context.new(entries)) { |ctx| yield ctx }
     end
 
     # Executes a block with ctx as the current context. It restores
     # the previous context upon exiting.
-    def self.with(context : Context)
+    def self.with(context : Context, &)
       attach(context) { |ctx| yield ctx }
     end
 
-    def self.with(entries)
+    def self.with(entries, &)
       self.with(Context.new(entries)) { |ctx| yield ctx }
     end
 
     # Execute a block in a new context with key set to value. Restores the
     # previous context after the block executes.
-    def self.with(key, value)
+    def self.with(key, value, &)
       ctx = current[key] = value
       token = attach(ctx)
       yield ctx, value
@@ -80,7 +80,7 @@ module OpenTelemetry
       detach(token)
     end
 
-    def self.with(key, value)
+    def self.with(key, value, &)
       self.with(key, value) { |ctx, val| yield ctx, val }
     end
 
@@ -93,7 +93,7 @@ module OpenTelemetry
     # @param [Callable] Block to execute in a new context
     # @yield [context, values] Yields the newly created context and values
     #   to the block
-    def self.with(values)
+    def self.with(values, &)
       ctx = current.dup.merge(values)
       token = attach(ctx)
       yield ctx, values
@@ -101,7 +101,7 @@ module OpenTelemetry
       detach(token)
     end
 
-    def self.with(key, values)
+    def self.with(key, values, &)
       self.with(key, values) { |ctx, val| yield ctx, val }
     end
 

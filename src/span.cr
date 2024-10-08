@@ -22,6 +22,7 @@ module OpenTelemetry
     property context : SpanContext = SpanContext.new
     property kind : Kind = Kind::Internal
     property status : Status = Status.new
+    # ameba:disable Naming/QueryBoolMethods
     property is_recording : Bool = true
 
     MATCH = /(?<span_id>[A-Fa-f0-9]{16})/
@@ -34,7 +35,7 @@ module OpenTelemetry
       !!MATCH.match id
     end
 
-    def self.build(name = "")
+    def self.build(name = "", &)
       span = new(name)
       yield span
 
@@ -68,7 +69,7 @@ module OpenTelemetry
       events << Event.new(name: name)
     end
 
-    def add_event(name = "")
+    def add_event(name = "", &)
       events << Event.new(name: name) do |event|
         yield event
       end

@@ -30,7 +30,7 @@ module OpenTelemetry
         ENV["OTEL_TRACES_EXPORTER"]?
       end
 
-      # TODO: The Sampler code all feels kind of bodgey. It should be
+      # The Sampler code all feels kind of bodgey. It should be
       # revisited, though maybe that will come naturally when all of
       # the SDK code is surgically separated from the API code.
       def self.default_sampler_instance
@@ -124,7 +124,7 @@ module OpenTelemetry
           "unknown_service:#{Path[Process.executable_path.to_s].basename}"
         end
 
-        def self.build(configuration)
+        def self.build(configuration, &)
           instance = Factory.new(configuration)
           yield instance
           _build(instance)
@@ -141,7 +141,8 @@ module OpenTelemetry
           schema_url = "",
           exporter = Exporter.new(:null),
           sampler = Sampler::AlwaysOn.new,
-          id_generator = IdGenerator.new("unique")
+          id_generator = IdGenerator.new("unique"),
+          &
         )
           instance = Factory.new(
             service_name: service_name,

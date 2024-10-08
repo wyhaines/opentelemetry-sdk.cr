@@ -7,7 +7,7 @@ module OpenTelemetry
     property logs : Array(Log) = [] of Log
     @exported : Bool = false
 
-    # TODO: Add support for Resources
+    # Add support for Resources
     # A LogCollection will typically be managed by a LogProvider. This class
     # encapsulates the logic necessary to package a set of logs into a single
     # transaction.

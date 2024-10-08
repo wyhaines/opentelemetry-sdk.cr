@@ -11,7 +11,7 @@ module OpenTelemetry
     def initialize(@name)
     end
 
-    def initialize(@name = "", &blk : Event ->)
+    def initialize(@name = "", & : Event ->)
       yield self
     end
 

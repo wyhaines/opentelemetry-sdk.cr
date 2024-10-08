@@ -1,6 +1,6 @@
 require "spec"
 require "../src/opentelemetry-sdk.cr"
-require "./test_exporter"
+require "./test_exporter_spec"
 
 clear_env
 
@@ -12,7 +12,7 @@ def clear_env
   end
 end
 
-def checkout_config(clear : Bool = true)
+def checkout_config(clear : Bool = true, &)
   config = OpenTelemetry.config
   clear_env if clear
   yield
@@ -50,8 +50,8 @@ class FindJson
       traces << JSON.parse(json)
     end
 
-    client_traces = traces.reject { |t| t.size == 0 }.select { |t| t["spans"][0]["kind"] == 3 }
-    server_traces = traces.reject { |t| t.size == 0 }.reject { |t| t["spans"][0]["kind"] == 3 }
+    client_traces = traces.reject { |trace| trace.size == 0 }.select { |trace| trace["spans"][0]["kind"] == 3 }
+    server_traces = traces.reject { |trace| trace.size == 0 }.reject { |trace| trace["spans"][0]["kind"] == 3 }
 
     {client_traces, server_traces}
   end

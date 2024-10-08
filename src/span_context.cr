@@ -6,9 +6,10 @@ module OpenTelemetry
     property span_id : Slice(UInt8)
     property parent_id : Slice(UInt8)? = nil
     property trace_flags : TraceFlags = TraceFlags::Sampled
-    # TODO: We're currenty playing fast and loose with TraceState. TraceState, per the spec,
+    # We're currenty playing fast and loose with TraceState. TraceState, per the spec,
     # should be immutable, however, so this will need to be revised.
     property trace_state : Hash(String, String) = {} of String => String
+    # ameba:disable Naming/QueryBoolMethods
     property remote : Bool = false
 
     def initialize
@@ -45,6 +46,7 @@ module OpenTelemetry
     end
 
     # The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid
+    # ameba:disable Naming/PredicateName
     def is_valid
       valid?
     end
@@ -54,6 +56,7 @@ module OpenTelemetry
     end
 
     # The spec dictates that this name be available: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#isvalid
+    # ameba:disable Naming/PredicateName
     def is_remote
       remote?
     end
@@ -70,7 +73,7 @@ module OpenTelemetry
       @trace_state[val] = val2
     end
 
-    def self.build(inherited_context : SpanContext? = nil)
+    def self.build(inherited_context : SpanContext? = nil, &)
       if inherited_context
         config = Config.new(inherited_context)
       else

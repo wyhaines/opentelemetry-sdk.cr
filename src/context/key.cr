@@ -18,8 +18,8 @@ module OpenTelemetry
         context[self.name]
       end
 
-      def <=>(val)
-        id <=> val.id
+      def <=>(other)
+        id <=> other.id
       end
     end
   end

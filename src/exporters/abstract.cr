@@ -5,7 +5,7 @@ module OpenTelemetry
     # :nodoc:
     # This class exists only for internal use.
     class Abstract < Base
-      def initialize
+      def initialize(&)
         yield self
       end
 

@@ -46,10 +46,10 @@ describe OpenTelemetry do
   end
 
   it "can create a trace via a block passed to the class method" do
-    trace = OpenTelemetry.trace_provider do |t|
-      t.service_name = "my_app_or_library"
-      t.service_version = "1.2.3"
-      t.exporter = OpenTelemetry::Exporter.new
+    trace = OpenTelemetry.trace_provider do |trace_setup|
+      trace_setup.service_name = "my_app_or_library"
+      trace_setup.service_version = "1.2.3"
+      trace_setup.exporter = OpenTelemetry::Exporter.new
     end.trace
 
     trace.service_name.should eq "my_app_or_library"
@@ -58,8 +58,8 @@ describe OpenTelemetry do
   end
 
   it "substitutes the global provider configuration when values are not set via block initialization" do
-    trace = OpenTelemetry.trace_provider do |t|
-      t.service_version = "2.2.2"
+    trace = OpenTelemetry.trace_provider do |trace_setup|
+      trace_setup.service_version = "2.2.2"
     end.trace
 
     trace.service_name.should eq "my_app_or_library"
@@ -94,6 +94,7 @@ describe OpenTelemetry do
         end
       end
 
+      # ameba:disable Lint/NotNil
       iterate_tracer_spans(trace.not_nil!).map(&.name).should eq ["request", "handler", "external api", "db"]
     end
   end
@@ -128,6 +129,7 @@ describe OpenTelemetry do
         OpenTelemetry.close_span
       end
 
+      # ameba:disable Lint/NotNil
       iterate_tracer_spans(trace.not_nil!).map(&.name).should eq ["request", "handler", "external api", "db"]
     end
   end

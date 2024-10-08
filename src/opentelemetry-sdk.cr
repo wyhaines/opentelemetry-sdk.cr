@@ -213,7 +213,7 @@ module OpenTelemetry
   # of opening a new `Tracer` ensures that only the code that executes between when
   # the block starts executing, and when it finishes executing, will be included in
   # the finished trace.
-  def self.trace
+  def self.trace(&)
     trace = self.trace
     yield trace
 
@@ -226,7 +226,7 @@ module OpenTelemetry
   # consistent naming, but that violates the spec. Future versions will move towards
   # deprecating the uniform naming, in places where that naming violates the spec.
   # This is here to start preparing for that transition.
-  def self.tracer
+  def self.tracer(&)
     tracer = self.tracer
     yield tracer
 
@@ -287,7 +287,7 @@ module OpenTelemetry
   def self.handle_error(error)
   end
 
-  def self.with_clock(clock : Clock)
+  def self.with_clock(clock : Clock, &)
     original_clock = self.clock
 
     begin

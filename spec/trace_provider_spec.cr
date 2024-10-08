@@ -144,9 +144,9 @@ describe OpenTelemetry::TraceProvider do
       service_name: "my_app_or_library",
       service_version: "1.1.1",
       exporter: OpenTelemetry::Exporter.new)
-    trace = provider.trace do |t|
-      t.service_name = "microservice"
-      t.service_version = "1.2.3"
+    trace = provider.trace do |trace_setup|
+      trace_setup.service_name = "microservice"
+      trace_setup.service_version = "1.2.3"
     end
 
     trace.is_a?(OpenTelemetry::Trace).should be_true

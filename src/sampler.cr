@@ -45,6 +45,7 @@ module OpenTelemetry
 
     # Crystal doesn't tend to yuse `get_*` names, but this name is provided as an alias for `description` to be more spec compliant,
     # as it request `getDescription` or a close equivalent.
+    # ameba:disable Naming/AccessorMethodName
     def get_description
       description
     end

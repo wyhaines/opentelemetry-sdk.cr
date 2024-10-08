@@ -237,8 +237,8 @@ module OpenTelemetry
         body: body.value,
         trace_id: @trace_id,
         span_id: @span_id,
-      # flags: @flags
-)
+        # flags: @flags
+      )
     end
 
     def to_json

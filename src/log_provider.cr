@@ -24,7 +24,7 @@ module OpenTelemetry
       new_log
     end
 
-    def log
+    def log(&)
       new_log = log
       new_log.provider = self
       yield new_log

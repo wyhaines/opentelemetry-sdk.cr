@@ -16,9 +16,9 @@ describe OpenTelemetry::Clock do
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new(variant: :null))
 
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
       end
 
       span = OpenTelemetry.with_clock(start_clock) do

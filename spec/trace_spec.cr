@@ -41,19 +41,19 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new)
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
-        t.schema_url = "https://schema.open-telemetry.io/trace/v1/trace"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
+        trace_setup.schema_url = "https://schema.open-telemetry.io/trace/v1/trace"
       end
 
       trace.id.hexstring.should_not eq Slice(UInt8).new(8, 0).hexstring
       trace.id.should eq trace.trace_id
       trace.schema_url.should eq "https://schema.open-telemetry.io/trace/v1/trace"
 
-      trace.id.should_not eq(provider.trace do |t|
-        t.service_name = "my_app_or_library"
-        t.service_version = "1.1.1"
+      trace.id.should_not eq(provider.trace do |trace_setup|
+        trace_setup.service_name = "my_app_or_library"
+        trace_setup.service_version = "1.1.1"
       end.id)
     end
   end
@@ -64,9 +64,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new)
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
       end
       trace.in_span("request") do |span|
         span.set_attribute("verb", "GET")
@@ -87,8 +87,11 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         span.set_attribute("url", "http://example.com/foo")
         span.add_event("dispatching to handler")
       end
+      # ameba:disable Lint/NotNil
       trace.output_stack.first.not_nil!.attributes.has_key?("verb").should be_true
+      # ameba:disable Lint/NotNil
       trace.output_stack.first.not_nil!.attributes.has_key?("url").should be_true
+      # ameba:disable Lint/NotNil
       trace.output_stack.first.not_nil!.attributes["verb"].value.should eq "GET"
     end
   end
@@ -99,9 +102,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new)
-      trace = provider.trace do |t|
-        t.service_name = "microservice"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice"
+        trace_setup.service_version = "1.2.3"
       end
 
       trace.span_stack.size.should eq 0
@@ -122,9 +125,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
   #     service_name: "my_app_or_library",
   #     service_version: "1.1.1",
   #     exporter: OpenTelemetry::Exporter.new)
-  #   trace = provider.trace do |t|
-  #     t.service_name = "microservice"
-  #     t.service_version = "1.2.3"
+  #   trace = provider.trace do |trace_setup|
+  #     trace_setup.service_name = "microservice"
+  #     trace_setup.service_version = "1.2.3"
   #   end
   #   trace.root_span.should be_nil
   #   trace.in_span("request") do |span|
@@ -142,9 +145,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new)
-      trace = provider.trace do |t|
-        t.service_name = "microservice a"
-        t.service_version = "1.2.3"
+      trace = provider.trace do |trace_setup|
+        trace_setup.service_name = "microservice a"
+        trace_setup.service_version = "1.2.3"
       end
 
       test_complex_trace.call(trace)
@@ -157,9 +160,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
         service_name: "my_app_or_library",
         service_version: "1.1.1",
         exporter: OpenTelemetry::Exporter.new)
-      tracer = provider.tracer do |t|
-        t.service_name = "microservice a"
-        t.service_version = "1.2.3"
+      tracer = provider.tracer do |trace_setup|
+        trace_setup.service_name = "microservice a"
+        trace_setup.service_version = "1.2.3"
       end
 
       test_complex_trace.call(tracer)
@@ -167,9 +170,9 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
   end
 
   it "produces traces and spans with the expected ids when using default trace creation syntax" do
-    trace = OpenTelemetry.trace do |t|
-      t.service_name = "microservice b"
-      t.service_version = "1.2.3"
+    trace = OpenTelemetry.trace do |trace_setup|
+      trace_setup.service_name = "microservice b"
+      trace_setup.service_version = "1.2.3"
     end
 
     test_complex_trace.call(trace)

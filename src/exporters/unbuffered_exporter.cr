@@ -20,7 +20,7 @@ module OpenTelemetry
         start
       end
 
-      def initialize
+      def initialize(&)
         yield self
         start
       end
