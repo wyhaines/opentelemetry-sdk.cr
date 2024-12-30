@@ -20,6 +20,10 @@ def checkout_config(clear : Bool = true, &)
   OpenTelemetry.config = config
 end
 
+def rand_time_span
+  Time::Span.new(nanoseconds: ((rand / 1000) * 1_000_000_000).to_i64)
+end
+
 # def iterate_span_nodes(span, indent, buffer)
 #   return if span.nil?
 

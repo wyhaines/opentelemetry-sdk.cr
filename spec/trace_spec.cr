@@ -12,25 +12,25 @@ describe OpenTelemetry::Trace, tags: ["Tracer"] do
 
       span.set_attribute("verb", "GET")
       span.set_attribute("url", "http://example.com/foo")
-      sleep(rand/1000)
+      sleep(rand_time_span)
       span.add_event("dispatching to handler")
       trace.in_span("handler") do |child_span|
         child_span.id.should_not eq span.id
-        sleep(rand/1000)
+        sleep(rand_time_span)
         child_span.add_event("dispatching to database")
         trace.in_span("db") do |db_span|
           db_span.id.should_not eq span.id
           db_span.id.should_not eq child_span.id
           db_span.add_event("querying database")
-          sleep(rand/1000)
+          sleep(rand_time_span)
         end
         trace.in_span("external api") do |api_span|
           api_span.id.should_not eq span.id
           api_span.id.should_not eq child_span.id
           api_span.add_event("querying api")
-          sleep(rand/1000)
+          sleep(rand_time_span)
         end
-        sleep(rand/1000)
+        sleep(rand_time_span)
       end
     end
   end

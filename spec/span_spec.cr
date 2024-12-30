@@ -121,20 +121,20 @@ describe OpenTelemetry::Span, tags: ["Span"] do
       trace.in_span("request") do |span|
         span.set_attribute("verb", "GET")
         span.set_attribute("url", "http://example.com/foo")
-        sleep(rand/1000)
+        sleep(rand_time_span)
         span.add_event("dispatching to handler")
         trace.in_span("handler") do |child_span|
-          sleep(rand/1000)
+          sleep(rand_time_span)
           child_span.add_event("dispatching to database")
           trace.in_span("db") do |db_span|
             db_span.add_event("querying database")
-            sleep(rand/1000)
+            sleep(rand_time_span)
           end
           trace.in_span("external api") do |api_span|
             api_span.add_event("querying api")
-            sleep(rand/1000)
+            sleep(rand_time_span)
           end
-          sleep(rand/1000)
+          sleep(rand_time_span)
         end
       end
 

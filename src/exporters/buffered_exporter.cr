@@ -47,7 +47,7 @@ module OpenTelemetry
           end
 
           break if reaped?
-          sleep 0.01
+          sleep(Time::Span.new(nanoseconds: 1))
         end
       end
     end
