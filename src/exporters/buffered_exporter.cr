@@ -14,6 +14,10 @@ module OpenTelemetry
       property batch_latency = 5
       property batch_interval = 0.05
 
+      def start
+        loop_and_receive
+      end
+
       def loop_and_receive
         elements = [] of Elements
         elements_size = 0
