@@ -9,6 +9,10 @@ module OpenTelemetry
       #   raise NotImplementedError.new("Exporter::Abstract.export not implemented; this class is not intended to be used externally")
       # end
 
+      def start
+        loop_and_receive
+      end
+
       def handle(elements : Array(Elements))
         raise NotImplementedError.new("Exporter::Abstract.handle not implemented; this class is not intended to be used externally")
       end
