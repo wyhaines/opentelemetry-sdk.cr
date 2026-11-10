@@ -31,7 +31,7 @@ module OpenTelemetry
       schema_url : String = "",
       exporter : Exporter? = nil,
       sampler : Sampler = Sampler::AlwaysOn.new,
-      id_generator = "unique"
+      id_generator = "unique",
     )
       @config = Configuration.new(
         service_name: service_name,

@@ -95,7 +95,7 @@ module OpenTelemetry
       @trace_id : Slice(UInt8)? = nil,
       @span_id : Slice(UInt8)? = nil,
       @flags : TraceFlags = TraceFlags.new(0x00),
-      @exporter : Exporter? = nil
+      @exporter : Exporter? = nil,
     )
       @severity_text = severity_text || @severity.to_s
       @observed_time = observed_time || @time
@@ -111,7 +111,7 @@ module OpenTelemetry
       trace_id : Slice(UInt8)? = nil,
       span_id : Slice(UInt8)? = nil,
       flags : TraceFlags = TraceFlags.new(0x00),
-      exporter : Exporter? = nil
+      exporter : Exporter? = nil,
     )
       initialize_impl(
         severity: severity,
@@ -134,7 +134,7 @@ module OpenTelemetry
       trace_id : Slice(UInt8)? = nil,
       span_id : Slice(UInt8)? = nil,
       flags : TraceFlags = TraceFlags.new(0x00),
-      exporter : Exporter? = nil
+      exporter : Exporter? = nil,
     )
       initialize_impl(
         severity: self.class.severity_from_name(severity),
@@ -157,7 +157,7 @@ module OpenTelemetry
       trace_id : Slice(UInt8)? = nil,
       span_id : Slice(UInt8)? = nil,
       flags : TraceFlags = TraceFlags.new(0x00),
-      exporter : Exporter? = nil
+      exporter : Exporter? = nil,
     )
       initialize_impl(
         severity: self.class.severity_from_number(severity),
@@ -198,16 +198,14 @@ module OpenTelemetry
     def body
       if b = @body
         b.value
-      else
-        nil
       end
     end
 
     def merge_configuration_from_provider=(val)
       # self.service_name = val.service_name if self.service_name.nil? || self.service_name.empty?
       # self.service_version = val.service_version if self.service_version.nil? || self.service_version.empty?
-      self.schema_url = val.schema_url if self.schema_url.nil? || self.schema_url.empty?
-      self.exporter = val.exporter if self.exporter.nil? || self.exporter.try(&.exporter).is_a?(Exporter::Abstract)
+      self.schema_url = val.schema_url if schema_url.nil? || schema_url.empty?
+      self.exporter = val.exporter if exporter.nil? || exporter.try(&.exporter).is_a?(Exporter::Abstract)
       @provider = val
     end
 

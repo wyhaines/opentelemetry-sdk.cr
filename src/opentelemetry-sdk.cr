@@ -141,7 +141,7 @@ module OpenTelemetry
   # deprecating the uniform naming, in places where that naming violates the spec.
   # This is here to start preparing for that transition.
   def self.tracer_provider(&block : TraceProvider::Configuration::Factory ->)
-    self.trace_provider(&block)
+    trace_provider(&block)
   end
 
   # Configure and return a new `TracerProvider` instance, using the method arguments.
@@ -151,7 +151,7 @@ module OpenTelemetry
   def self.trace_provider(
     service_name : String? = nil,
     service_version : String? = nil,
-    exporter = nil
+    exporter = nil,
   )
     if !service_name.nil? || !service_version.nil? || !exporter.nil?
       self.provider = TraceProvider.new(
@@ -172,9 +172,9 @@ module OpenTelemetry
   def self.tracer_provider(
     service_name : String? = nil,
     service_version : String? = nil,
-    exporter = nil
+    exporter = nil,
   )
-    self.trace_provider(
+    trace_provider(
       service_name: service_name,
       service_version: service_version,
       exporter: exporter)

@@ -70,7 +70,7 @@ class FindJson
   end
 
   def pull_json
-    return nil if @buffer.empty?
+    return if @buffer.empty?
 
     pos = 0
     start_pos = -1

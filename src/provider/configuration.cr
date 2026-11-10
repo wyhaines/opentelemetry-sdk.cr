@@ -17,7 +17,7 @@ module OpenTelemetry
         @schema_url : String = "",
         @exporter : Exporter? = nil,
         @sampler : Sampler = Sampler::AlwaysOn.new,
-        id_generator : IdGenerator = IdGenerator.new("unique")
+        id_generator : IdGenerator = IdGenerator.new("unique"),
       )
       end
 
@@ -27,7 +27,7 @@ module OpenTelemetry
         @schema_url : String = "",
         @exporter : Exporter? = nil,
         @sampler : Sampler = Sampler::AlwaysOn.new,
-        id_generator : String = "unique"
+        id_generator : String = "unique",
       )
         @id_generator = IdGenerator.new(id_generator)
       end

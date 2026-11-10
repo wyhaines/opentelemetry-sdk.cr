@@ -181,7 +181,7 @@ module OpenTelemetry
     def to_json
       return "" unless can_export?
       JSON.build(indent: "  ") do |json|
-        self.to_json(json)
+        to_json(json)
       end
     end
 

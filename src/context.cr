@@ -80,10 +80,6 @@ module OpenTelemetry
       detach(token)
     end
 
-    def self.with(key, value, &)
-      self.with(key, value) { |ctx, val| yield ctx, val }
-    end
-
     # Execute a block in a new context where its values are merged with the
     # incoming values. Restores the previous context after the block executes.
 

@@ -29,7 +29,7 @@ module OpenTelemetry
       @remote_parent_sampled : InheritableSampler = AlwaysOn.new,
       @remote_parent_not_sampled : InheritableSampler = AlwaysOff.new,
       @local_parent_sampled : InheritableSampler = AlwaysOn.new,
-      @local_parent_not_sampled : InheritableSampler = AlwaysOff.new
+      @local_parent_not_sampled : InheritableSampler = AlwaysOff.new,
     )
       @description = "ParentBased{root=#{@root.description}, remote_parent_sampled=#{@remote_parent_sampled.description}, remote_parent_not_sampled=#{@remote_parent_not_sampled.description}, local_parent_sampled=#{@local_parent_sampled.description}, local_parent_not_sampled=#{@local_parent_not_sampled}}"
     end

@@ -5,6 +5,6 @@ class Fiber
 
   # This permits Fiber instances to be sorted.
   def <=>(other)
-    self.object_id <=> val.object_id
+    object_id <=> val.object_id
   end
 end

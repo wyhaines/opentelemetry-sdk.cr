@@ -19,7 +19,7 @@ module OpenTelemetry
       trace_id : Slice(UInt8)? = nil,
       kind : OpenTelemetry::Span::Kind = OpenTelemetry::Span::Kind::Internal,
       attributes : Hash(String, AnyAttribute) = {} of String => AnyAttribute,
-      links : Nil = nil # Not implemented yet
+      links : Nil = nil, # Not implemented yet
     ) : SamplingResult
       trace_id = validate(context, name, trace_id, kind, attributes, links)
 

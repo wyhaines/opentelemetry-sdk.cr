@@ -68,7 +68,7 @@ module OpenTelemetry
     # Export the resource with a JSON representation.
     def to_json
       JSON.build(indent: "  ") do |json|
-        self.to_json(json)
+        to_json(json)
       end
     end
 

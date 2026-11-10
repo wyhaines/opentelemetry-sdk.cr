@@ -15,7 +15,7 @@ module OpenTelemetry
       end
 
       def get(context = Context.current)
-        context[self.name]
+        context[name]
       end
 
       def <=>(other)

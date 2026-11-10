@@ -16,7 +16,7 @@ module OpenTelemetry
       service_version = nil,
       schema_url = nil,
       exporter = nil,
-      interval = nil
+      interval = nil,
     )
       new_meter = Meter.new(
         service_name: service_name,

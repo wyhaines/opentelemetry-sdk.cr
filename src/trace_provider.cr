@@ -15,7 +15,7 @@ module OpenTelemetry
       service_name = nil,
       service_version = nil,
       schema_url = nil,
-      provider = self
+      provider = self,
     )
       new_trace = Trace.new(
         service_name: service_name,
@@ -37,7 +37,7 @@ module OpenTelemetry
       service_name = nil,
       service_version = nil,
       schema_url = nil,
-      provider = self
+      provider = self,
     )
       trace(service_name, service_version, schema_url, provider)
     end
