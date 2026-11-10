@@ -28,8 +28,6 @@ module OpenTelemetry
                   "Instrument name must be comprised of only alphanumeric characters and '_', '.', and '-' characters"
                 elsif @name.size > 63
                   "Instrument names must be less than 64 characters in length"
-                else
-                  nil
                 end
 
       raise InstrumentNameError.new(message) if message

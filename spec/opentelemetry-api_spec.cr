@@ -104,7 +104,6 @@ describe OpenTelemetry do
       OpenTelemetry.configure do |config|
         config.exporter = OpenTelemetry::Exporter.new(variant: :null)
       end
-      trace = nil
       begin
         span = OpenTelemetry.in_span("request")
         trace = Fiber.current.current_trace

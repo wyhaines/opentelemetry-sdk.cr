@@ -8,7 +8,7 @@ describe OpenTelemetry::AnyValue do
 
   it "can create a bool value" do
     attr = OpenTelemetry::AnyValue.new(true)
-    attr.value.should eq true
+    attr.value.should be_true
   end
 
   it "can create an int32 value" do

@@ -14,7 +14,7 @@ module OpenTelemetry
       def initialize(
         @decision,
         attributes = {} of String => AnyAttribute,
-        trace_state = {} of String => String
+        trace_state = {} of String => String,
       )
         @attributes.merge! attributes
         @trace_state.merge! trace_state

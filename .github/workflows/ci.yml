@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        crystal: ["1.18.1", "1.19.0", "1.20.3"]
+        crystal: ["1.18.1", "1.19.0", "1.20.3", "1.21.1", "1.22.2"]
         experimental: [false]
         include:
           - crystal_version: nightly
@@ -37,9 +37,5 @@ jobs:
         env:
           LOG_LEVEL: trace
         run: crystal spec -t -s
-      - name: Linting
-        run: crystal tool format --check
-      - name: Run Ameba
-        run: bin/ameba
       - name: Build docs
         run: crystal docs

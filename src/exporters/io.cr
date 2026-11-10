@@ -4,7 +4,7 @@ require "io/memory"
 module OpenTelemetry
   class Exporter
     class IO < Base
-      property io : ::IO | ::IO::Memory | Nil
+      property io : ::IO | ::IO::Memory?
 
       def initialize(@io : ::IO | ::IO::Memory = ::IO::Memory.new, *_junk, **_kwjunk)
         start

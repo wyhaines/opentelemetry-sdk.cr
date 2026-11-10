@@ -65,7 +65,7 @@ module OpenTelemetry
 
     def to_json
       JSON.build do |json|
-        self.to_json(json)
+        to_json(json)
       end
     end
 

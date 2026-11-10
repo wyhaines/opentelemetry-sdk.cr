@@ -66,7 +66,7 @@ module OpenTelemetry
       service_version = nil,
       schema_url = nil,
       exporter = nil,
-      provider = nil
+      provider = nil,
     )
       provider ||= TraceProvider.new
       @provider = provider
@@ -108,8 +108,6 @@ module OpenTelemetry
     def []?(key)
       if r = resource[key]?
         r.value
-      else
-        nil
       end
     end
 
@@ -150,9 +148,9 @@ module OpenTelemetry
 
     # Merge the configuration from a given `TraceProvider` into the configuration for this trace's TraceProvider.
     def merge_configuration_from_provider=(val)
-      self.service_name = val.service_name if self.service_name.nil? || self.service_name.empty?
-      self.service_version = val.service_version if self.service_version.nil? || self.service_version.empty?
-      self.schema_url = val.schema_url if self.schema_url.nil? || self.schema_url.empty?
+      self.service_name = val.service_name if service_name.nil? || service_name.empty?
+      self.service_version = val.service_version if service_version.nil? || service_version.empty?
+      self.schema_url = val.schema_url if schema_url.nil? || schema_url.empty?
       @provider = val
     end
 
@@ -205,7 +203,7 @@ module OpenTelemetry
 
         begin
           result.as(typeof(yield span)) # `typeof` is evaluated at compile_time, which means that the yield is not actually called twice, despite what this looks like.
-        rescue ex : TypeCastError
+        rescue TypeCastError
           # Sometimes, the above still fails to protect us. I feel like there has to be a better way to do this, but for now, this works.
           # ameba:disable Lint/NotNil
           result.not_nil!
@@ -348,7 +346,7 @@ module OpenTelemetry
 
     def to_json
       JSON.build(indent: "  ") do |json|
-        self.to_json(json)
+        to_json(json)
       end
     end
 

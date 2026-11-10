@@ -161,7 +161,7 @@ module OpenTelemetry
           schema_url = "",
           exporter = Exporter.new(:null),
           sampler = Sampler::AlwaysOn.new,
-          id_generator = IdGenerator.new("unique")
+          id_generator = IdGenerator.new("unique"),
         )
           instance = Factory.new(
             service_name: service_name,
@@ -179,7 +179,7 @@ module OpenTelemetry
           @schema_url,
           @exporter,
           @sampler,
-          @id_generator
+          @id_generator,
         )
         end
 

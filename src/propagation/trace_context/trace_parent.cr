@@ -88,7 +88,7 @@ module OpenTelemetry
           elsif trace_flags.is_a?(Int)
             trace_flags = TraceFlags.new(trace_flags)
           elsif trace_flags.is_a?(TraceFlags)
-            trace_flags
+            # noop
           else
             trace_flags = TraceFlags.new(trace_flags.to_i(16))
           end

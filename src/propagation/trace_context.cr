@@ -84,7 +84,7 @@ module OpenTelemetry
 
       def version=(value : Slice(UInt8))
         trace_parent.version = value
-        @trace_parent = self.trace_parent
+        @trace_parent = trace_parent
       end
 
       def version=(value)
@@ -97,7 +97,7 @@ module OpenTelemetry
 
       def trace_id=(value : Slice(UInt8))
         trace_parent.trace_id = value
-        @trace_parent = self.trace_parent
+        @trace_parent = trace_parent
       end
 
       def trace_id=(value)
@@ -110,7 +110,7 @@ module OpenTelemetry
 
       def span_id=(value : Slice(UInt8))
         trace_parent.span_id = value
-        @trace_parent = self.trace_parent
+        @trace_parent = trace_parent
       end
 
       def span_id=(value)
@@ -131,7 +131,7 @@ module OpenTelemetry
 
       def trace_flags=(value)
         trace_parent.trace_flags = TraceFlags.new(value)
-        @trace_parent = self.trace_parent
+        @trace_parent = trace_parent
       end
 
       def traceparent

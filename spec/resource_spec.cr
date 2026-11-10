@@ -31,15 +31,15 @@ describe OpenTelemetry::Resource, tags: ["Resource"] do
 
   it "can create a json representation of a resource" do
     resource.to_json.should eq <<-EJSON
-    {
-      "verb": "GET",
-      "url": "http://example.com/foo",
-      "bools": true,
-      "headers": [
-        "Content-Type: text/plain",
-        "Content-Length: 23"
-      ]
-    }
-    EJSON
+      {
+        "verb": "GET",
+        "url": "http://example.com/foo",
+        "bools": true,
+        "headers": [
+          "Content-Type: text/plain",
+          "Content-Length: 23"
+        ]
+      }
+      EJSON
   end
 end

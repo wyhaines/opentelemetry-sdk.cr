@@ -12,7 +12,7 @@ module OpenTelemetry
     end
 
     def log(
-      exporter = nil
+      exporter = nil,
     )
       new_log = Log.new(
         service_name,

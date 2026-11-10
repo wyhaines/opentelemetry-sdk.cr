@@ -8,7 +8,7 @@ describe OpenTelemetry::Attribute do
 
   it "can create a bool attribute" do
     attr = OpenTelemetry::Attribute(Bool).new("key", true)
-    attr.value.should eq true
+    attr.value.should be_true
   end
 
   it "can create an int32 attribute" do
